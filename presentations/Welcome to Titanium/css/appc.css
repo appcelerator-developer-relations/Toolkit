@@ -1,0 +1,767 @@
+/**
+ * This is a stylesheet for a demo presentation for impress.js
+ * 
+ * It is not meant to be a part of impress.js and is not required by impress.js.
+ * I expect that anyone creating a presentation for impress.js would create their own
+ * set of styles.
+ */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: '\201C' '\201D';
+ }
+ blockquote:before { content: open-quote; font-weight: bold; }
+ blockquote:after { content: close-quote; font-weight: bold; }
+
+
+/*blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}*/
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    
+    min-height: 740px;
+
+    background: rgb(215, 215, 215);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
+    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+
+    -webkit-font-smoothing: antialiased;
+}
+
+b, strong { font-weight: bold }
+i, em { font-style: italic}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0 0.1em;
+    background: rgba(255,255,255,0.5);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+    border-radius: 0.2em;
+    
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+a:hover {
+    background: rgba(255,255,255,1);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
+}
+
+h1 {
+	color: #a00;
+	font-size: 160px;
+	font-weight: bold;
+	text-shadow: 0px 2px #222;	
+}
+
+h2 {
+	color: #a00;
+	font-size: 120px;
+	font-weight: bold;
+	text-shadow: 0px 2px #222;	
+}
+
+h3 {
+	color: #a00;
+	font-size: 80px;
+	font-weight: bold;
+	text-shadow: 0px 2px #222;	
+	padding-bottom: 20px;
+}
+
+.graytext {
+	color: #444;
+	font-size: 48px;
+	font-weight: normal;
+	text-shadow: 0px 1px #222;	
+}
+
+/* COMMON STEP STYLES */
+
+.step {
+    width: 900px;
+    padding: 40px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    font-family: 'Museo Sans', 'PT Serif', georgia, serif;
+
+    font-size: 48px;
+    line-height: 1;
+}
+
+/* fade out inactive slides */
+
+.step {
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.step:not(.active) {
+    opacity: 0.3;
+}
+
+/* STEP SPECIFIC STYLES */
+
+/* hint on the first slide */
+
+.hint {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 200px;
+    
+    background: rgba(0,0,0,0.5);
+    color: #EEE;
+    text-align: center;
+    
+    font-size: 50px;
+    padding: 20px;
+    
+    z-index: 100;
+    
+    opacity: 0;
+    
+    -webkit-transform: translateY(400px);
+    -moz-transform:    translateY(400px);
+    -ms-transform:     translateY(400px);
+    -o-transform:      translateY(400px);
+    transform:         translateY(400px);
+
+    -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
+    -moz-transition:    opacity 1s,    -moz-transform 0.5s 1s;
+    -ms-transition:     opacity 1s,     -ms-transform 0.5s 1s;
+    -o-transition:      opacity 1s,      -o-transform 0.5s 1s;
+    transition:         opacity 1s,         transform 0.5s 1s;
+}
+
+.step-bored + .hint {
+    opacity: 1;
+    
+    -webkit-transition: opacity 1s 5s, -webkit-transform 0.5s;
+    -moz-transition:    opacity 1s 5s,    -moz-transform 0.5s;
+    -ms-transition:     opacity 1s 5s,     -ms-transform 0.5s;
+    -o-transition:      opacity 1s 5s,      -o-transform 0.5s;
+    transition:         opacity 1s 5s,         transform 0.5s;
+    
+    -webkit-transform: translateY(0px);
+    -moz-transform:    translateY(0px);
+    -ms-transform:     translateY(0px);
+    -o-transform:      translateY(0px);
+    transform:         translateY(0px);
+}
+
+/* Main title step */
+#title {
+	position: relative;
+	top: -100px;
+    padding: 0;
+    font-size: 40px; 
+    font-weight: bold; 
+    color: #222;
+}
+	/* Welcome to Titanium title */
+	#title .welcome {
+		position: relative;
+		top: -1000px;
+		font-size: 30px;
+		-webkit-transition: top 0.5s ease-out;
+		-webkit-transition-delay: 0.75s;	
+	}
+	
+	#title .titanium {
+		position: relative; 
+		left: 45px;
+		color: #a00;
+		text-shadow: 0px 2px #222;	
+	}
+	
+	#title .titleImage {
+		position: relative;
+		top: 2px;
+		height: 500px;
+		-webkit-transition: height 1s ease-in;	
+	}
+	
+	#title .titleLeft {
+		position: relative;
+		left: -1000px;
+		-webkit-transition: all 1s ease-in;
+	}
+	
+	#title .titleRight {
+		position: relative;
+		left: 1000px;
+		-webkit-transition: all 1s ease-in;
+	}
+	
+	#title.active .welcome {
+		top: 50px;	
+	}
+	
+	#title.active .titleImage {
+		height: 100px;	
+	}
+	
+	#title.active .titleLeft {
+		left: 5px;
+		font-size: 160px;
+	}
+	
+	#title.active .titleRight {
+		left: -15px;
+		font-size: 160px;
+	}
+
+	/* The cross platform statement */
+	#title .statement {
+		text-align:center; 
+		color: #555; 
+		font-size: 32px; 
+		font-weight: normal;
+	}
+	
+		/* Statement line 1 */
+		#title .statement1 {
+		    position: relative;
+		    top: 1000px;
+		    padding-bottom: 10px;
+		}
+		
+		#title.active .statement1 {
+			top: 0px;
+			-webkit-transition: top 1s ease-in;
+			-webkit-transition-delay: 2s;	
+		}
+		
+		#title .xplatform {
+			position: relative;
+			left: -100px;	
+		}
+		
+		#title.active .xplatform {
+			left: 0px;
+			-webkit-transition: left 0.5s ease-in;
+			-webkit-transition-delay: 7s;	
+		}
+		
+		#title .theonly {
+			position: relative;
+			left: -1000px;
+			font-weight: bold;
+			color: #000;	
+		}
+		
+		#title.active .theonly {
+			left: 0px;
+			-webkit-transition: left 0.5s ease-in;
+			-webkit-transition-delay: 7s;	
+		}
+	
+		/* Statement line 2 */
+		#title .statement2 {
+			position: relative;
+			top: 1000px;
+		    left: -40px;
+		}
+		
+		#title.active .statement2 {
+			top: 0px;
+			left: 0px;
+			-webkit-transition-property: top, left;
+			-webkit-transition-duration: 1s, 0.5s;
+			-webkit-transition-timing-function: ease-in, ease-in;
+			-webkit-transition-delay: 4s, 7s;
+		}
+		
+		#title.active .native {
+			font-size: 48px;
+			font-weight: bold;
+			color: #7a86a3;
+			text-shadow: 0px 1px #222;
+			-webkit-transition: all 0.25s ease-out;
+			-webkit-transition-delay: 6s;
+		}
+		
+/* Presenter step */
+
+#badges {
+	clear: both;
+	padding-top: 20px;
+	text-align: center;	
+}
+
+#badges img {
+	height: 100px;	
+}
+
+/* Agenda step */
+
+#agenda {
+	color: #222;
+	font-size: 36px;	
+}
+
+@-webkit-keyframes swinginggate {
+        0% {
+                -webkit-transform: rotateY(-70deg);
+                -webkit-animation-timing-function: ease-out;
+        }
+        90% {
+                -webkit-transform: rotateY(40deg);
+                -webkit-animation-timing-function: ease-in-out;
+        }
+        100% {
+                -webkit-transform: rotateY(0deg);       
+        }
+}
+
+#agenda .items {
+	-webkit-transform-origin: 0 0;
+	-webkit-transform: rotateY(-70deg);
+	padding-bottom: 20px;
+}
+
+#agenda.active .items {
+	-webkit-animation: swinginggate 1s;
+	-webkit-animation-delay: 1s;
+	-webkit-animation-fill-mode: forwards;	
+}
+
+#agenda.active .item2 {
+     -webkit-animation-delay: 1.25s;
+}
+
+#agenda.active .item3 {
+     -webkit-animation-delay: 1.5s;
+}
+
+#agenda.active .item4 {
+     -webkit-animation-delay: 1.75s;
+}
+
+#agenda.active .item5 {
+     -webkit-animation-delay: 2s;
+}
+
+/* What is Titanium? */
+
+#whatistitanium:not(.active), #importantly:not(.active), #whytitanium:not(.active) {
+	opacity: 0;	
+}
+
+@-webkit-keyframes fontswell {
+        0% {
+                font-size: 100px;
+                text-shadow: 0px 2px #222;
+                -webkit-animation-timing-function: ease-out;
+        }
+        50% {
+        	text-shadow: 0px 4px #222;
+                font-size: 160px;
+                -webkit-animation-timing-function: ease-in-out;
+        }
+        100% {
+        	text-shadow: 0px 2px #222;
+                font-size: 100px;       
+        }
+}
+
+#whytitanium.active .why {
+	-webkit-animation: fontswell 0.5s;
+	-webkit-animation-delay: 1.5s;
+	-webkit-animation-fill-mode: forwards;
+}
+
+/* Dilemma */
+
+#dilemma .somany {
+	position: relative;
+	left: 0px;	
+	padding-bottom: 15px;
+}
+
+/*#dilemma.active .somany {
+	left: 0px;
+	-webkit-transition: left 1s ease-in-out;
+	-webkit-transition-delay: 1s;
+}*/
+
+#dilemma .sofew {
+	position: relative;
+	left: 290px;	
+}
+
+/*#dilemma.active .sofew {
+	left: 290px;
+	-webkit-transition: left 1s ease-in-out;
+	-webkit-transition-delay: 4s;
+}*/
+
+@-webkit-keyframes imageswell {
+        0% {
+                height: 0px;
+                -webkit-animation-timing-function: ease-out;
+        }
+        90% {
+        		height: 160px;
+                -webkit-animation-timing-function: ease-in-out;
+        }
+        100% {
+        		height: 150px;      
+        }
+}
+
+#dilemma img {
+	height: 150px;
+}
+
+/* resource details */
+
+#resourcedetails div {
+	position: fixed;
+}
+
+#resourcedetails .platformbox {
+	background-color:#fff; 
+	border-radius:8px; 
+	padding: 10px; 
+	border: solid 1px #ccc;	
+	top: -200px;
+}
+
+#resourcedetails .resources {
+	background-color: #222;
+	color: #eee;
+	border-radius: 8px;
+	border: solid 1px #ccc;
+	padding: 10px;
+	font-size: 24px;
+	width: 220px;	
+	top: -40px;
+}
+
+#resourcedetails .scalable {
+	background-color: #a00;
+	padding: 70px;
+	color: #eee;
+	border-radius: 8px;
+	top: 140px;	
+}
+
+#resourcedetails .line {
+	background-color: #000;
+	width: 3px;	
+}
+
+.arrow-down {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #000;
+}
+
+/* done to death */
+
+#donetodeath {
+	font-size: 48px;
+	font-weight: bold;
+	color: #555;	
+}
+
+#donetodeath img {
+	position: fixed;
+	height: 150px;	
+	opacity: 0;
+}
+
+#donetodeath.active img {
+	opacity: 1;
+	-webkit-transition: opacity 1s ease-in;
+	-webkit-transition-delay: 2s;	
+}
+
+/*#donetodeath:not(.active) img {
+	top: 6000px;
+	opacity: 1;
+	-webkit-transition: top 2s ease-in;
+}*/
+
+#donetodeath .image1 {
+	top: -150px;
+	left: 380px;
+}
+
+#donetodeath .image2 {
+	top: -130px;
+	left: 560px;
+}
+
+#donetodeath .image3 {
+	top: -130px;
+	left: -100px;
+}
+
+#donetodeath .image4 {
+	top: 150px;
+	left: 380px;
+}
+
+#donetodeath .image5 {
+	top: 150px;
+	left: 580px;
+}
+
+#donetodeath .image6 {
+	top: 130px;
+	left: -100px;
+}
+
+#donetodeath .image7 {
+	top: 0px;
+	left: -40px;
+}
+
+#donetodeath .image8 {
+	top: 0px;
+	left: 750px;
+}
+
+#donetodeath .image9 {
+	top: 0px;
+	left: 900px;
+}
+
+/* missing native */
+
+#missingnative .native {
+	color: #a00;
+	font-weight: bold;
+	font-size: 90px;
+	text-shadow: 0px 2px #222;
+	float: left;
+	vertical-align: middle;
+	line-height: 230px;
+	-webkit-transform: scale(0);
+}
+
+#missingnative .brace {
+	color: #a00;
+	font-weight: normal;
+	font-size: 230px;
+	text-shadow: 0px 2px #222;
+	float: right;
+	padding-right:30px;
+	-webkit-transform: scale(0);
+}
+
+#missingnative.active .native, #missingnative.active .brace {
+	-webkit-transform: scale(1);
+	-webkit-transition: -webkit-transform 0.5s ease-in 4.5s;	
+}
+
+#missingnative .listing {
+	color: #555;
+	font-weight: normal;
+	font-size: 48px;
+	text-shadow: 0px 1px #222;
+	float: right;	
+}
+
+#missingnative .listing div {
+	position: relative;
+	left: -2000px;	
+}
+
+#missingnative.active .item1 {
+	left: 0px;
+	-webkit-transition: left 1s ease-in 1s;
+}
+
+#missingnative.active .item2 {
+	left: 0px;
+	color: #7a86a3;
+	-webkit-transition: left 1s ease-in 1.5s;
+}
+
+#missingnative.active .item3 {
+	left: 0px;
+	-webkit-transition: left 1s ease-in 2s;
+}
+
+#missingnative.active .item4 {
+	left: 0px;
+	color: #7a86a3;
+	-webkit-transition: left 1s ease-in 2.5s;
+}
+
+#missingnative.active .item5 {
+	left: 0px;
+	-webkit-transition: left 1s ease-in 3s;
+}
+
+#introducetitanium:not(.active) {
+	opacity: 0;	
+}
+
+li {
+	padding: 20px;	
+}
+
+#commonapproach li {
+	padding: 0px;	
+}
+
+/* overview step */
+
+#overview {
+    z-index: -1;
+    padding: 0;
+}
+
+/* on overview step everything is visible */
+
+#impress.step-overview .step {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/*
+ * SLIDE STEP STYLES
+ *
+ * inspired by: http://html5slides.googlecode.com/svn/trunk/styles.css
+ *
+ * ;)
+ */
+
+.slide {
+    display: block;
+
+    width: 900px;
+    height: 700px;
+
+    padding: 40px 60px;
+
+    border-radius: 10px;
+
+    background-color: white;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+    border: 1px solid rgba(0, 0, 0, .3);
+
+    font-family: 'Open Sans', Arial, sans-serif;
+
+    color: rgb(102, 102, 102);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+
+    font-size: 30px;
+    line-height: 36px;
+
+    letter-spacing: -1px;
+}
+
+.slide q {
+    display: block;
+    font-size: 50px;
+    line-height: 72px;
+
+    margin-top: 100px;
+}
+
+.slide q strong {
+    white-space: nowrap;
+}
+
+
+/* IMPRESS NOT SUPPORTED STYLES */
+
+.fallback-message {
+    font-family: sans-serif;
+    line-height: 1.3;
+    
+    display: none;
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+
+    border-radius: 10px;
+    border: 1px solid #E4C652;
+    background: #EEDC94;
+}
+
+.fallback-message p {
+    margin-bottom: 10px;
+}
+
+.impress-not-supported .step {
+    position: relative;
+    opacity: 1;
+    margin: 20px auto;
+}
+
+.impress-not-supported .fallback-message {
+    display: block;
+}
+

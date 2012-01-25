@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Welcome to Titanium!</title>
+    
+    <meta name="description" content="Welcome to Titanium presentation, using impress.js">
+    <meta name="author" content="Tony Lukasavage" />
+    <link href="css/appc.css" rel="stylesheet" />
+</head>
+<body>
+
+<div id="impress" class="impress-not-supported">
+
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+    
+    <div id="title" class="step" data-x="0" data-y="0">
+        <div class="welcome">WELCOME</div>
+        <div class="welcome">TO</div>
+        <div class="titanium">
+	    	<span class="titleLeft">Tit</span>
+	    	<img  class="titleImage" src="images/appc.png" />
+	    	<span class="titleRight">nium</span>
+    	</div>
+    	<br>
+    	<div class="statement">
+    		<div class="statement1">
+    			<span class="theonly">The only</span>
+    			<span class="xplatform"> cross-platform mobile development framework</span>
+    		</div>
+    		<div class="statement2">
+	    		with <span class="native">NATIVE</span> UI and performance
+    		</div>
+    	</div>
+    </div>
+    
+    <div class="step" data-x="1000" data-y="1000" data-rotate="360">
+    	<!-- Use your own headshot or other picture here -->
+    	<img src="images/headshot.png" style="width:300px; float:left;"/>
+    	<div style="width:450px; float:right;">
+	    	<div style="color:#7a86a3; text-shadow:0px 2px #222; font-weight:bold; font-size:80px;">Tony Lukasavage</div>
+	    	<div style="padding: 40px 0px 20px 0px; font-size:32px;">
+	    		<!-- If you are a titan, change employee.png to titan.png -->
+	    		<img src="images/badges/employee.png" style="height: 100px; float:right;"/>
+	    		Platform Evangelist, Appcelerator
+	    	</div>
+    	</div>
+    	
+    	<!-- Add/remove certification badges are appropriate -->
+    	<div id="badges">
+    		<img src="images/badges/tcad_color.png"/>
+    		<img src="images/badges/tcmd_color.png"/>
+    		<img src="images/badges/tce_color.png"/>
+    	</div>
+    	
+    	<!-- Enter your own website and twitter, or other contact info -->
+    	<div style="font-size:24px; color:#555; text-align:center; padding-top:30px;">
+    		<a href="http://savagelook.com">savagelook.com</a> | 
+    		<a href="https://twitter.com/#!/tonylukasavage">@tonylukasavage</a> |
+    		<a href="mailto:tlukasavage@appcelerator.com">email</a>
+    	</div>
+    </div>
+    
+    <div id="agenda" class="step" data-x="2000" data-y="1000" data-rotate="90" style="text-align:center;">
+    	<div style="font-size:80px; font-weight:bold; color:#a00; text-shadow: 0px 2px #222; padding-bottom:15px;">AGENDA</div>
+    	<div style="float:left; width:500px; text-align:left; color:#222; font-size:36px;">
+    		<div class="item1 items">* What is Titanium?</div>
+    		<div class="item2 items">* How does Titanium work?</div>
+    		<div class="item3 items">* What can Titanium do?</div>
+    		<div class="item4 items">* What's it like developing with Titanium?</div>
+    		<div class="item5 items">* How can I learn more?</div>
+    	</div>
+	    <img src="images/titanium.png" style="height:300px; float:right;"/>
+    </div>
+    
+    <div id="whatistitanium" class="step" data-x="2000" data-y="2000"
+         style="text-align:center; color:#a00; font-size:160px; font-weight: bold; text-shadow: 0px 2px #222;">
+    	<div style="color:#555; font-size:100px;">What is</div> 
+    	<div>Titanium?</div>
+    	<img src="images/titanium.png" style="height:250px;"/>
+    </div>
+
+	<div id="importantly" class="step" data-x="2300" data-y="2000" data-scale="0.3" style="text-align:center;">
+		<div style="color:#555; font-size:100px; text-shadow: 0px 2px #222; font-weight: bold;">But more importantly...</div> 
+	</div>
+	
+	<div id="whytitanium" class="step" data-x="2000" data-y="2000"
+         style="text-align:center; color:#a00; font-size:160px; font-weight: bold; text-shadow: 0px 2px #222;">
+         <div class="why" style="color:#555; font-size:100px;">Why</div>
+    	<div>Titanium?</div>
+    	<img src="images/titanium.png" style="height:250px;"/>
+    </div>
+    
+    <div id="dilemma" class="step graytext" data-x="2000" data-y="2800">
+    	
+    	<h3>The Dilemma:</h3>
+    	<div class="somany">So many native platforms...</div>
+    	<div>
+    		<img src="images/devices/androidtablet.png"/>
+    		<img src="images/devices/iphone.png"/>
+    		<img src="images/devices/nook.png" />
+    		<img src="images/devices/android.png"/>
+    		<img src="images/devices/ipad.png"/>
+    	</div>
+    	<div class="sofew">So few <span style="color:#7a86a3; font-weight:normal;">RESOURCES</span></div>
+    </div>
+    
+    <div id="resourcedetails" class="step graytext" data-x="2147" data-y="2960" data-scale="0.03" 
+         style="text-align: center; font-size: 40px; font-weight: normal; color:#666; text-shadow: 0px 1px #222;">
+    	<div class="line" style="height:90px; left:160px; top:-150px;"></div>
+    	<div class="arrow-down" style="left:152px; top:-60px;"></div>
+    	<div class="line" style="height:90px; left:420px; top:-150px;"></div>
+    	<div class="arrow-down" style="left:412px; top:-60px;"></div>
+    	<div class="line" style="height:90px; left:680px; top:-150px;"></div>
+    	<div class="arrow-down" style="left:672px; top:-60px;"></div>
+
+		<div class="line" style="height:90px; left:160px; top:30px;"></div>
+    	<div class="arrow-down" style="left:152px; top:120px;"></div>
+    	<div class="line" style="height:90px; left:420px; top:30px;"></div>
+    	<div class="arrow-down" style="left:412px; top:120px;"></div>
+    	<div class="line" style="height:90px; left:680px; top:30px;"></div>
+    	<div class="arrow-down" style="left:672px; top:120px;"></div>
+    	
+    	<div class="platformbox" style="left:40px;">
+    		Platform #1
+    	</div>
+    	<div class="platformbox" style="left:300px;">
+    		Platform #2
+    	</div>
+    	<div class="platformbox" style="left:560px;">
+    		Platform #3
+    	</div>
+    	
+    	
+    	
+    	<div class="resources" style="left:40px;">
+    		TIME + MONEY + PEOPLE
+    	</div>
+    	<div class="resources" style="left:300px;">
+    		TIME + MONEY + PEOPLE
+    	</div>
+    	<div class="resources" style="left:560px;">
+    		TIME + MONEY + PEOPLE
+    	</div>
+    	
+    	<div class="scalable">
+    		Scalability + Maintenance + Parity
+    	</div>
+    </div>
+    
+    <div class="step graytext" data-x="0" data-y="2000" data-rotate="90" style="font-weight: bold;">
+    	<span style="color:#7a86a3;">Cross-platform</span> development is the answer, but we don't want to...
+    </div>
+    
+    <div class="step" data-x="1000" data-y="2000" style="text-align:center; font-size: 80px; color:#222">
+    	<div>"Write once,</div>
+    	<div><span style="color:#a00; font-weight:bold; text-shadow:0px 2px #222;">SUCK</span> everywhere"<sup>*</sup></div>
+    	<div style="font-size: 16px; text-align:right; padding: 150px 30px 0px 0px;">
+    		<sup>*</sup>Loren Brichter, author of "Tweetie" Twitter client for iOS
+    	</div>
+    </div>
+    
+    <div id="commonapproach" class="step" data-x="1500" data-y="3400">
+    	<div style="color:#a00; font-weight: bold; text-shadow:0px 2px #222; padding-bottom: 20px;">Common approach:<sup style="color:#222; font-weight: normal;">*</sup></div>
+    	<div class="graytext" style="font-size:32px;">Use a single rendering context, like</div> 
+    	<ul style="margin-left: 100px; font-size:36px; padding: 20px 0px 20px 0px; list-style-type:circle; color:#7a86a3;">
+    		<li>Web View</li>
+    		<li>OpenGL</li>
+    		<li>Custom Runtime</li>
+    	</ul>
+    	<div class="graytext" style="font-size:32px; padding-bottom:100px;">and then add some native API hooks.</div>
+    </div>
+    
+    <div id="donetodeath" class="step" data-x="1650" data-y="3550" data-scale="0.3" style="text-align:center;">
+    	<sup>*</sup>see also, "done to <span style="color:#a00;">death</span>"
+    	<img src="images/xplat/air.png" class="image1"/>
+    	<img src="images/xplat/appmobi.png" class="image2"/>
+    	<img src="images/xplat/corona.png" class="image3"/>
+    	<img src="images/xplat/flash.png" class="image4"/>
+    	<img src="images/xplat/phonegap.png" class="image9"/>
+    	<img src="images/xplat/rhomobile.png" class="image7"/>
+    	<img src="images/xplat/mosync.png" class="image8"/>
+    	<img src="images/xplat/triggerio.png" class="image6"/>
+    	<img src="images/xplat/unity.png" class="image5"/>
+    </div>
+    
+    <div class="step" data-x="1650" data-y="4350" data-scale="0.3" style="text-align:center;">
+    	What are they all <span style="color:#a00;">missing</span>?
+    </div>
+    
+    <div id="missingnative" class="step" data-x="2400" data-y="4550" data-rotate="-90">
+    	<div class="native">NATIVE</div>
+    	<div class="listing">
+    		<div class="item1">Performance</div>
+    		<div class="item2">UI Components</div>
+    		<div class="item3">Look &amp; Feel</div>
+    		<div class="item4">Behavior</div>
+    		<div class="item5">Services</div>
+    	</div>
+    	<div class="brace">{</div>
+    </div>
+    
+    <div id="introducetitanium" class="step" data-x="2400" data-y="4550" data-rotate="-90" style="text-align:center;">
+    	<img src="images/titanium.png" style="height: 300px;"/>
+    	<div style="color:#555;">
+    		Titanium Mobile is a platform for building <span style="color:#a00; text-shadow:0px 1px #222;">best in class</span> 
+    		cross-platform mobile applications in JavaScript
+    	</div>
+    </div>
+    
+    <div class="step" data-x="2300" data-y="4550" data-scale="0.05" data-rotate="-90"
+         style="color:#555; font-size: 38px;">
+    	<div style="color:#a00; text-shadow:0px 2px #222; font-size:70px; font-weight: bold;">Titanium Mobile</div>
+    	<ul id="titaniumis" style="list-style: circle; margin-left:40px;">
+	    	<li>Only cross-platform mobile toolkit with <span style="color:#7a86a3; font-weight:bold; text-shadow:0px 1px #222;">native</span> UI and performance</li>
+	    	<li><span style="color:#7a86a3; font-weight:bold; text-shadow:0px 1px #222;">Free</span> and <span style="color:#7a86a3; font-weight:bold; text-shadow:0px 1px #222;">open source</span> under the Apache 2.0 license</li>
+	    	<li>Supports iOS, Android, Blackberry, and Mobile Web</li>
+    	</ul>
+    </div>
+    
+    <div class="step" data-x="5000" data-y="5000" style=" font-size:70px; font-weight: normal;">
+    	<div style="padding-bottom: 20px;">How <span style="color:#a00; text-shadow:0px 2px #222; font-weight: bold;">Titanium</span> Works</div>
+    	<img src="images/overview.png" style="float:right; height:300px;"/>
+    	<ul style="list-style: circle; margin-left:40px; font-size:32px; color:#555;">
+    		<li>You write <span style="color:#7a86a3; font-weight:bold; text-shadow:0px 1px #222;">Javascript</span></li>
+    		<li>Titanium maps your JS to native bindings</li>
+    		<li>Your JS + JS engine + native bindings = <span style="color:#7a86a3; font-weight:bold; text-shadow:0px 1px #222;">native mobile app</span></li>
+    	</ul>
+    </div>
+    
+    <div class="step graytext" data-x="6300" data-y="5000" data-rotate-y="45"
+         style="text-align:center; font-size: 80px; color:#7a86a3; font-weight:normal; text-shadow:0px 2px #222;">
+    	That's great, but what can I do with it?
+    </div>
+    
+    <div class="step" data-x="-1500" data-y="2000" data-scale="2">
+		<div>
+	    	<img src="images/apps/nbc.png" style="height:300px;"/>
+	    	<img src="images/apps/BravoNow.png" style="height:300px;"/>
+	    	<img src="images/apps/triplingo.jpg" style="height:300px;"/>
+	   </div>
+	   <div class="graytext" style="">
+	    	<img src="images/apps/goexplore.jpg" style="height:300px; float:left;"/>
+    		<ul id="titaniumis" style="list-style: circle; width:350px; float:left; margin-left: 60px;">
+    			<li>Top brands</li>
+    			<li>Independent success</li>
+    			<li>#1 apps</li>
+    		</ul>
+    	</div>
+    </div>
+    
+    <div class="step" data-x="-1300" data-y="2800" data-rotate-y="-45"
+         style="text-align:center; font-size: 100px; color:#7a86a3; font-weight:normal; text-shadow:0px 2px #222;">
+    	What's it like to code with?
+    </div>
+    
+    <div id="workflow" class="step" data-x="-1000" data-y="3500" data-rotate-x="45">
+    	<div style="padding-bottom:20px; text-align:center; font-weight:bold; color:#a00; text-shadow:0px 2px #222;">
+    		Development Workflow
+    	</div>
+    	<ul style="width:420px; float:left; font-size:32px;" class="graytext">
+	    	<li>UI and app logic coded in <span style="color:#7a86a3">Javascript</span></li>
+	    	<li>Write code, manage projects, and package with <span style="color:#7a86a3">Titanium Studio</span></li>
+	    	<li>Target multiple platforms from a single codebase</li>
+    	</ul>
+    	<img src="images/code.png" style="float:right; height: 450px;"/>
+    </div>
+    
+    <div class="step" data-x="0" data-y="3800" data-rotate-y="45" 
+         style="text-align:center; font-size: 120px; color:#7a86a3; font-weight:bold; text-shadow:0px 2px #222;">
+    	Live Code Demo
+    </div>
+    
+   <div class="step" data-x="0" data-y="4300" data-rotate-x="45"
+         style="text-align:center; font-size: 120px; color:#7a86a3; font-weight:bold; text-shadow:0px 2px #222;">
+    	Want to learn more?
+    </div>
+    
+    <div class="step" data-x="-35" data-y="4400" data-rotate-x="45" data-scale="0.05">
+    	<ul style="width:400px; float:left; font-size:32px;" class="graytext">
+	    	<li><a href="https://github.com/appcelerator" target="_blank">Github Code Samples</a></li>
+	    	<li><a href="http://vimeopro.com/appcelerator/forging-titanium" target="_blank">Forging Titanium</a></li>
+	    	<li><a href="http://training.appcelerator.com/" target="_blank">Video Training Series</a></li>
+	    	<li><a href="https://wiki.appcelerator.org/display/guides/Home" target="_blank">Wiki Documentation</a></li>
+	    	<li><a href="http://developer.appcelerator.com/apidoc/mobile/latest" target="_blank">API Documentation</a></li>
+	    	<li><a href="http://developer.appcelerator.com/blog/" target="_blank">Developer Blog</a></li>
+    	</ul>
+    	<img src="images/appu.png" style="float:right; height: 220px; padding-top:100px;"/>
+    </div>
+    
+    <div class="step" data-x="1000" data-y="4500" data-rotate-y="45">
+    	<div style="padding-bottom:20px; text-align:center; font-weight:bold; color:#a00; text-shadow:0px 2px #222;">
+    		Appcelerator News
+    	</div>
+    	<ul style="width:400px; float:left; font-size:32px;" class="graytext">
+    		<li><a href="https://twitter.com/#!/appcelerator" target="_blank">Follow @appcelerator</a></li>
+    		<li><a href="http://www.facebook.com/appcelerator" target="_blank">Like us on Facebook</a></li>
+	    	<li><a href="http://developer.appcelerator.com/blog/" target="_blank">Developer Blog</a></li>
+	    	<li><a href="">Developer Mailing List</a></li>
+    	</ul>
+    	<img src="images/appc.png" style="float:right; height: 220px; padding-top:50px;"/>
+    </div>
+    
+    <div class="step" data-x="0" data-y="-600" data-scale="0.5" 
+         style="text-align:center; color:#7a86a3; font-size:300px; font-weight:bold; text-shadow:0px 2px #222;">
+    	Q&amp;A
+    </div>
+    
+    <div class="step" data-x="1000" data-y="-600" data-scale="0.5" style="text-align:center;">
+    	<h2>Contact</h2>
+    	<ul>
+    		<li><a href="https://twitter.com/#!/tonylukasavage">@tonylukasavage</a></li>
+    		<li><a href="mailto:tlukasavage@appcelerator.com">tlukasavage@appcelerator.com</a></li>
+    		<li><a href="mailto:community@appcelerator.com">community@appcelerator.com</a></li>
+    	</ul>
+    </div>
+    
+    <div class="step" data-x="2000" data-y="2000" data-scale="10">
+    	
+    </div>
+</div>
+
+<script src="js/impress.js"></script>
+
+</body>
+</html>
