@@ -37,14 +37,14 @@
     	</div>
     </div>
     
-    <div class="step" data-x="1000" data-y="1000" data-rotate="360">
+    <div id="presenter" class="step" data-x="1000" data-y="1000" data-rotate="360">
     	<!-- Use your own headshot or other picture here -->
-    	<img src="images/headshot.png" style="width:300px; float:left;"/>
-    	<div style="width:450px; float:right;">
-	    	<div style="color:#7a86a3; text-shadow:0px 2px #222; font-weight:bold; font-size:80px;">Tony Lukasavage</div>
+    	<img class="presenterpic" src="images/headshot.png"/>
+    	<div class="bio">
+	    	<div class="bigblue">Tony Lukasavage</div>
 	    	<div style="padding: 40px 0px 20px 0px; font-size:32px;">
 	    		<!-- If you are a titan, change employee.png to titan.png -->
-	    		<img src="images/badges/employee.png" style="height: 100px; float:right;"/>
+	    		<img src="images/badges/employee.png" class="employee"/>
 	    		Platform Evangelist, Appcelerator
 	    	</div>
     	</div>
@@ -57,7 +57,7 @@
     	</div>
     	
     	<!-- Enter your own website and twitter, or other contact info -->
-    	<div style="font-size:24px; color:#555; text-align:center; padding-top:30px;">
+    	<div class="contact">
     		<a href="http://savagelook.com">savagelook.com</a> | 
     		<a href="https://twitter.com/#!/tonylukasavage">@tonylukasavage</a> |
     		<a href="mailto:tlukasavage@appcelerator.com">email</a>
@@ -65,32 +65,30 @@
     </div>
     
     <div id="agenda" class="step" data-x="2000" data-y="1000" data-rotate="90" style="text-align:center;">
-    	<div style="font-size:80px; font-weight:bold; color:#a00; text-shadow: 0px 2px #222; padding-bottom:15px;">AGENDA</div>
-    	<div style="float:left; width:500px; text-align:left; color:#222; font-size:36px;">
+    	<div class="mediumred" style="padding-bottom:15px;">AGENDA</div>
+    	<div class="items">
     		<div class="item1 items">* What is Titanium?</div>
     		<div class="item2 items">* How does Titanium work?</div>
     		<div class="item3 items">* What can Titanium do?</div>
     		<div class="item4 items">* What's it like developing with Titanium?</div>
     		<div class="item5 items">* How can I learn more?</div>
     	</div>
-	    <img src="images/titanium.png" style="height:300px; float:right;"/>
+	    <img src="images/titanium.png" class="image"/>
     </div>
     
-    <div id="whatistitanium" class="step" data-x="2000" data-y="2000"
-         style="text-align:center; color:#a00; font-size:160px; font-weight: bold; text-shadow: 0px 2px #222;">
-    	<div style="color:#555; font-size:100px;">What is</div> 
-    	<div>Titanium?</div>
+    <div id="whatistitanium" class="step" data-x="2800" data-y="2000" style="text-align:center;">
+    	<div class="biggray">What is</div> 
+    	<div class="hugered">Titanium?</div>
     	<img src="images/titanium.png" style="height:250px;"/>
     </div>
 
-	<div id="importantly" class="step" data-x="2300" data-y="2000" data-scale="0.3" style="text-align:center;">
-		<div style="color:#555; font-size:100px; text-shadow: 0px 2px #222; font-weight: bold;">But more importantly...</div> 
+	<div id="importantly" class="step" data-x="3100" data-y="2020" data-scale="0.3" style="text-align:center;">
+		<div class="biggray">But more importantly...</div> 
 	</div>
 	
-	<div id="whytitanium" class="step" data-x="2000" data-y="2000"
-         style="text-align:center; color:#a00; font-size:160px; font-weight: bold; text-shadow: 0px 2px #222;">
-         <div class="why" style="color:#555; font-size:100px;">Why</div>
-    	<div>Titanium?</div>
+	<div id="whytitanium" class="step" data-x="2800" data-y="2000" style="text-align:center;">
+         <div class="why" class="biggray">Why</div>
+    	<div class="hugered">Titanium?</div>
     	<img src="images/titanium.png" style="height:250px;"/>
     </div>
     
