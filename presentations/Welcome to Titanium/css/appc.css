@@ -130,6 +130,11 @@ h3 {
 	text-shadow: 0px 1px #222;	
 }
 
+@font-face {
+  font-family: Museo Sans;
+  src: url("../fonts/MuseoSans_700.otf") format("opentype");
+}
+
 /* COMMON STEP STYLES */
 
 .step {
@@ -141,9 +146,7 @@ h3 {
     -ms-box-sizing:     border-box;
     -o-box-sizing:      border-box;
     box-sizing:         border-box;
-
     font-family: 'Museo Sans', 'PT Serif', georgia, serif;
-
     font-size: 48px;
     line-height: 1;
 }
