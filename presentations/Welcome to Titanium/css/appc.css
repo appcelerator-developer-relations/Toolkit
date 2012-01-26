@@ -414,35 +414,39 @@ h2 {
 	
 	/* Agenda item listing */
 	#agenda .items {
-		-webkit-transform-origin: 0 0;
-		-webkit-transform: rotateY(-70deg);
-		padding-bottom: 20px;
 		float:left; 
 		width:500px; 
 		text-align:left; 
-		font-size:36px;
+		font-size:32px;
 	}
 	
-		/* Individual classes to independently animate items */
-		#agenda.active .items {
+		/* Individual classes to independently animate and localize items */
+		#l_agenda1,
+		#l_agenda2,
+		#l_agenda3,
+		#l_agenda4,
+		#l_agenda5 {
+			padding: 10px;
+			-webkit-transform-origin: 0 0;
+			-webkit-transform: rotateY(-70deg);
 			-webkit-animation: swinginggate 1s;
 			-webkit-animation-delay: 1s;
 			-webkit-animation-fill-mode: forwards;	
 		}
 		
-		#agenda.active .item2 {
+		#l_agenda2 {
 		     -webkit-animation-delay: 1.25s;
 		}
 		
-		#agenda.active .item3 {
+		#l_agenda3 {
 		     -webkit-animation-delay: 1.5s;
 		}
 		
-		#agenda.active .item4 {
+		#l_agenda4 {
 		     -webkit-animation-delay: 1.75s;
 		}
 		
-		#agenda.active .item5 {
+		#l_agenda5 {
 		     -webkit-animation-delay: 2s;
 		}
 

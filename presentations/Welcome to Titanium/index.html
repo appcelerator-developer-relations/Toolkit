@@ -7,6 +7,8 @@
     <meta name="description" content="Welcome to Titanium presentation, using impress.js">
     <meta name="author" content="Tony Lukasavage" />
     <link href="css/appc.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/l10n.js"></script>
+    <script type="text/javascript" src="js/localizations.js"></script>
 </head>
 <body>
 
@@ -65,36 +67,36 @@
     </div>
     
     <div id="agenda" class="step center" data-x="2000" data-y="1000" data-rotate="90">
-    	<h1>AGENDA</h1>
+    	<h1 id="l_agenda_title">AGENDA</h1>
     	<div class="items">
-    		<div class="item1 items">* What is Titanium?</div>
-    		<div class="item2 items">* How does Titanium work?</div>
-    		<div class="item3 items">* What can Titanium do?</div>
-    		<div class="item4 items">* What's it like developing with Titanium?</div>
-    		<div class="item5 items">* How can I learn more?</div>
+    		<div id="l_agenda1">* What is Titanium?</div>
+    		<div id="l_agenda2">* How does Titanium work?</div>
+    		<div id="l_agenda3">* What can Titanium do?</div>
+    		<div id="l_agenda4">* What's it like developing with Titanium?</div>
+    		<div id="l_agenda5">* How can I learn more?</div>
     	</div>
 	    <img src="images/titanium.png" class="image"/>
     </div>
     
     <div id="whatistitanium" class="step center" data-x="2800" data-y="2000">
-    	<div class="biggray">What is</div> 
+    	<div id="l_whatis" class="biggray">What is</div> 
     	<div class="hugered">Titanium?</div>
     	<img src="images/titanium.png" style="height:250px;"/>
     </div>
 
 	<div id="importantly" class="step center" data-x="3100" data-y="2020" data-scale="0.3">
-		<div class="biggray">But more importantly...</div> 
+		<div id="l_important" class="biggray">But more importantly...</div> 
 	</div>
 	
 	<div id="whytitanium" class="step center" data-x="2800" data-y="2000">
-         <div class="why" class="biggray">Why</div>
+         <div id="l_why" class="why" class="biggray">Why</div>
     	<div class="hugered">Titanium?</div>
     	<img src="images/titanium.png" style="height:250px;"/>
     </div>
     
     <div id="dilemma" class="step step-left graytext" data-x="2000" data-y="2800">	
-    	<h1>The Dilemma:</h1>
-    	<div class="somany">So many native platforms...</div>
+    	<h1 id="l_dilemma">The Dilemma:</h1>
+    	<div id="l_somany" class="somany">So many native platforms...</div>
     	<div>
     		<img src="images/devices/androidtablet.png"/>
     		<img src="images/devices/iphone.png"/>
@@ -102,7 +104,7 @@
     		<img src="images/devices/android.png"/>
     		<img src="images/devices/ipad.png"/>
     	</div>
-    	<div class="sofew">So few <span class="bluetext">RESOURCES</span></div>
+    	<div id="l_sofew" class="sofew">So few <span class="bluetext">RESOURCES</span></div>
     </div>
     
     <!-- TODO: Let's try making this a <canvas> -->
@@ -122,13 +124,13 @@
     	<div class="arrow-down" style="left:672px; top:120px;"></div>
     	
     	<div class="platform box" style="left:40px;">
-    		Platform #1
+    		<span id="l_platform">Platform</span> #1
     	</div>
     	<div class="platform box" style="left:300px;">
-    		Platform #2
+    		<span id="l_platform">Platform</span> #2
     	</div>
     	<div class="platform box" style="left:560px;">
-    		Platform #3
+    		<span id="l_platform">Platform</span> #3
     	</div>
     	
     	<div class="resources box" style="left:40px;">
@@ -309,6 +311,37 @@
     	
     </div>
 </div>
+
+<script type="text/javascript">
+
+//String.locale = 'es' || document.documentElement.lang || 'en';
+var localize = function (string) {
+	var localized = string.toLocaleString();
+	var locale = String.locale;
+	var defaultLocale = 'en';
+	
+	if (localized !== string) {
+		return localized;
+	} else {
+		String.locale = defaultLocale;
+		localized = string.toLocaleString();
+		String.locale = locale;
+		if (localized !== string) {
+			return localized;	
+		} else {
+			return '';	
+		}
+	}
+};
+
+// Iterate through all `l_` prefixed element ids and localize
+var all = document.getElementsByTagName("*");
+for (var i=0, max=all.length; i < max; i++) {
+	if (all[i].id.indexOf('l_') === 0) {
+		document.getElementById(all[i].id).innerHTML = localize("%" + all[i].id);	
+	} 
+}
+</script>
 
 <script src="js/impress.js"></script>
 
