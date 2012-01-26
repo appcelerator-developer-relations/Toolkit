@@ -42,7 +42,7 @@ body {
     line-height: 1;
 }
 ol, ul {
-    list-style: none;
+    list-style: circle;
 }
 
 li {
@@ -50,7 +50,9 @@ li {
 }
 
 blockquote, q {
-    quotes: '\201C' '\201D';
+	quotes: '\201C' '\201D*';
+    color: #222;
+    font-size: 80px;
  }
  blockquote:before { content: open-quote; font-weight: bold; }
  blockquote:after { content: close-quote; font-weight: bold; }
@@ -97,44 +99,30 @@ a:hover {
 
 h1 {
 	color: #a00;
-	font-size: 160px;
+	font-size: 80px;
 	font-weight: bold;
 	text-shadow: 0px 2px #222;	
+	padding-bottom: 20px;	
 }
 
 h2 {
 	color: #a00;
-	font-size: 120px;
-	font-weight: bold;
-	text-shadow: 0px 2px #222;	
-}
-
-h3 {
-	color: #a00;
-	font-size: 80px;
-	font-weight: bold;
-	text-shadow: 0px 2px #222;	
-	padding-bottom: 20px;
-}
-
-.graytext32 {
-	color: #555;
-	font-size: 32px;
-	font-weight: normal;
-	text-shadow: 0px 1px #222;	
-}
-
-.graytext48 {
-	color: #555;
 	font-size: 48px;
-	font-weight: normal;
+	font-weight: bold;
 	text-shadow: 0px 1px #222;	
+	padding-bottom: 20px;	
 }
 
 /* Custom styling */
 
 .bluetext {
-	color: #7a86a3	
+	color: #7a86a3;	
+}
+
+.boldblue {
+	color: #7a86a3;
+	font-weight: bold;
+	text-shadow: 0px 1px #222;
 }
 
 .bigblue {
@@ -144,11 +132,28 @@ h3 {
 	font-size:80px;	
 }
 
+.blue120 {
+	color:#7a86a3; 
+	text-shadow:0px 2px #222; 
+	font-weight:bold; 
+	font-size:120px;		
+}
+
 .biggray {
 	color:#555; 
 	font-size:100px; 
 	text-shadow: 0px 2px #222; 
 	font-weight: bold;	
+}
+
+.boldred {
+	color: #a00;
+	font-weight: bold;
+	text-shadow: 0px 1px #222;	
+}
+
+.redtext {
+	color: #a00;
 }
 
 .mediumred {
@@ -190,6 +195,10 @@ h3 {
     line-height: 1;
 }
 
+.center {
+	text-align: center;	
+}
+
 /* fade out inactive slides */
 
 .step {
@@ -208,26 +217,39 @@ h3 {
 
 /* Main title step */
 #title {
-	position: relative;
-	top: -100px;
-    padding: 0;
+	padding: 0px;
 }
+
 	/* Welcome to Titanium title */
 	#title .welcome {
-		position: relative;
+		position: fixed;
 		top: -1000px;
-		font-size: 30px;
+		left: 40px;
+		font-size: 35px;
 		color: #000;
 		-webkit-transition: top 0.5s ease-out;
 		-webkit-transition-delay: 0.75s;	
 	}
 	#title.active .welcome {
-		top: 50px;	
+		top: -20px;	
+	}
+	
+	#title .to {
+		position: fixed;
+		top: -1000px;
+		left: 40px;
+		font-size: 35px;
+		color: #000;
+		-webkit-transition: top 0.5s ease-out;
+		-webkit-transition-delay: 0.75s;	
+	}
+	#title.active .to {
+		top: 18px;	
 	}
 	
 	#title .titanium {
 		position: relative; 
-		left: 45px;
+		/*left: 45px;*/
 		color: #a00;
 		text-shadow: 0px 2px #222;	
 	}
@@ -544,152 +566,262 @@ h3 {
 		height: 90px;
 	}
 
+/* Write once, suck everywhere */
+
+#suck {
+	color: #222;
+	font-size: 120px;
+}
+
+	#suck .footnote {
+		font-size: 16px; 
+		text-align:right; 
+		text-shadow: 0px 0px #000;
+		padding: 150px 30px 0px 0px;
+	}
+	
+/* Common approach */
+
+#commonapproach {
+	font-size: 28px;
+}
+
+	#commonapproach li {
+		padding: 0px;	
+	}
+
+	#commonapproach .contexts {
+		margin-left: 100px; 
+		font-size:36px; 
+		padding: 20px 0px 20px 0px;	
+	}
+
 /* done to death */
 
-#donetodeath {
-	font-size: 48px;
-	font-weight: bold;
-	color: #555;	
-}
+#donetodeath {}
 
-#donetodeath img {
-	position: fixed;
-	height: 150px;	
-	opacity: 0;
-}
+	/* animate in the opacity of images */
+	#donetodeath img {
+		position: fixed;
+		height: 150px;	
+		opacity: 0;
+	}
+	
+	#donetodeath.active img {
+		opacity: 1;
+		-webkit-transition: opacity 1s ease-in;
+		-webkit-transition-delay: 2s;	
+	}
 
-#donetodeath.active img {
-	opacity: 1;
-	-webkit-transition: opacity 1s ease-in;
-	-webkit-transition-delay: 2s;	
-}
-
-/*#donetodeath:not(.active) img {
-	top: 6000px;
-	opacity: 1;
-	-webkit-transition: top 2s ease-in;
-}*/
-
-#donetodeath .image1 {
-	top: -150px;
-	left: 380px;
-}
-
-#donetodeath .image2 {
-	top: -130px;
-	left: 560px;
-}
-
-#donetodeath .image3 {
-	top: -130px;
-	left: -100px;
-}
-
-#donetodeath .image4 {
-	top: 150px;
-	left: 380px;
-}
-
-#donetodeath .image5 {
-	top: 150px;
-	left: 580px;
-}
-
-#donetodeath .image6 {
-	top: 130px;
-	left: -100px;
-}
-
-#donetodeath .image7 {
-	top: 0px;
-	left: -40px;
-}
-
-#donetodeath .image8 {
-	top: 0px;
-	left: 750px;
-}
-
-#donetodeath .image9 {
-	top: 0px;
-	left: 900px;
-}
+	/* positions of each image */
+	#donetodeath .image1 {
+		top: -150px;
+		left: 380px;
+	}
+	
+	#donetodeath .image2 {
+		top: -130px;
+		left: 560px;
+	}
+	
+	#donetodeath .image3 {
+		top: -130px;
+		left: -100px;
+	}
+	
+	#donetodeath .image4 {
+		top: 150px;
+		left: 380px;
+	}
+	
+	#donetodeath .image5 {
+		top: 150px;
+		left: 580px;
+	}
+	
+	#donetodeath .image6 {
+		top: 130px;
+		left: -100px;
+	}
+	
+	#donetodeath .image7 {
+		top: 0px;
+		left: -40px;
+	}
+	
+	#donetodeath .image8 {
+		top: 0px;
+		left: 750px;
+	}
+	
+	#donetodeath .image9 {
+		top: 0px;
+		left: 900px;
+	}
 
 /* missing native */
 
-#missingnative .native {
-	color: #a00;
-	font-weight: bold;
-	font-size: 90px;
-	text-shadow: 0px 2px #222;
-	float: left;
-	vertical-align: middle;
-	line-height: 230px;
-	-webkit-transform: scale(0);
-}
+#missingnative {}
 
-#missingnative .brace {
-	color: #a00;
-	font-weight: normal;
-	font-size: 230px;
-	text-shadow: 0px 2px #222;
-	float: right;
-	padding-right:30px;
-	-webkit-transform: scale(0);
-}
+	/* Set up NATIVE and brace, then animate their scale */
+	#missingnative .native {
+		color: #a00;
+		font-weight: bold;
+		font-size: 90px;
+		text-shadow: 0px 2px #222;
+		float: left;
+		vertical-align: middle;
+		line-height: 230px;
+		-webkit-transform: scale(0);
+	}
+	
+	#missingnative .brace {
+		color: #a00;
+		font-weight: normal;
+		font-size: 230px;
+		text-shadow: 0px 2px #222;
+		float: right;
+		padding-right:30px;
+		-webkit-transform: scale(0);
+	}
+	
+	#missingnative.active .native, #missingnative.active .brace {
+		-webkit-transform: scale(1);
+		-webkit-transition: -webkit-transform 0.5s ease-in 4.5s;	
+	}
+	
+	/* The listing of native attributes */
+	#missingnative .listing {
+		color: #555;
+		font-weight: normal;
+		font-size: 48px;
+		text-shadow: 0px 1px #222;
+		float: right;	
+	}
 
-#missingnative.active .native, #missingnative.active .brace {
-	-webkit-transform: scale(1);
-	-webkit-transition: -webkit-transform 0.5s ease-in 4.5s;	
-}
+	#missingnative .listing div {
+		position: relative;
+		left: -2000px;	
+	}
 
-#missingnative .listing {
-	color: #555;
-	font-weight: normal;
-	font-size: 48px;
-	text-shadow: 0px 1px #222;
-	float: right;	
-}
+		/* Each items to be animated in */
+		#missingnative.active .item1 {
+			left: 0px;
+			-webkit-transition: left 1s ease-in 1s;
+		}
+		
+		#missingnative.active .item2 {
+			left: 0px;
+			color: #7a86a3;
+			-webkit-transition: left 1s ease-in 1.5s;
+		}
+		
+		#missingnative.active .item3 {
+			left: 0px;
+			-webkit-transition: left 1s ease-in 2s;
+		}
+		
+		#missingnative.active .item4 {
+			left: 0px;
+			color: #7a86a3;
+			-webkit-transition: left 1s ease-in 2.5s;
+		}
+		
+		#missingnative.active .item5 {
+			left: 0px;
+			-webkit-transition: left 1s ease-in 3s;
+		}
 
-#missingnative .listing div {
-	position: relative;
-	left: -2000px;	
-}
-
-#missingnative.active .item1 {
-	left: 0px;
-	-webkit-transition: left 1s ease-in 1s;
-}
-
-#missingnative.active .item2 {
-	left: 0px;
-	color: #7a86a3;
-	-webkit-transition: left 1s ease-in 1.5s;
-}
-
-#missingnative.active .item3 {
-	left: 0px;
-	-webkit-transition: left 1s ease-in 2s;
-}
-
-#missingnative.active .item4 {
-	left: 0px;
-	color: #7a86a3;
-	-webkit-transition: left 1s ease-in 2.5s;
-}
-
-#missingnative.active .item5 {
-	left: 0px;
-	-webkit-transition: left 1s ease-in 3s;
-}
-
+/* Introducing Titanium */
 #introducetitanium:not(.active) {
 	opacity: 0;	
 }
 
-#commonapproach li {
-	padding: 0px;	
+/* How Titanium Works */
+#howitworks {}
+
+	#howitworks img {
+		float:right; 
+		height:300px;
+	}
+	
+	#howitworks ul {
+		font-size: 32px;	
+	}
+	
+/* The Apps */
+
+#app {}
+
+	#apps img {
+		height: 300px;	
+	}
+	
+/* Development Workflow */
+
+#workflow {}
+
+	#workflow h2 {
+		text-align: center;	
+	}
+	
+	#workflow ul {
+		width:420px; 
+		float:left; 
+		font-size:32px;
+	}
+	
+	#workflow img {
+		float:right; 
+		height: 450px;	
+	}
+	
+/* Learning Resources */
+
+#learning {}
+
+	#learning ul {
+		width:400px; 
+		float:left; 
+		font-size:32px;	
+	}
+	
+	#learning img {
+		float:right; 
+		height: 220px; 
+		padding-top:100px;	
+	}
+
+/* Appcelerator News */
+
+#news {}
+
+	#news h2 {
+		text-align: center;	
+	}
+
+	#news ul {
+		width:400px; 
+		float:left; 
+		font-size:32px;	
+	}
+	
+	#news img {
+		float:right; 
+		height: 220px; 
+		padding-top:50px;
+	}
+	
+/* Q & A */
+
+#qa {
+	color:#7a86a3; 
+	font-size:300px; 
+	font-weight:bold; 
+	text-shadow:0px 2px #222;
 }
+
+
 
 /* IMPRESS NOT SUPPORTED STYLES */
 

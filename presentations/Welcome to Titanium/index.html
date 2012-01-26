@@ -17,9 +17,9 @@
         <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
     </div>
     
-    <div id="title" class="step" data-x="0" data-y="0">
+    <div id="title" class="step center" data-x="0" data-y="0">
         <div class="welcome">WELCOME</div>
-        <div class="welcome">TO</div>
+        <div class="to">TO</div>
         <div class="titanium">
 	    	<span class="titleLeft">Tit</span>
 	    	<img  class="titleImage" src="images/appc.png" />
@@ -64,8 +64,8 @@
     	</div>
     </div>
     
-    <div id="agenda" class="step" data-x="2000" data-y="1000" data-rotate="90" style="text-align:center;">
-    	<div class="mediumred" style="padding-bottom:15px;">AGENDA</div>
+    <div id="agenda" class="step center" data-x="2000" data-y="1000" data-rotate="90">
+    	<h1>AGENDA</h1>
     	<div class="items">
     		<div class="item1 items">* What is Titanium?</div>
     		<div class="item2 items">* How does Titanium work?</div>
@@ -76,24 +76,24 @@
 	    <img src="images/titanium.png" class="image"/>
     </div>
     
-    <div id="whatistitanium" class="step" data-x="2800" data-y="2000" style="text-align:center;">
+    <div id="whatistitanium" class="step center" data-x="2800" data-y="2000">
     	<div class="biggray">What is</div> 
     	<div class="hugered">Titanium?</div>
     	<img src="images/titanium.png" style="height:250px;"/>
     </div>
 
-	<div id="importantly" class="step" data-x="3100" data-y="2020" data-scale="0.3" style="text-align:center;">
+	<div id="importantly" class="step center" data-x="3100" data-y="2020" data-scale="0.3">
 		<div class="biggray">But more importantly...</div> 
 	</div>
 	
-	<div id="whytitanium" class="step" data-x="2800" data-y="2000" style="text-align:center;">
+	<div id="whytitanium" class="step center" data-x="2800" data-y="2000">
          <div class="why" class="biggray">Why</div>
     	<div class="hugered">Titanium?</div>
     	<img src="images/titanium.png" style="height:250px;"/>
     </div>
     
-    <div id="dilemma" class="step graytext" data-x="2000" data-y="2800">	
-    	<h3>The Dilemma:</h3>
+    <div id="dilemma" class="step step-left graytext" data-x="2000" data-y="2800">	
+    	<h1>The Dilemma:</h1>
     	<div class="somany">So many native platforms...</div>
     	<div>
     		<img src="images/devices/androidtablet.png"/>
@@ -146,31 +146,33 @@
     	</div>
     </div>
     
-    <div class="step graytext" data-x="500" data-y="2000" style="font-weight: bold;">
-    	<span style="color:#7a86a3;">Cross-platform</span> development is the answer, but we don't want to...
+    <div id="theanswer" class="step center" data-x="500" data-y="2000">
+    	<span class="bluetext">Cross-platform</span> development is the answer, but we don't want to...
     </div>
     
-    <div class="step" data-x="1500" data-y="1800" data-rotate-y="45" data-rotate-x="30" style="text-align:center; font-size: 80px; color:#222">
-    	<div>"Write once,</div>
-    	<div><span style="color:#a00; font-weight:bold; text-shadow:0px 2px #222;">SUCK</span> everywhere"<sup>*</sup></div>
-    	<div style="font-size: 16px; text-align:right; padding: 150px 30px 0px 0px;">
+    <div id="suck" class="step center" data-x="1500" data-y="1800" data-rotate-y="45" data-rotate-x="30">
+    	<blockquote>
+    		Write once,<br>
+    		<span class="boldred">SUCK</span> everywhere
+    	</blockquote>
+    	<div class="footnote">
     		<sup>*</sup>Loren Brichter, author of "Tweetie" Twitter client for iOS
     	</div>
     </div>
     
     <div id="commonapproach" class="step" data-x="1500" data-y="3400">
-    	<div style="color:#a00; font-weight: bold; text-shadow:0px 2px #222; padding-bottom: 20px;">Common approach:<sup style="color:#222; font-weight: normal;">*</sup></div>
-    	<div class="graytext" style="font-size:32px;">Use a single rendering context, like</div> 
-    	<ul style="margin-left: 100px; font-size:36px; padding: 20px 0px 20px 0px; list-style-type:circle; color:#7a86a3;">
+    	<h2>Common approach:<sup style="color:#222; font-weight: normal;">*</sup></h2>
+    	<div>Use a single rendering context, like</div> 
+    	<ul class="contexts bluetext">
     		<li>Web View</li>
     		<li>OpenGL</li>
     		<li>Custom Runtime</li>
     	</ul>
-    	<div class="graytext" style="font-size:32px; padding-bottom:100px;">and then add some native API hooks.</div>
+    	<div style="padding-bottom:100px;">and then add some native API hooks.</div>
     </div>
     
-    <div id="donetodeath" class="step" data-x="1650" data-y="3550" data-scale="0.3" style="text-align:center;">
-    	<sup>*</sup>see also, "done to <span style="color:#a00;">death</span>"
+    <div id="donetodeath" class="step center" data-x="1650" data-y="3550" data-scale="0.3">
+    	<sup>*</sup>see also, "done to <span class="redtext">death</span>"
     	<img src="images/xplat/air.png" class="image1"/>
     	<img src="images/xplat/appmobi.png" class="image2"/>
     	<img src="images/xplat/corona.png" class="image3"/>
@@ -182,8 +184,8 @@
     	<img src="images/xplat/unity.png" class="image5"/>
     </div>
     
-    <div class="step" data-x="1650" data-y="4350" data-scale="0.3" style="text-align:center;">
-    	What are they all <span style="color:#a00;">missing</span>?
+    <div id="whataretheymissing" class="step center" data-x="1650" data-y="4350" data-scale="0.3">
+    	What are they all <span class="redtext">missing</span>?
     </div>
     
     <div id="missingnative" class="step" data-x="2400" data-y="4550" data-rotate="-90">
@@ -198,48 +200,46 @@
     	<div class="brace">{</div>
     </div>
     
-    <div id="introducetitanium" class="step" data-x="2400" data-y="4550" data-rotate="-90" style="text-align:center;">
+    <div id="introducetitanium" class="step center" data-x="2400" data-y="4550" data-rotate="-90">
     	<img src="images/titanium.png" style="height: 300px;"/>
-    	<div style="color:#555;">
-    		Titanium Mobile is a platform for building <span style="color:#a00; text-shadow:0px 1px #222;">best in class</span> 
+    	<div>
+    		Titanium Mobile is a platform for building <span class="redtext">best in class</span> 
     		cross-platform mobile applications in JavaScript
     	</div>
     </div>
     
-    <div class="step" data-x="2300" data-y="4550" data-scale="0.05" data-rotate="-90"
-         style="color:#555; font-size: 38px;">
-    	<div style="color:#a00; text-shadow:0px 2px #222; font-size:70px; font-weight: bold;">Titanium Mobile</div>
-    	<ul id="titaniumis" style="list-style: circle; margin-left:40px;">
-	    	<li>Only cross-platform mobile toolkit with <span style="color:#7a86a3; font-weight:bold; text-shadow:0px 1px #222;">native</span> UI and performance</li>
-	    	<li><span style="color:#7a86a3; font-weight:bold; text-shadow:0px 1px #222;">Free</span> and <span style="color:#7a86a3; font-weight:bold; text-shadow:0px 1px #222;">open source</span> under the Apache 2.0 license</li>
+    <div id="titaniummobile" class="step" data-x="2300" data-y="4550" data-scale="0.05" data-rotate="-90" style="font-size: 36px;">
+    	<h1>Titanium Mobile</h1>
+    	<ul style="margin-left:40px;">
+	    	<li>Only cross-platform mobile toolkit with <span class="boldblue">native</span> UI and performance</li>
+	    	<li><span class="boldblue">Free</span> and <span class="boldblue">open source</span> under the Apache 2.0 license</li>
 	    	<li>Supports iOS, Android, Blackberry, and Mobile Web</li>
     	</ul>
     </div>
     
-    <div class="step" data-x="5000" data-y="5000" style=" font-size:70px; font-weight: normal;">
-    	<div style="padding-bottom: 20px;">How <span style="color:#a00; text-shadow:0px 2px #222; font-weight: bold;">Titanium</span> Works</div>
-    	<img src="images/overview.png" style="float:right; height:300px;"/>
-    	<ul style="list-style: circle; margin-left:40px; font-size:32px; color:#555;">
-    		<li>You write <span style="color:#7a86a3; font-weight:bold; text-shadow:0px 1px #222;">Javascript</span></li>
+    <div id="howitworks" class="step" data-x="5000" data-y="5000">
+    	<h1><span style="color:#444;">How</span> Titanium <span style="color:#444;">Works</span></h1>
+    	<img src="images/overview.png"/>
+    	<ul style="margin-left:40px;">
+    		<li>You write <span class="boldblue">Javascript</span></li>
     		<li>Titanium maps your JS to native bindings</li>
-    		<li>Your JS + JS engine + native bindings = <span style="color:#7a86a3; font-weight:bold; text-shadow:0px 1px #222;">native mobile app</span></li>
+    		<li>Your JS + JS engine + native bindings = <span class="boldblue">native mobile app</span></li>
     	</ul>
     </div>
     
-    <div class="step graytext" data-x="6300" data-y="5000" data-rotate-y="45"
-         style="text-align:center; font-size: 80px; color:#7a86a3; font-weight:normal; text-shadow:0px 2px #222;">
-    	That's great, but what can I do with it?
+    <div id="whatcanido" class="step center" data-x="6300" data-y="5000" data-rotate-y="45">
+    	<span class="bigblue">That's great, but what can I do with it?</span>
     </div>
     
-    <div class="step" data-x="-1500" data-y="2000" data-scale="2">
+    <div id="apps" class="step" data-x="-1500" data-y="2000" data-scale="2">
 		<div>
-	    	<img src="images/apps/nbc.png" style="height:300px;"/>
-	    	<img src="images/apps/BravoNow.png" style="height:300px;"/>
-	    	<img src="images/apps/triplingo.jpg" style="height:300px;"/>
+	    	<img src="images/apps/nbc.png"/>
+	    	<img src="images/apps/BravoNow.png"/>
+	    	<img src="images/apps/triplingo.jpg"/>
 	   </div>
-	   <div class="graytext" style="">
-	    	<img src="images/apps/goexplore.jpg" style="height:300px; float:left;"/>
-    		<ul id="titaniumis" style="list-style: circle; width:350px; float:left; margin-left: 60px;">
+	   <div>
+	    	<img src="images/apps/goexplore.jpg" style="float:left;"/>
+    		<ul style="width:350px; float:left; margin-left: 60px;">
     			<li>Top brands</li>
     			<li>Independent success</li>
     			<li>#1 apps</li>
@@ -247,35 +247,30 @@
     	</div>
     </div>
     
-    <div class="step" data-x="-1300" data-y="2800" data-rotate-y="-45"
-         style="text-align:center; font-size: 100px; color:#7a86a3; font-weight:normal; text-shadow:0px 2px #222;">
-    	What's it like to code with?
+    <div id="whatsthecodelike" class="step center" data-x="-1300" data-y="2800" data-rotate-y="-45">
+    	<span class="bigblue">What's the code like?</span>
     </div>
     
     <div id="workflow" class="step" data-x="-1000" data-y="3500" data-rotate-x="45">
-    	<div style="padding-bottom:20px; text-align:center; font-weight:bold; color:#a00; text-shadow:0px 2px #222;">
-    		Development Workflow
-    	</div>
-    	<ul style="width:420px; float:left; font-size:32px;" class="graytext">
-	    	<li>UI and app logic coded in <span style="color:#7a86a3">Javascript</span></li>
-	    	<li>Write code, manage projects, and package with <span style="color:#7a86a3">Titanium Studio</span></li>
+    	<h2>Development Workflow</h1>
+    	<ul>
+	    	<li>UI and app logic coded in <span class="bluetext">Javascript</span></li>
+	    	<li>Write code, manage projects, and package with <span class="bluetext">Titanium Studio</span></li>
 	    	<li>Target multiple platforms from a single codebase</li>
     	</ul>
-    	<img src="images/code.png" style="float:right; height: 450px;"/>
+    	<img src="images/code.png"/>
     </div>
     
-    <div class="step" data-x="0" data-y="3800" data-rotate-y="45" 
-         style="text-align:center; font-size: 120px; color:#7a86a3; font-weight:bold; text-shadow:0px 2px #222;">
-    	Live Code Demo
+    <div id="livecode" class="step center" data-x="0" data-y="3800" data-rotate-y="45" >
+    	<span class="blue120">Live Code Demo</span>
     </div>
     
-   <div class="step" data-x="0" data-y="4500" data-rotate-x="45"
-         style="text-align:center; font-size: 120px; color:#7a86a3; font-weight:bold; text-shadow:0px 2px #222;">
-    	Want to learn more?
+   <div id="learnmore" class="step center" data-x="0" data-y="4500" data-rotate-x="45">
+    	<span class="blue120">Want to learn more?</span>
     </div>
     
-    <div class="step" data-x="-35" data-y="4600" data-rotate-x="45" data-scale="0.05">
-    	<ul style="width:400px; float:left; font-size:32px;" class="graytext">
+    <div id="learning" class="step" data-x="-35" data-y="4600" data-rotate-x="45" data-scale="0.05">
+    	<ul>
 	    	<li><a href="https://github.com/appcelerator" target="_blank">Github Code Samples</a></li>
 	    	<li><a href="http://vimeopro.com/appcelerator/forging-titanium" target="_blank">Forging Titanium</a></li>
 	    	<li><a href="http://training.appcelerator.com/" target="_blank">Video Training Series</a></li>
@@ -283,13 +278,11 @@
 	    	<li><a href="http://developer.appcelerator.com/apidoc/mobile/latest" target="_blank">API Documentation</a></li>
 	    	<li><a href="http://developer.appcelerator.com/blog/" target="_blank">Developer Blog</a></li>
     	</ul>
-    	<img src="images/appu.png" style="float:right; height: 220px; padding-top:100px;"/>
+    	<img src="images/appu.png"/>
     </div>
     
-    <div class="step" data-x="1000" data-y="4700" data-rotate-y="45">
-    	<div style="padding-bottom:20px; text-align:center; font-weight:bold; color:#a00; text-shadow:0px 2px #222;">
-    		Appcelerator News
-    	</div>
+    <div id="news" class="step" data-x="1000" data-y="4700" data-rotate-y="45">
+    	<h2>Appcelerator News</h2>
     	<ul style="width:400px; float:left; font-size:32px;" class="graytext">
     		<li><a href="https://twitter.com/#!/appcelerator" target="_blank">Follow @appcelerator</a></li>
     		<li><a href="http://www.facebook.com/appcelerator" target="_blank">Like us on Facebook</a></li>
@@ -299,14 +292,13 @@
     	<img src="images/appc.png" style="float:right; height: 220px; padding-top:50px;"/>
     </div>
     
-    <div class="step" data-x="0" data-y="-600" data-scale="0.5" 
-         style="text-align:center; color:#7a86a3; font-size:300px; font-weight:bold; text-shadow:0px 2px #222;">
+    <div id="qa" class="step center" data-x="0" data-y="-600" data-scale="0.5">
     	Q&amp;A
     </div>
     
-    <div class="step" data-x="1000" data-y="-600" data-scale="0.5" style="text-align:center;">
-    	<h2>Contact</h2>
-    	<ul>
+    <div id="contactme" class="step center" data-x="1000" data-y="-600" data-scale="0.5">
+    	<h1>Contact</h1>
+    	<ul style="list-style:none;">
     		<li><a href="https://twitter.com/#!/tonylukasavage">@tonylukasavage</a></li>
     		<li><a href="mailto:tlukasavage@appcelerator.com">tlukasavage@appcelerator.com</a></li>
     		<li><a href="mailto:community@appcelerator.com">community@appcelerator.com</a></li>
