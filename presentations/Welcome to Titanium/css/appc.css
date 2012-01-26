@@ -133,6 +133,10 @@ h3 {
 
 /* Custom styling */
 
+.bluetext {
+	color: #7a86a3	
+}
+
 .bigblue {
 	color:#7a86a3; 
 	text-shadow:0px 2px #222; 
@@ -453,80 +457,92 @@ h3 {
 
 /* Dilemma */
 
-#dilemma .somany {
-	position: relative;
-	left: 0px;	
-	padding-bottom: 15px;
-}
-
-#dilemma .sofew {
-	position: relative;
-	left: 290px;	
-}
-
-@-webkit-keyframes imageswell {
-        0% {
-                height: 0px;
-                -webkit-animation-timing-function: ease-out;
-        }
-        90% {
-        		height: 160px;
-                -webkit-animation-timing-function: ease-in-out;
-        }
-        100% {
-        		height: 150px;      
-        }
-}
-
-#dilemma img {
-	height: 150px;
-}
+#dilemma {}
+	
+	/* Image swell animation */
+	@-webkit-keyframes imageswell {
+		0% {
+	    	height: 0px;
+	        -webkit-animation-timing-function: ease-out;
+	    }
+	    90% {
+	        height: 160px;
+	        -webkit-animation-timing-function: ease-in-out;
+	    }
+	    100% {
+	        height: 150px;      
+	    }
+	}
+	
+	/* Dilemma text styles */
+	#dilemma .somany {
+		position: relative;
+		left: 0px;	
+		padding-bottom: 15px;
+	}
+	
+	#dilemma .sofew {
+		position: relative;
+		left: 290px;	
+	}
+	
+	#dilemma img {
+		height: 150px;
+	}
 
 /* resource details */
 
-#resourcedetails div {
-	position: fixed;
+#resources {
+	font-size: 40px;
+	text-shadow: 0px 1px #222;	
 }
 
-#resourcedetails .platformbox {
-	background-color:#fff; 
-	border-radius:8px; 
-	padding: 10px; 
-	border: solid 1px #ccc;	
-	top: -200px;
-}
+	/* Down arrows for resources flow */
+	.arrow-down {
+	    width: 0;
+	    height: 0;
+	    border-left: 10px solid transparent;
+	    border-right: 10px solid transparent;
+	    border-top: 10px solid #000;
+	}
 
-#resourcedetails .resources {
-	background-color: #222;
-	color: #eee;
-	border-radius: 8px;
-	border: solid 1px #ccc;
-	padding: 10px;
-	font-size: 24px;
-	width: 220px;	
-	top: -40px;
-}
+	/* Resource flow boxes */
+	#resources div {
+		position: fixed;
+	}
+	
+	#resources .box {
+		border-radius:8px; 
+		border: solid 1px #ccc;
+	}
 
-#resourcedetails .scalable {
-	background-color: #a00;
-	padding: 70px;
-	color: #eee;
-	border-radius: 8px;
-	top: 140px;	
-}
-
-#resourcedetails .line {
-	background-color: #000;
-	width: 3px;	
-}
-
-.arrow-down {
-        width: 0;
-        height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 10px solid #000;
-}
+	#resources .platform {
+		background-color:#fff;  
+		padding: 10px; 	
+		top: -200px;
+	}
+	
+	#resources .resources {
+		background-color: #222;
+		color: #eee;
+		padding: 10px;
+		font-size: 24px;
+		width: 220px;	
+		top: -40px;
+	}
+	
+	#resources .scalable {
+		background-color: #a00;
+		padding: 70px;
+		color: #eee;
+		top: 140px;	
+	}
+	
+	#resources .line {
+		background-color: #000;
+		width: 3px;	
+		height: 90px;
+	}
 
 /* done to death */
 
