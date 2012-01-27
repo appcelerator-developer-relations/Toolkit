@@ -52,7 +52,7 @@ li {
 blockquote, q {
 	quotes: '\201C' '\201D*';
     color: #222;
-    font-size: 80px;
+    font-size: 50px;
  }
  blockquote:before { content: open-quote; font-weight: bold; }
  blockquote:after { content: close-quote; font-weight: bold; }
@@ -421,11 +421,11 @@ h2 {
 	}
 	
 		/* Individual classes to independently animate and localize items */
-		#l_agenda1,
-		#l_agenda2,
-		#l_agenda3,
-		#l_agenda4,
-		#l_agenda5 {
+		#agenda .l_agenda1,
+		#agenda .l_agenda2,
+		#agenda .l_agenda3,
+		#agenda .l_agenda4,
+		#agenda .l_agenda5 {
 			padding: 10px;
 			-webkit-transform-origin: 0 0;
 			-webkit-transform: rotateY(-70deg);
@@ -434,19 +434,19 @@ h2 {
 			-webkit-animation-fill-mode: forwards;	
 		}
 		
-		#l_agenda2 {
+		#agenda .l_agenda2 {
 		     -webkit-animation-delay: 1.25s;
 		}
 		
-		#l_agenda3 {
+		#agenda .l_agenda3 {
 		     -webkit-animation-delay: 1.5s;
 		}
 		
-		#l_agenda4 {
+		#agenda .l_agenda4 {
 		     -webkit-animation-delay: 1.75s;
 		}
 		
-		#l_agenda5 {
+		#agenda .l_agenda5 {
 		     -webkit-animation-delay: 2s;
 		}
 
@@ -475,7 +475,7 @@ h2 {
 	    }
 	}
 	
-	#whytitanium.active .why {
+	#whytitanium.active .l_why {
 		-webkit-animation: fontswell 0.5s;
 		-webkit-animation-delay: 1.5s;
 		-webkit-animation-fill-mode: forwards;
@@ -501,13 +501,13 @@ h2 {
 	}
 	
 	/* Dilemma text styles */
-	#dilemma .somany {
+	#dilemma .l_somany {
 		position: relative;
 		left: 0px;	
 		padding-bottom: 15px;
 	}
 	
-	#dilemma .sofew {
+	#dilemma .l_sofew {
 		position: relative;
 		left: 290px;	
 	}
@@ -519,7 +519,7 @@ h2 {
 /* resource details */
 
 #resources {
-	font-size: 40px;
+	font-size: 32px;
 	text-shadow: 0px 1px #222;	
 }
 
@@ -545,6 +545,7 @@ h2 {
 	#resources .platform {
 		background-color:#fff;  
 		padding: 10px; 	
+		width: 220px;	
 		top: -200px;
 	}
 	
@@ -559,9 +560,10 @@ h2 {
 	
 	#resources .scalable {
 		background-color: #a00;
-		padding: 70px;
+		padding: 50px 10px 50px 10px;
 		color: #eee;
 		top: 140px;	
+		width: 760px;
 	}
 	
 	#resources .line {
@@ -574,7 +576,6 @@ h2 {
 
 #suck {
 	color: #222;
-	font-size: 120px;
 }
 
 	#suck .footnote {

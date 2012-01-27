@@ -13,7 +13,18 @@ String.toLocaleString({
 		"%l_somany": "So many native plaforms...",
 		"%l_sofew": "so few RESOURCES",
 		"%l_platform": "Platform",
-		"%l_crossplatform":''
+		"%l_time_money_people":'TIME + MONEY + PEOPLE',
+		"%l_scalability": "Scalability + Maintenance + Parity",
+		"%l_crossplatform": "Cross-platform",
+		"%l_theanswer": "development is the answer, but we don't want to",
+		"%l_suck1": "Write once",
+		"%l_suck2": "SUCK",
+		"%l_suck3": "everywhere",
+		"%l_approach": "Common Approach",
+		"%l_rendering": "Use a single rendering context, like",
+		"%l_apihooks": "then add some native API hooks.",
+		"%l_donetodeath": "see also, \"done to death\"",
+		"%l_missing": "What are they all missing?"
 	},
 	"es": {
 		"%l_agenda_title": "ORDEN DEL DÍA",
@@ -28,7 +39,18 @@ String.toLocaleString({
 		"%l_dilemma": "El Dilema:",
 		"%l_somany": "Plataformas nativas tantos...",
 		"%l_sofew": "tan pocos RECURSOS",
-		"%l_platform": "Plataforma"
-		
+		"%l_platform": "Plataforma",
+		"%l_time_money_people":'TIEMPO + DINERO + PERSONAS',
+		"%l_scalability": "Escalabilidad + Mantenimiento + Paridad",
+		"%l_crossplatform": "Multi-plataforma",
+		"%l_theanswer": "el desarrollo es la respuesta, pero no quiero",
+		"%l_suck1": "Escribir una vez",
+		"%l_suck2": "CHUPAR",
+		"%l_suck3": "todo el mundo",
+		"%l_approach": "Enfoque Común",
+		"%l_rendering": "Use un contexto de representación, como",
+		"%l_apihooks": "a continuación, añadir algunos nativos ganchos API.",
+		"%l_donetodeath": "véase también, \"hecho a la muerte\"",
+		"%l_missing": "¿Qué son todas las que faltan?"
 	}
 });

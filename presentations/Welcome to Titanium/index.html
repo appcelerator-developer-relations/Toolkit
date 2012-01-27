@@ -67,36 +67,36 @@
     </div>
     
     <div id="agenda" class="step center" data-x="2000" data-y="1000" data-rotate="90">
-    	<h1 id="l_agenda_title">AGENDA</h1>
+    	<h1 class="l_agenda_title">AGENDA</h1>
     	<div class="items">
-    		<div id="l_agenda1">* What is Titanium?</div>
-    		<div id="l_agenda2">* How does Titanium work?</div>
-    		<div id="l_agenda3">* What can Titanium do?</div>
-    		<div id="l_agenda4">* What's it like developing with Titanium?</div>
-    		<div id="l_agenda5">* How can I learn more?</div>
+    		<div class="l_agenda1">* What is Titanium?</div>
+    		<div class="l_agenda2">* How does Titanium work?</div>
+    		<div class="l_agenda3">* What can Titanium do?</div>
+    		<div class="l_agenda4">* What's it like developing with Titanium?</div>
+    		<div class="l_agenda5">* How can I learn more?</div>
     	</div>
 	    <img src="images/titanium.png" class="image"/>
     </div>
     
     <div id="whatistitanium" class="step center" data-x="2800" data-y="2000">
-    	<div id="l_whatis" class="biggray">What is</div> 
+    	<div class="biggray l_whatis">What is</div> 
     	<div class="hugered">Titanium?</div>
     	<img src="images/titanium.png" style="height:250px;"/>
     </div>
 
 	<div id="importantly" class="step center" data-x="3100" data-y="2020" data-scale="0.3">
-		<div id="l_important" class="biggray">But more importantly...</div> 
+		<div class="biggray l_important">But more importantly...</div> 
 	</div>
 	
 	<div id="whytitanium" class="step center" data-x="2800" data-y="2000">
-         <div id="l_why" class="why" class="biggray">Why</div>
+        <div class="biggray l_why">Why</div>
     	<div class="hugered">Titanium?</div>
     	<img src="images/titanium.png" style="height:250px;"/>
     </div>
     
-    <div id="dilemma" class="step step-left graytext" data-x="2000" data-y="2800">	
-    	<h1 id="l_dilemma">The Dilemma:</h1>
-    	<div id="l_somany" class="somany">So many native platforms...</div>
+    <div id="dilemma" class="step graytext" data-x="2000" data-y="2800">	
+    	<h1 class="l_dilemma">The Dilemma:</h1>
+    	<div class="l_somany">So many native platforms...</div>
     	<div>
     		<img src="images/devices/androidtablet.png"/>
     		<img src="images/devices/iphone.png"/>
@@ -104,7 +104,7 @@
     		<img src="images/devices/android.png"/>
     		<img src="images/devices/ipad.png"/>
     	</div>
-    	<div id="l_sofew" class="sofew">So few <span class="bluetext">RESOURCES</span></div>
+    	<div class="l_sofew">So few <span class="bluetext">RESOURCES</span></div>
     </div>
     
     <!-- TODO: Let's try making this a <canvas> -->
@@ -124,38 +124,39 @@
     	<div class="arrow-down" style="left:672px; top:120px;"></div>
     	
     	<div class="platform box" style="left:40px;">
-    		<span id="l_platform">Platform</span> #1
+    		<span class="l_platform">Platform</span> #1
     	</div>
     	<div class="platform box" style="left:300px;">
-    		<span id="l_platform">Platform</span> #2
+    		<span class="l_platform">Platform</span> #2
     	</div>
     	<div class="platform box" style="left:560px;">
-    		<span id="l_platform">Platform</span> #3
+    		<span class="l_platform">Platform</span> #3
     	</div>
     	
     	<div class="resources box" style="left:40px;">
-    		TIME + MONEY + PEOPLE
+    		<span class="l_time_money_people">TIME + MONEY + PEOPLE</span>
     	</div>
     	<div class="resources box" style="left:300px;">
-    		TIME + MONEY + PEOPLE
+    		<span class="l_time_money_people">TIME + MONEY + PEOPLE</span>
     	</div>
     	<div class="resources box" style="left:560px;">
-    		TIME + MONEY + PEOPLE
+    		<span class="l_time_money_people">TIME + MONEY + PEOPLE</span>
     	</div>
     	
     	<div class="scalable box">
-    		Scalability + Maintenance + Parity
+    		<span class="l_scalability">Scalability + Maintenance + Parity</span>
     	</div>
     </div>
     
     <div id="theanswer" class="step center" data-x="500" data-y="2000">
-    	<span class="bluetext">Cross-platform</span> development is the answer, but we don't want to...
+    	<span class="bluetext l_crossplatform">Cross-platform</span> 
+    	<span class="l_theanswer">development is the answer, but we don't want to</span>...
     </div>
     
     <div id="suck" class="step center" data-x="1500" data-y="1800" data-rotate-y="45" data-rotate-x="30">
     	<blockquote>
-    		Write once,<br>
-    		<span class="boldred">SUCK</span> everywhere
+    		<span class="l_suck1">Write once</span>,<br>
+    		<span class="boldred l_suck2">SUCK</span> <span class="l_suck3">everywhere</span>
     	</blockquote>
     	<div class="footnote">
     		<sup>*</sup>Loren Brichter, author of "Tweetie" Twitter client for iOS
@@ -163,18 +164,18 @@
     </div>
     
     <div id="commonapproach" class="step" data-x="1500" data-y="3400">
-    	<h2>Common approach:<sup style="color:#222; font-weight: normal;">*</sup></h2>
-    	<div>Use a single rendering context, like</div> 
+    	<h2><span class="l_approach">Common approach</span>:<sup style="color:#222; font-weight: normal;">*</sup></h2>
+    	<div class="l_rendering">Use a single rendering context, like</div> 
     	<ul class="contexts bluetext">
     		<li>Web View</li>
     		<li>OpenGL</li>
     		<li>Custom Runtime</li>
     	</ul>
-    	<div style="padding-bottom:100px;">and then add some native API hooks.</div>
+    	<div class="l_apihooks" style="padding-bottom:100px;">and then add some native API hooks.</div>
     </div>
     
     <div id="donetodeath" class="step center" data-x="1650" data-y="3550" data-scale="0.3">
-    	<sup>*</sup>see also, "done to <span class="redtext">death</span>"
+    	<sup>*</sup><span class="l_donetodeath">see also, "done to death"</span>
     	<img src="images/xplat/air.png" class="image1"/>
     	<img src="images/xplat/appmobi.png" class="image2"/>
     	<img src="images/xplat/corona.png" class="image3"/>
@@ -187,7 +188,7 @@
     </div>
     
     <div id="whataretheymissing" class="step center" data-x="1650" data-y="4350" data-scale="0.3">
-    	What are they all <span class="redtext">missing</span>?
+    	<span class="l_missing">What are they all missing?</span>
     </div>
     
     <div id="missingnative" class="step" data-x="2400" data-y="4550" data-rotate="-90">
@@ -314,33 +315,48 @@
 
 <script type="text/javascript">
 
-//String.locale = 'es' || document.documentElement.lang || 'en';
-var localize = function (string) {
-	var localized = string.toLocaleString();
-	var locale = String.locale;
-	var defaultLocale = 'en';
-	
-	if (localized !== string) {
-		return localized;
-	} else {
-		String.locale = defaultLocale;
-		localized = string.toLocaleString();
-		String.locale = locale;
+(function() {
+	String.locale = 'es' || document.documentElement.lang || 'en';
+	var localize = function (string) {
+		var localized = string.toLocaleString();
+		var locale = String.locale;
+		var defaultLocale = 'en';
+		
 		if (localized !== string) {
-			return localized;	
+			return localized;
 		} else {
-			return '';	
+			String.locale = defaultLocale;
+			localized = string.toLocaleString();
+			String.locale = locale;
+			if (localized !== string) {
+				return localized;	
+			} else {
+				return '';	
+			}
+		}
+	};
+
+	var classPrefix = 'l_';
+	var hasClassName = new RegExp("(?:^|\\s)(" + classPrefix + "[^\\s]+)");
+	var allElements = document.getElementsByTagName("*");
+	var results = [];
+
+	var element;
+	for (var i = 0; (element = allElements[i]) != null; i++) {
+		var elementClass = element.className;
+		if (elementClass && elementClass.indexOf(classPrefix) != -1 && (match = hasClassName.exec(elementClass))) {
+			element.innerHTML = localize("%" + match[1]);
 		}
 	}
-};
+})();
 
 // Iterate through all `l_` prefixed element ids and localize
-var all = document.getElementsByTagName("*");
-for (var i=0, max=all.length; i < max; i++) {
-	if (all[i].id.indexOf('l_') === 0) {
-		document.getElementById(all[i].id).innerHTML = localize("%" + all[i].id);	
-	} 
-}
+// var all = document.getElementsByTagName("*");
+// for (var i=0, max=all.length; i < max; i++) {
+	// if (all[i].id.indexOf('l_') === 0) {
+		// document.getElementById(all[i].id).innerHTML = localize("%" + all[i].id);	
+	// } 
+// }
 </script>
 
 <script src="js/impress.js"></script>
