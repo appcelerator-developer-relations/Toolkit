@@ -666,17 +666,19 @@ h2 {
 
 /* missing native */
 
-#missingnative {}
+#missingnative {
+	position: relative;
+}
 
 	/* Set up NATIVE and brace, then animate their scale */
-	#missingnative .native {
+	#missingnative .l_native {
 		color: #a00;
 		font-weight: bold;
 		font-size: 90px;
 		text-shadow: 0px 2px #222;
 		float: left;
-		vertical-align: middle;
-		line-height: 230px;
+		width: 320px;
+		padding-top: 70px;
 		-webkit-transform: scale(0);
 	}
 	
@@ -687,10 +689,12 @@ h2 {
 		text-shadow: 0px 2px #222;
 		float: right;
 		padding-right:30px;
+		width: 70px;
 		-webkit-transform: scale(0);
 	}
 	
-	#missingnative.active .native, #missingnative.active .brace {
+	#missingnative.active .l_native, 
+	#missingnative.active .brace {
 		-webkit-transform: scale(1);
 		-webkit-transition: -webkit-transform 0.5s ease-in 4.5s;	
 	}
@@ -699,9 +703,10 @@ h2 {
 	#missingnative .listing {
 		color: #555;
 		font-weight: normal;
-		font-size: 48px;
+		font-size: 44px;
 		text-shadow: 0px 1px #222;
 		float: right;	
+		width: 370px;
 	}
 
 	#missingnative .listing div {
@@ -748,15 +753,19 @@ h2 {
 	#howitworks img {
 		float:right; 
 		height:300px;
+		padding-left: 20px;
 	}
 	
 	#howitworks ul {
-		font-size: 32px;	
+		font-size: 32px;
+		margin-left:30px;	
 	}
 	
 /* The Apps */
 
-#app {}
+#apps { 
+	font-size: 38px;
+}
 
 	#apps img {
 		height: 300px;	
@@ -786,14 +795,14 @@ h2 {
 #learning {}
 
 	#learning ul {
-		width:400px; 
+		width:480px; 
 		float:left; 
 		font-size:32px;	
 	}
 	
 	#learning img {
 		float:right; 
-		height: 220px; 
+		width: 320px; 
 		padding-top:100px;	
 	}
 
@@ -806,22 +815,22 @@ h2 {
 	}
 
 	#news ul {
-		width:400px; 
+		width:480px; 
 		float:left; 
 		font-size:32px;	
 	}
 	
 	#news img {
 		float:right; 
-		height: 220px; 
-		padding-top:50px;
+		width: 320px; 
+		padding-top:40px;
 	}
 	
 /* Q & A */
 
 #qa {
 	color:#7a86a3; 
-	font-size:300px; 
+	font-size:200px; 
 	font-weight:bold; 
 	text-shadow:0px 2px #222;
 }
