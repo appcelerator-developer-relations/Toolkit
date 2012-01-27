@@ -433,7 +433,7 @@ h2 {
 	}
 	
 	/* Agenda item listing */
-	#agenda .items {
+	#agenda ul {
 		float:left; 
 		width:500px; 
 		text-align:left; 
@@ -454,19 +454,19 @@ h2 {
 			-webkit-animation-fill-mode: forwards;	
 		}
 		
-		#agenda .l_agenda2 {
+		#agenda.active .l_agenda2 {
 		     -webkit-animation-delay: 1.25s;
 		}
 		
-		#agenda .l_agenda3 {
+		#agenda.active .l_agenda3 {
 		     -webkit-animation-delay: 1.5s;
 		}
 		
-		#agenda .l_agenda4 {
+		#agenda.active .l_agenda4 {
 		     -webkit-animation-delay: 1.75s;
 		}
 		
-		#agenda .l_agenda5 {
+		#agenda.active .l_agenda5 {
 		     -webkit-animation-delay: 2s;
 		}
 
@@ -640,32 +640,32 @@ h2 {
 
 	/* positions of each image */
 	#donetodeath .image1 {
-		top: -150px;
+		top: -160px;
 		left: 380px;
 	}
 	
 	#donetodeath .image2 {
-		top: -130px;
+		top: -140px;
 		left: 560px;
 	}
 	
 	#donetodeath .image3 {
-		top: -130px;
+		top: -140px;
 		left: -100px;
 	}
 	
 	#donetodeath .image4 {
-		top: 150px;
+		top: 160px;
 		left: 380px;
 	}
 	
 	#donetodeath .image5 {
-		top: 150px;
+		top: 160px;
 		left: 580px;
 	}
 	
 	#donetodeath .image6 {
-		top: 130px;
+		top: 140px;
 		left: -100px;
 	}
 	
