@@ -314,7 +314,7 @@
 
 (function() {
 	String.locale = 'es' || document.documentElement.lang || 'en';
-	var localize = function (string) {
+	var localize = function (string, fallback) {
 		var localized = string.toLocaleString();
 		var locale = String.locale;
 		var defaultLocale = 'en';
@@ -328,7 +328,7 @@
 			if (localized !== string) {
 				return localized;	
 			} else {
-				return '';	
+				return fallback;	
 			}
 		}
 	};
@@ -342,18 +342,10 @@
 	for (var i = 0; (element = allElements[i]) != null; i++) {
 		var elementClass = element.className;
 		if (elementClass && elementClass.indexOf(classPrefix) != -1 && (match = hasClassName.exec(elementClass))) {
-			element.innerHTML = localize("%" + match[1]);
+			element.innerHTML = localize("%" + match[1], element.innerHTML);
 		}
 	}
 })();
-
-// Iterate through all `l_` prefixed element ids and localize
-// var all = document.getElementsByTagName("*");
-// for (var i=0, max=all.length; i < max; i++) {
-	// if (all[i].id.indexOf('l_') === 0) {
-		// document.getElementById(all[i].id).innerHTML = localize("%" + all[i].id);	
-	// } 
-// }
 </script>
 
 <script src="js/impress.js"></script>
