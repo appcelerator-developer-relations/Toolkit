@@ -686,9 +686,7 @@ h2 {
 
 /* missing native */
 
-#missingnative {
-	position: relative;
-}
+#missingnative {}
 
 	/* Set up NATIVE and brace, then animate their scale */
 	#missingnative .l_native {
@@ -720,7 +718,8 @@ h2 {
 	}
 	
 	/* The listing of native attributes */
-	#missingnative .listing {
+	#missingnative ul {
+		list-style: none;
 		color: #555;
 		font-weight: normal;
 		font-size: 44px;
@@ -729,9 +728,10 @@ h2 {
 		width: 370px;
 	}
 
-	#missingnative .listing div {
+	#missingnative ul li {
 		position: relative;
 		left: -2000px;	
+		padding: 2px;
 	}
 
 		/* Each items to be animated in */
