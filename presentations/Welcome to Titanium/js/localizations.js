@@ -1,5 +1,7 @@
 String.toLocaleString({
 	"en-US": {
+		"%l_welcometotitanium": "Welcome to Titanium",
+		"%l_tagline": "The only cross-platform mobile development framework with NATIVE UI and performance",
 		"%l_agenda_title": "AGENDA",
 		"%l_agenda1": "What is Titanium?",
 		"%l_agenda2": "How does Titanium work?",
@@ -17,9 +19,7 @@ String.toLocaleString({
 		"%l_scalability": "Scalability + Maintenance + Parity",
 		"%l_crossplatform": "Cross-platform",
 		"%l_theanswer": "development is the answer, but we don't want to",
-		"%l_suck1": "Write once",
-		"%l_suck2": "SUCK",
-		"%l_suck3": "everywhere",
+		"%l_suck": "Write once, SUCK everywhere",
 		"%l_approach": "Common Approach",
 		"%l_rendering": "Use a single rendering context, like",
 		"%l_apihooks": "then add some native API hooks.",
@@ -64,6 +64,8 @@ String.toLocaleString({
 		"%l_contact": "Contact"
 	},
 	"es": {
+		"%l_welcometotitanium": "Bienvenido al Titanium",
+		"%l_tagline": "La única cruz-plataforma móvil marco de desarrollo con la interfaz de usuario y el rendimiento de NATIVO",
 		"%l_agenda_title": "ORDEN DEL DÍA",
 		"%l_agenda1": "¿Qué es el Titanium?",
 		"%l_agenda2": "¿Cómo Titanium de trabajo?",
@@ -81,9 +83,7 @@ String.toLocaleString({
 		"%l_scalability": "Escalabilidad + Mantenimiento + Paridad",
 		"%l_crossplatform": "Multi-plataforma",
 		"%l_theanswer": "el desarrollo es la respuesta, pero no quiero",
-		"%l_suck1": "Escribir una vez",
-		"%l_suck2": "CHUPAR",
-		"%l_suck3": "todo el mundo",
+		"%l_suck": "Escribir una vez, CHUPAR todo el mundo",
 		"%l_approach": "Enfoque Común",
 		"%l_rendering": "Use un contexto de representación, como",
 		"%l_apihooks": "a continuación, añadir algunos nativos ganchos API.",

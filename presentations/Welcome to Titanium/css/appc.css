@@ -52,7 +52,7 @@ li {
 blockquote, q {
 	quotes: '\201C' '\201D*';
     color: #222;
-    font-size: 50px;
+    font-size: 70px;
  }
  blockquote:before { content: open-quote; font-weight: bold; }
  blockquote:after { content: close-quote; font-weight: bold; }
@@ -125,7 +125,7 @@ h2 {
 	text-shadow: 0px 1px #222;
 }
 
-.bigblue {
+.blue80 {
 	color:#7a86a3; 
 	text-shadow:0px 2px #222; 
 	font-weight:bold; 
@@ -139,11 +139,15 @@ h2 {
 	font-size:120px;		
 }
 
-.biggray {
-	color:#555; 
-	font-size:100px; 
+.gray100 {
+	color: #555; 
+	font-size: 100px; 
 	text-shadow: 0px 2px #222; 
 	font-weight: bold;	
+}
+
+.redtext {
+	color: #a00;
 }
 
 .boldred {
@@ -152,22 +156,34 @@ h2 {
 	text-shadow: 0px 1px #222;	
 }
 
-.redtext {
-	color: #a00;
-}
-
-.mediumred {
-	color:#a00; 
-	text-shadow:0px 2px #222; 
-	font-weight:bold; 
-	font-size:80px;	
-}
-
-.hugered {
-	color:#a00; 
-	font-size:160px; 
+.red160 {
+	color: #a00; 
+	font-size: 160px; 
 	font-weight: bold; 
 	text-shadow: 0px 2px #222;	
+}
+
+/* Captions */
+
+.subtitle {
+	position: relative;
+	left: 15%;
+	width: 70%;
+	color: #eee;
+	text-shadow: 0px 0px #888;
+	font-size: 20px;
+	font-weight: normal;	
+	background-color: #222;
+	border-radius: 8px;
+	border: dashed 2px #bbb;
+	padding: 10px;
+	opacity: 0;
+	margin-top: 30px;
+}
+
+.active .subtitle {
+	opacity: 1;
+	-webkit-transition: opacity 1s linear 2s;	
 }
 
 /* Embedding the main font */
@@ -252,6 +268,10 @@ h2 {
 		/*left: 45px;*/
 		color: #a00;
 		text-shadow: 0px 2px #222;	
+	}
+	
+	#title .l_welcometotitanium {
+			
 	}
 	
 	#title .titleImage {
