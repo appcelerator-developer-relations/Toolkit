@@ -1,5 +1,5 @@
 String.toLocaleString({
-	"en": {
+	"en-US": {
 		"%l_agenda_title": "AGENDA",
 		"%l_agenda1": "What is Titanium?",
 		"%l_agenda2": "How does Titanium work?",
