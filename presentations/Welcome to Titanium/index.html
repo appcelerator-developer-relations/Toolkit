@@ -7,6 +7,8 @@
     <meta name="description" content="Welcome to Titanium presentation, using impress.js">
     <meta name="author" content="Tony Lukasavage" />
     <link href="css/appc.css" rel="stylesheet" />
+    <link href="css/showoff.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="js/l10n.js"></script>
     <script type="text/javascript" src="js/localizations.js"></script>
 </head>
@@ -68,10 +70,10 @@
     		<a href="mailto:tlukasavage@appcelerator.com">email</a>
     	</div>
     </div>
-    
-    <div id="agenda" class="step center" data-x="2000" data-y="1000" data-rotate="90">
+ 
+ 	<div id="agenda" class="step center" data-x="2000" data-y="1000" data-rotate="90">
     	<h1 class="l_agenda_title">AGENDA</h1>
-    	<ul>
+    	<ul class="swinginggate-stagger">
     		<li class="l_agenda1">What is Titanium?</li>
     		<li class="l_agenda2">How does Titanium work?</li>
     		<li class="l_agenda3">What can Titanium do?</li>
@@ -170,7 +172,7 @@
     <div id="commonapproach" class="step" data-x="1500" data-y="3400">
     	<h2><span class="l_approach">Common approach</span>:<sup style="color:#222; font-weight: normal;">*</sup></h2>
     	<div class="l_rendering">Use a single rendering context, like</div> 
-    	<ul class="contexts bluetext">
+    	<ul class="swinginggate-stagger contexts bluetext">
     		<li>Web View</li>
     		<li>OpenGL</li>
     		<li>Custom Runtime</li>
@@ -311,11 +313,13 @@
     		<li><a href="mailto:community@appcelerator.com">community@appcelerator.com</a></li>
     	</ul>
     </div>
-
+    
+    <div class="step" data-scale="20"></div>
 </div>
 
 <script src="js/localize.js"></script>
 <script src="js/impress.js"></script>
+<script src="js/showoff.js"></script>
 
 </body>
 </html>

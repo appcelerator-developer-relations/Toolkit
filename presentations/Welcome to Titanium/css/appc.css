@@ -410,21 +410,6 @@ h2 {
 /* Agenda step */
 
 #agenda {}
-
-	/* swinging text animation */
-	@-webkit-keyframes swinginggate {
-		0% {
-			-webkit-transform: rotateY(-70deg);
-	        -webkit-animation-timing-function: ease-out;
-	    }
-	    90% {
-	    	-webkit-transform: rotateY(40deg);
-	        -webkit-animation-timing-function: ease-in-out;
-	    }
-	    100% {
-	        -webkit-transform: rotateY(0deg);       
-	    }
-	}
 	
 	/* Titanium Image */
 	#agenda .image {
@@ -441,33 +426,10 @@ h2 {
 	}
 	
 		/* Individual classes to independently animate and localize items */
-		#agenda .l_agenda1,
-		#agenda .l_agenda2,
-		#agenda .l_agenda3,
-		#agenda .l_agenda4,
-		#agenda .l_agenda5 {
+		#agenda ul li {
 			padding: 10px;
 			-webkit-transform-origin: 0 0;
 			-webkit-transform: rotateY(-70deg);
-			-webkit-animation: swinginggate 1s;
-			-webkit-animation-delay: 1s;
-			-webkit-animation-fill-mode: forwards;	
-		}
-		
-		#agenda.active .l_agenda2 {
-		     -webkit-animation-delay: 1.25s;
-		}
-		
-		#agenda.active .l_agenda3 {
-		     -webkit-animation-delay: 1.5s;
-		}
-		
-		#agenda.active .l_agenda4 {
-		     -webkit-animation-delay: 1.75s;
-		}
-		
-		#agenda.active .l_agenda5 {
-		     -webkit-animation-delay: 2s;
 		}
 
 /* What is and why Titanium? */
@@ -476,23 +438,6 @@ h2 {
 
 	#whatistitanium:not(.active), #importantly:not(.active), #whytitanium:not(.active) {
 		opacity: 0;	
-	}
-	
-	@-webkit-keyframes fontswell {
-		0% {
-	    	font-size: 100px;
-	        text-shadow: 0px 2px #222;
-	        -webkit-animation-timing-function: ease-out;
-	    }
-	    50% {
-	    	text-shadow: 0px 4px #222;
-	        font-size: 160px;
-	        -webkit-animation-timing-function: ease-in-out;
-	    }
-	    100% {
-	    	text-shadow: 0px 2px #222;
-	        font-size: 100px;       
-	    }
 	}
 	
 	#whytitanium.active .l_why {

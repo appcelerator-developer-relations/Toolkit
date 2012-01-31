@@ -9,6 +9,9 @@
  * Copyright 2011 Bartek Szopka (@bartaz)
  */
 
+var ImpressJS = {};
+ImpressJS.API = {};
+
 (function ( document, window ) {
 
     // HELPER FUNCTIONS
@@ -269,6 +272,11 @@
         
         return select(next);
     };
+    
+    // Exposing these methods to allow external JS to navigate the presentation
+    ImpressJS.API.select = select;
+    ImpressJS.API.selectPrev = selectPrev;
+    ImpressJS.API.selectNext = selectNext;
     
     // EVENTS
     
