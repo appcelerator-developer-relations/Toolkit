@@ -5,8 +5,8 @@ A collection of presentations, code samples, and other materials for evnagelizin
 ### Presentations
 
 All presentations are free to be used by anyone. The presentations themselves are based on the 
-[impress.js|https://github.com/bartaz/impress.js] web-based presentation framework. In addition, 
-localization is achieved using the [l10n.js|https://github.com/eligrey/l10n.js/tree/] library.
+[impress.js](https://github.com/bartaz/impress.js) web-based presentation framework. In addition, 
+localization is achieved using the [l10n.js](https://github.com/eligrey/l10n.js/tree/) library.
 
 Some basic rules to follow:
 
