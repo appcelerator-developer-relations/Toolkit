@@ -1,16 +1,1 @@
-## Titan Toolkit
-
-A collection of presentations, code samples, and other materials for evnagelizing Titanium.
-
-### Presentations
-
-All presentations are free to be used by anyone. The presentations themselves are based on the 
-[impress.js](https://github.com/bartaz/impress.js) web-based presentation framework. In addition, 
-localization is achieved using the [l10n.js](https://github.com/eligrey/l10n.js/tree/) library.
-
-Some basic rules to follow:
-
-* If adding any fields that need to be localized, name them with a `l_` prefix to make them 
-  easier to identify. For example, an element with the `id` of `myElementId` should be called
-  `l_myElementId` if it needs to be localized.
-* Localizations can be found in the `js/localizations.js` folder
+## Titan ToolkitA collection of presentations, code samples, and other materials for spreading the good word about Titanium.### PresentationsThis is a steadily growing collection of presentations that can be used to talk about Appcelerator, Titanium, and other associated topics. These are close or identical to what we actually use, but you can feel free to customize them to your heart's content. In short, **these presentations are free for anyone to use and you can modify them however you like**. If you do something particularly cool or helpful (like a localization), we'd love to hear about it. You can do one of 2 things to notify us (which you have no obligation to do):* Submit a pull request with your changes to this project* Send us an email at community at appcelerator dot com#### LocalizationsThe **best** way you can help us with these presentations is to submit text localizations. We'd like these presentations to be available in as many languages as possible. Fortunately, it's pretty quick and easy to submit a localization for one (or more) of these presentations if you have the linguistic skills.So let's assume you want to add support for a new language in the [Welcome to Titanium]() presentation. Here's the steps you would follow.1. Goto `Toolkit/presentations/Welcome to Titanium/js`2. Open the `localizations.js` file3. Copy the entire `en-US` localization key and content   ~~~   "en-US": {		"%l_welcometotitanium": "Welcome to Titanium",		"%l_tagline": "The only cross-platform mobile development framework with NATIVE UI and performance",		       // truncated... 		"%l_qa": "Q&A",		"%l_contact": "Contact"	}   ~~~4. Append the new localization by pasting it to the end of the collection of localizations5. Change the `en-US` to the [language code](http://www.w3schools.com/tags/ref_language_codes.asp) for the language to which you plan to translate. For example, if you were providing a Spanish translation, you would change the `en-US` key to `es`.6. Translate each key's value from the current English version to your target language.#### Special ThanksWithout the help of the following people and projects, this repository would be a whole lot less interesting. ##### Projects* [impress.js](https://github.com/bartaz/impress.js) - HTML5/JS presentation framework* [l10n.js](https://github.com/eligrey/l10n.js/tree/) - Javascript Localization library* [jQuery](http://jquery.com/) - If you need a description...##### Contributors* We need translators!
