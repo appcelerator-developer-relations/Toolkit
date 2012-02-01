@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Presentation Template</title>
+    
+    <meta name="description" content="Presentation Template">
+    <meta name="author" content="Tony Lukasavage" />
+    
+    <link href="../common/css/appc.css" rel="stylesheet" />
+    <link href="css/presentation.css" rel="stylesheet" />
+    <link href="../common/css/showoff.css" rel="stylesheet"/>
+    
+    <script type="text/javascript" src="../common/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../common/js/l10n.js"></script>
+    <script type="text/javascript" src="js/localizations.js"></script>
+</head>
+<body>
+
+<div id="impress" class="impress-not-supported">
+
+    <div class="fallback-message">
+        <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+        <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
+    </div>
+    
+    <!-- 
+         "mystep", "presenter", and "contactme" are just 3 sample steps to give
+         you an idea of how to lay them out. You'll want to delete "mystep" and 
+         replace it with a title step, but probably want to keep and edit the 
+         "presenter" and "contactme" steps.
+    -->
+    <div id="mystep" class="step" data-x="0" data-y="0">
+        <p class="l_hereissometext">Here is some text that needs styling</p>
+        <ul>
+            <li>list item 1</li>
+            <li>list item 2</li>
+        </ul>
+    </div>
+    
+    <div id="presenter" class="step" data-x="0" data-y="1000" data-rotate="360">
+    	<!-- Use your own headshot or other picture here -->
+    	<img class="presenterpic" src="images/headshot.png"/>
+    	<div class="bio">
+	    	<div class="blue80">Tony Lukasavage</div>
+	    	<div style="padding: 40px 0px 20px 0px; font-size:32px;">
+	    		<!-- If you are a titan, change employee.png to titan.png -->
+	    		<img src="images/badges/employee.png" class="employee"/>
+	    		Platform Evangelist, Appcelerator
+	    	</div>
+    	</div>
+    	
+    	<!-- Add/remove certification badges are appropriate -->
+    	<div id="badges">
+    		<img src="images/badges/tcad_color.png"/>
+    		<img src="images/badges/tcmd_color.png"/>
+    		<img src="images/badges/tce_color.png"/>
+    	</div>
+    	
+    	<!-- Enter your own website and twitter, or other contact info -->
+    	<div class="contact">
+    		<a href="http://savagelook.com">savagelook.com</a> | 
+    		<a href="https://twitter.com/#!/tonylukasavage">@tonylukasavage</a> |
+    		<a href="mailto:tlukasavage@appcelerator.com">email</a>
+    	</div>
+    </div>
+        
+    <div id="contactme" class="step center" data-x="1000" data-y="-600" data-rotate-y="45" data-scale="0.5">
+    	<h1 class="l_contact">Contact</h1>
+    	<ul style="list-style:none;">
+    		<li><a href="https://twitter.com/#!/tonylukasavage">@tonylukasavage</a></li>
+    		<li><a href="mailto:community@appcelerator.com">community@appcelerator.com</a></li>
+    	</ul>
+    </div>
+    
+    <!-- 
+         Leave this here if you want an overview step, which allows 
+         you to see all of your steps at once. As your presentation
+         canvas grows, you may need to increase the data-scale value 
+         to see the whole canvas
+    -->
+    <div class="step" data-scale="5"></div>
+</div>
+ 
+<script src="../common/js/localize.js"></script>
+<script src="../common/js/impress.js"></script>
+<script src="../common/js/showoff.js"></script>
+
+</body>
+</html>
