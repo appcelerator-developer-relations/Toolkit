@@ -10,6 +10,14 @@
     <link href="../common/css/appc.css" rel="stylesheet" />
     <link href="css/presentation.css" rel="stylesheet" />
     <link href="../common/css/showoff.css" rel="stylesheet"/>
+
+    <!-- SyntaxHighlighter includes -->
+    <script type="text/javascript" src="../common/syntaxhighlighter/shCore.js"></script>
+    <script type="text/javascript" src="../common/syntaxhighlighter/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../common/syntaxhighlighter/shBrushBash.js"></script>
+    <script type="text/javascript" src="../common/syntaxhighlighter/shBrushXml.js"></script>
+    <link href="../common/syntaxhighlighter/shCore.css" rel="stylesheet"/>
+    <link href="../common/syntaxhighlighter/shThemeDefault.css" rel="stylesheet"/>
     
     <script type="text/javascript" src="../common/js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="../common/js/l10n.js"></script>
@@ -33,20 +41,85 @@
         <img class="appc-footnote-img" src="../common/images/appc-400px.png"/>
     </div> 
 
-    <div id="atest" class="step" data-x="2000" data-y="2000">
-        <a href="http://www.google.com">TESTING</a>
-    </div>
-
-    <div id="thetools" class="step" data-x="0" data-y="1000">
-        Before getting started, <span class="boldred">BIG</span> thanks to the projects that made this possible:
+    <div id="thetools" class="step" data-x="0" data-y="900">
+        <p>Before getting started, <span class="boldred">BIG</span> thanks to the projects that made this possible:</p>
+        <br>
         <ul style="list-style:none; font-size:32px;">
             <li><a href="https://github.com/bartaz/impress.js" target="_blank">impress.js</a> - HTML5/JS presentation framework</li>
-            <li><a href="https://github.com/eligrey/l10n.js" target="_blank">l10n.js</a> - Localization library</li>
+            <li><a href="https://github.com/eligrey/l10n.js" target="_blank">l10n.js</a> - JS localization library</li>
+            <li><a href="https://github.com/alexgorbatchev/SyntaxHighlighter">SyntaxHighlighter</a> - JS syntax highlighter</li>
             <li><a href="http://jquery.com" target="_blank">jQuery</a> - if you need a description...</li>
         </ul>
     </div>
+
+    <div id="clonerepo" class="step" data-x="1200" data-y="900">
+        First thing's first, get the Toolkit
+        <br><br>
+        <a href="https://github.com/appcelerator-titans/Toolkit">appcelerator-titans/Toolkit</a>
+        <br><br>
+        or cut to the chase:
+        <br>
+        <pre class="brush: bash; gutter: false; wrap-lines: true;">
+            git clone https://github.com/appcelerator-titans/Toolkit
+        </pre>
+    </div>
+
+    <div id="makeyourown" class="step" data-x="2400" data-y="900">
+        Create your own presentation based on the template
+        <pre class="brush: bash; gutter: false; wrap-lines: true;">
+            cd Toolkit/presentations
+            cp -r template YOUR_PRESENTATION_NAME
+            cd YOUR_PRESENTATION_NAME
+        </pre>
+    </div>
+
+    <div id="openinbrowser" class="step" data-x="2400" data-y="0">
+        Now fire up 
+        <pre class="brush: bash; gutter: false; wrap-lines: true;">
+            Toolkit/presentations/YOUR_PRESENTATION_NAME/index.html
+        </pre>
+        in a supported browser
+        <br><br>
+        <div class="bluetext" style="text-align:center;">
+            Safari <span style="color:#555">|</span> Chrome <span style="color:#555">|</span> Firefox (10)
+        </div>
+    </div>
+
+    <div id="templatetitle" class="step center" data-x="2400" data-y="-1000">
+        You should see something like this:
+        <br><br>
+        <img src="images/template_title.png" style="height:400px; border: solid 2px #222;"/>
+    </div>
+
+    <div id="thesteps" class="step" data-x="1200" data-y="-1000">
+        <p>Open up <span class="boldblue">index.html</span> in an editor, and you'll find that each <span style="color:#000;">"step<sup>*</sup>"</span> is a
+        self-contained <span class="boldblue">&lt;div&gt;</span> in the HTML. This makes it easy to create a flow.</p>
+        <script type="syntaxhighlighter" class="brush: xml; gutter: false; wrap-lines: true;">
+            <![CDATA[
+
+<div id="title" class="step center" data-x="0" data-y="0">
+    <h1>Presentation Title</h1>
+    <br>
+    <p>A relatively brief description of what this presentation is all about. It's up to you.</p>
+    <br>
+    <img class="appc-footnote-img" src="../common/images/appc-400px.png"/>
+</div>
+            ]]>
+        </script>
+        <p>"Steps" are created by assigning the <span>step</span> class to an element,
+        while inside the main &lt;div id="impress"&gt;&lt;/div&gt; element.
         
-    <div id="contactme" class="step center" data-x="1000" data-y="-600" data-rotate-y="45" data-scale="0.5">
+    </div>
+
+    <div id="stepsequalslides" class="step" data-x="1400" data-y="-800" data-scale="0.2">
+        <sup>*</sup>in impress.js, "slides" === "steps"
+    </div>
+
+    <div id="" class="step">
+
+    </div>
+        
+    <div id="contactme" class="step center" data-x="0" data-y="-900" data-rotate-y="45" data-scale="0.5">
     	<h1 class="l_contact">Contact</h1>
     	<ul style="list-style:none;">
     		<li><a href="https://twitter.com/#!/appcelerator">@appcelerator</a></li>
@@ -64,6 +137,7 @@
 <script src="../common/js/localize.js"></script>
 <script src="../common/js/impress.js"></script>
 <script src="../common/js/showoff.js"></script>
+<script type="text/javascript">SyntaxHighlighter.all()</script>
 
 </body>
 </html>
