@@ -97,6 +97,18 @@ a:hover {
     text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
 }
 
+p {
+    color: #555;
+    font-size: 32px;
+}
+
+img.appc-footnote-img {
+    position: fixed;
+    bottom: -50px;
+    right: 10px;
+    width: 200px;
+}
+
 h1 {
 	color: #a00;
 	font-size: 80px;
@@ -257,5 +269,53 @@ h2 {
 
 .impress-not-supported .fallback-message {
     display: block;
+}
+
+/* hint on the first slide */
+
+.hint {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    
+    background: rgba(0,0,0,0.5);
+    color: #EEE;
+    text-align: center;
+    
+    font-size: 32px;
+    padding: 20px;
+    
+    z-index: 100;
+    
+    opacity: 0;
+    
+    -webkit-transform: translateY(400px);
+    -moz-transform:    translateY(400px);
+    -ms-transform:     translateY(400px);
+    -o-transform:      translateY(400px);
+    transform:         translateY(400px);
+
+    -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
+    -moz-transition:    opacity 1s,    -moz-transform 0.5s 1s;
+    -ms-transition:     opacity 1s,     -ms-transform 0.5s 1s;
+    -o-transition:      opacity 1s,      -o-transform 0.5s 1s;
+    transition:         opacity 1s,         transform 0.5s 1s;
+}
+
+.step-title + .hint {
+    opacity: 1;
+    
+    -webkit-transition: opacity 1s 1s, -webkit-transform 0.5s;
+    -moz-transition:    opacity 1s 1s,    -moz-transform 0.5s;
+    -ms-transition:     opacity 1s 1s,     -ms-transform 0.5s;
+    -o-transition:      opacity 1s 1s,      -o-transform 0.5s;
+    transition:         opacity 1s 1s,         transform 0.5s;
+    
+    -webkit-transform: translateY(0px);
+    -moz-transform:    translateY(0px);
+    -ms-transform:     translateY(0px);
+    -o-transform:      translateY(0px);
+    transform:         translateY(0px);
 }
 

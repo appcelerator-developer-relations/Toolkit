@@ -64,17 +64,20 @@
 	text-align:center; 
 	overflow-x: hidden;
 	overflow-y: scroll;
+    visibility: hidden;
 	opacity: 0;
 	border-left: solid 2px #222;
 	border-right: solid 2px #222;
 }
 
 #showoff_navpanel.visible {
+    visibility: visible;
 	opacity: 0.8;
 	-webkit-transition: opacity 0.5s linear;	
 }
 
 #showoff_navpanel.hidden {
+    visibility: hidden;
 	opacity: 0;
 	-webkit-transition: opacity 0.5s linear;	
 }
