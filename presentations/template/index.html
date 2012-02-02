@@ -24,18 +24,12 @@
         <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 (to be released soon) will also handle it.</p>
     </div>
     
-    <!-- 
-         "mystep", "presenter", and "contactme" are just 3 sample steps to give
-         you an idea of how to lay them out. You'll want to delete "mystep" and 
-         replace it with a title step, but probably want to keep and edit the 
-         "presenter" and "contactme" steps.
-    -->
-    <div id="mystep" class="step" data-x="0" data-y="0">
-        <p class="l_hereissometext">Here is some text that needs styling</p>
-        <ul>
-            <li>list item 1</li>
-            <li>list item 2</li>
-        </ul>
+    <div id="title" class="step center" data-x="0" data-y="0">
+        <h1>Presentation Title</h1>
+        <br>
+        <p>A relatively brief description of what this presentation is all about. It's up to you.</p>
+        <br>
+        <img class="appc-footnote-img" src="../common/images/appc-400px.png"/>
     </div>
     
     <div id="presenter" class="step" data-x="0" data-y="1000" data-rotate="360">
@@ -79,7 +73,16 @@
          canvas grows, you may need to increase the data-scale value 
          to see the whole canvas
     -->
-    <div class="step" data-scale="5"></div>
+    <div class="step canvas-overview" data-scale="5"></div>
+</div>
+
+<!-- 
+     Shows this navigation hint on whatever slide you gave the 
+     id of 'title'. You can delete this if you don't want to have
+     the hint show up at all
+-->
+<div class="hint">
+    Use a spacebar or arrow keys to navigate.<br>Press 'n' to toggle the navigation panel.
 </div>
  
 <script src="../common/js/localize.js"></script>
