@@ -1,0 +1,95 @@
+/*
+Appcelerator Titan Toolkit presentation template
+
+HEADS UP: "slides" are generally referred to as "steps" in impress.js 
+
+This is the file where you will define all of your presentation-specific styling.
+The best way to create and organize the "steps" of your presentation is to create
+and `id` for each "step". Under each `id` tag, assemble the styling for all of its
+children elements, indented appropriately. Think python.
+
+Here's an example, since that explanation was clear as mud. let's assume we defined 
+a "step" in out index.html like this:
+
+    <div id="mystep" class="step" data-x="0" data-y="0">
+        <p>Here is some text that needs styling</p>
+        <ul>
+            <li>list item 1</li>
+            <li>list item 2</li>
+        </ul>
+    </div>
+
+This is how we would define the css for it in this file:
+
+    #mystep {}
+    
+        #mystep p {
+            font-size: 80px;
+            font-weight: bold;
+            color: #a00;
+        }
+        
+        #mystep ul {
+            list-style: circle;
+        }
+        
+            #mystep ul li {
+                padding: 20px;
+            }
+            
+It's also good to leave some comments with each "step" as they are natural breaks in
+the flow of the presentation. Just a few words describing them is pretty useful in 
+helping others understand the "step".
+*/
+
+/* Example step style from comments above. Feel free to delete */
+#mystep {}
+    
+    #mystep p {
+        font-size: 80px;
+        font-weight: bold;
+        color: #a00;
+    }
+        
+    #mystep ul {
+        list-style: circle;
+    }
+        
+        #mystep ul li {
+            padding: 20px;
+        }
+        
+/* Presenter step */
+
+#presenter {}
+
+	#presenter .presenterpic {
+		width: 300px;
+		float: left;
+	}
+	
+	#presenter .bio {
+		width:450px; 
+		float:right;
+	}
+
+	#presenter .employee {
+		float: right;
+		height: 100px;	
+	}
+	
+	#presenter .contact {
+		font-size:24px; 
+		text-align:center; 
+		padding-top:30px;	
+	}
+
+	#badges {
+		clear: both;
+		padding-top: 20px;
+		text-align: center;	
+	}
+	
+	#badges img {
+		height: 100px;	
+	}
