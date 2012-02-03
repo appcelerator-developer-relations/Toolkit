@@ -13,6 +13,8 @@ All presentations in this repository are created using [impress.js](http://barta
 
 But, if you want to ignore me and get started right away, here's a straight-to-the-point rundown of impress.js and how it's used for these presentations. It's not a complete doc, and I again urge you to check out the [impress.js website](http://bartaz.github.com/impress.js/#/bored). That said, here we go.
 
+### Steps
+
 Presentations consist of **_steps_**. In impress.js, steps are essentially equal to a typical presentation's slides. They represent a single view state of the presentation. Steps are navigated in a few ways:
 
 * **Forward** - spacebar, tab, right/down arrow, page down
@@ -34,6 +36,8 @@ You create a step in your presentation by defining an HTML element inside of the
 </div>
 ``` 
 
+### Data-\* Attributes
+
 You'l probably notice the `data-x` and `data-y` attributes right away. These attributes, among a few others, allow you to dictate how impress.js will perform animated transitions between each step. You can make all forms of 2D & 3D transitions, including scale, translation, and rotation. Let's take a quick look at each:
 
 * **data-x, data-y, data-z** - Used to specify a step's position along the given axis. So `<div class="step" data-x="0" data-y="300" data-z="400">` would be positioned, you guessed it, at `(0,300,400)` within the presentation.
@@ -42,6 +46,27 @@ You'l probably notice the `data-x` and `data-y` attributes right away. These att
 * **data-scale** - Scales up or down the size of the whole step. A practical application of this is when you want to create a footnote that you'd like to zoom in on in the next step.
 
 So if we look again at the <a href="#stepexample">2-step example</a>, when you navigate from `step1` to `step2`, you would move 1000 pixels to the right to `step2`, which is rotated 45 degrees along its y-axis and is also 1/2 it's normal size.
+
+### The _active_ class
+
+When steps become active, they get the `active` class added to them. This is useful for initiating JS and CSS animations when slides become active. For a good exmaple of this, let's look at how I animate in the opacity of images on a step from the [Welcome to Titanium](https://github.com/appcelerator-titans/Toolkit/tree/master/presentations/Welcome%20to%20Titanium) presentation:
+
+```css
+/* animate in the opacity of images when active */
+#donetodeath img {
+    position: fixed;
+    height: 150px;  
+    opacity: 0;
+}
+ 
+#donetodeath.active img {
+    opacity: 1;
+    -webkit-transition: opacity 1s ease-in;
+    -webkit-transition-delay: 2s;   
+}
+```
+
+As you can see above, the opacity of the images on the `donetodeath` step are animated from `0` to `1`, but not until 2 seconds _after_ the step becomes active. Understanding the power of the `active` class is critical to creating really dynamic impress.js presentations. 
 
 And that's it for now. As previously mentioned, firing up a presentation in a supported browser and checking out the source is probably the best way to learn how to start toying with it yourself. Be warned, once you get the hang of it, impress.js is very addicting. You'll find yourself forgetting about the content and spending your time playing with transitions and animations. 
 
