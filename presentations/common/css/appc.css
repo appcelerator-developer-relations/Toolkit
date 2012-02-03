@@ -168,6 +168,13 @@ h2 {
 	text-shadow: 0px 1px #222;	
 }
 
+.red120 {
+    color: #a00; 
+    font-size: 120px; 
+    font-weight: bold; 
+    text-shadow: 0px 2px #222;  
+}
+
 .red160 {
 	color: #a00; 
 	font-size: 160px; 
