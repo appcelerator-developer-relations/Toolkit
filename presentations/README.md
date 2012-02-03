@@ -1,0 +1,1 @@
+# PresentationsThis is a steadily growing collection of presentations that can be used to talk about Appcelerator, Titanium, and other associated topics. These are close or identical to what we actually use, but you can feel free to customize them to your heart's content. 
