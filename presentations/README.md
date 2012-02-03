@@ -13,6 +13,14 @@ All presentations in this repository are created using [impress.js](http://barta
 
 But, if you want to ignore me and get started right away, here's a straight-to-the-point rundown of impress.js and how it's used for these presentations. It's not a complete doc, and I again urge you to check out the [impress.js website](http://bartaz.github.com/impress.js/#/bored). That said, here we go.
 
+### Supported Browsers
+
+Since you're going to be presenting in a browser of your own choosing, wide compatibility isn't much of an issue. Knowing that, though, you still need to use one of the following browsers to get all the features of impress.js:
+
+* Chrome
+* Safari 5.1+
+* Firefox 10+
+
 ### Steps
 
 Presentations consist of **_steps_**. In impress.js, steps are essentially equal to a typical presentation's slides. They represent a single view state of the presentation. Steps are navigated in a few ways:
