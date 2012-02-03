@@ -9,7 +9,7 @@ In short, **these presentations are free for anyone to use and you can modify th
 
 ## Impress.js Crash Course
 
-All presentations in this repository are created using [impress.js](http://bartaz.github.com/impress.js/#/bored). So before diving in, you'll likely want to take a look at that project and its educational resources. It's pretty basic, but it's a new paradigm for creating presentations. The best way to really get a sense of how different it is is to visit the [impress.js website](http://bartaz.github.com/impress.js/#/bored) and see for yourself.
+All presentations in this repository are created using [impress.js](http://bartaz.github.com/impress.js/#/bored). So before diving in, you'll likely want to take a look at that project and its educational resources. It's pretty basic, but it's a new paradigm for creating presentations. The best way to really get a sense of how different it is is to visit the [impress.js website](http://bartaz.github.com/impress.js/#/bored) and see for yourself. Another good reference I found was [this blog post](http://www.cubewebsites.com/blog/guides/how-to-use-impress-js/) as well.
 
 But, if you want to ignore me and get started right away, here's a straight-to-the-point rundown of impress.js and how it's used for these presentations. It's not a complete doc, and I again urge you to check out the [impress.js website](http://bartaz.github.com/impress.js/#/bored). That said, here we go.
 
