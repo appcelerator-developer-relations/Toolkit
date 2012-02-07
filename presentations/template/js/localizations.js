@@ -4,7 +4,7 @@ String.toLocaleString({
 		"%l_contact": "Contact"
 	},
 	"es": {
-		"%l_hereissometext": "Aquí es un texto que las necesidades de diseño",
+		"%l_hereissometext": "Aquí va texto que necesita estilos",
 		"%l_contact": "Contacto"
 	}
 });
