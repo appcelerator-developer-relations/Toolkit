@@ -1,1 +1,5 @@
 .DS_Store
+presentations/profile/profile.json
+presentations/profile/headshot.jpg
+presentations/profile/logo.png
+node_modules

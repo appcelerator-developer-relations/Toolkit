@@ -1,0 +1,13 @@
+{
+	"name": "Kevin Whinnery",
+	"title": "Director of Developer Relations",
+	"headshot": "../profile/headshot.jpg",
+	"company": "Appcelerator Inc.",
+	"logo":"../profile/logo.png",
+	"badges": ["tcad", "tcmd", "tce"],
+	"links": {
+		"@kevinwhinnery": "http://www.twitter.com/kevinwhinnery",
+		"kevinwhinnery.com": "http://www.kevinwhinnery.com",
+		"developer.appcelerator.com": "http://developer.appcelerator.com"
+	}
+}

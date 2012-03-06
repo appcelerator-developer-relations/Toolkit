@@ -334,3 +334,20 @@ h2 {
     transform:         translateY(0px);
 }
 
+#badges img {
+	margin:0 10px 0 10px;
+}
+
+.profile_link_bar ul {
+    list-style-type: none;
+    text-align: center;
+	margin:0;
+	padding:0;
+}
+
+.profile_link_bar li {
+    display: inline;
+	padding:0;
+	margin: 0 10px 0 10px;
+}
+

@@ -14,6 +14,7 @@
     <script type="text/javascript" src="../common/js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="../common/js/l10n.js"></script>
     <script type="text/javascript" src="js/localizations.js"></script>
+    <script type="text/javascript" src="../common/js/profile.js"></script>
 </head>
 <body>
 
@@ -48,30 +49,21 @@
     </div>
     
     <div id="presenter" class="step" data-x="1000" data-y="1000" data-rotate="360">
-    	<!-- Use your own headshot or other picture here -->
-    	<img class="presenterpic" src="images/headshot.png"/>
+    	<img class="presenterpic profile_headshot" src="/profile/headshot.jpg"/>
     	<div class="bio">
-	    	<div class="blue80">Tony Lukasavage</div>
+	    	<div class="blue80 profile_name">Your Name Here</div>
 	    	<div style="padding: 40px 0px 20px 0px; font-size:32px;">
-	    		<!-- If you are a titan, change employee.png to titan.png -->
-	    		<img src="images/badges/employee.png" class="employee"/>
-	    		Platform Evangelist, Appcelerator
+	    		<img class="employee profile_logo" src="images/badges/titan.png"/>
+	    		<div class="profile_title"></div> 
+				<div style="margin-top:10px;font-size:0.7em;" class="profile_company"></div>
 	    	</div>
     	</div>
     	
     	<!-- Add/remove certification badges are appropriate -->
-    	<div id="badges">
-    		<img src="images/badges/tcad_color.png"/>
-    		<img src="images/badges/tcmd_color.png"/>
-    		<img src="images/badges/tce_color.png"/>
-    	</div>
+    	<div id="badges" class="profile_badges"></div>
     	
     	<!-- Enter your own website and twitter, or other contact info -->
-    	<div class="contact">
-    		<a href="http://savagelook.com">savagelook.com</a> | 
-    		<a href="https://twitter.com/#!/tonylukasavage">@tonylukasavage</a> |
-    		<a href="mailto:tlukasavage@appcelerator.com">email</a>
-    	</div>
+    	<div class="contact profile_link_bar"></div>
     </div>
  
  	<div id="agenda" class="step center" data-x="2000" data-y="1000" data-rotate="90">
@@ -308,12 +300,8 @@
     	Q&amp;A
     </div>
     
-    <div id="contactme" class="step center" data-x="1000" data-y="-600" data-scale="0.5">
-    	<h1 class="l_contact">Contact</h1>
-    	<ul style="list-style:none;">
-    		<li><a href="https://twitter.com/#!/appcelerator" target="_blank">@appcelerator</a></li>
-    		<li><a href="mailto:community@appcelerator.com">community@appcelerator.com</a></li>
-    	</ul>
+    <div id="thanks" class="step center l_thanks" data-x="1000" data-y="-600" data-scale="0.5">
+    	Thank You!
     </div>
     
     <div class="step canvas-overview" data-scale="20"></div>

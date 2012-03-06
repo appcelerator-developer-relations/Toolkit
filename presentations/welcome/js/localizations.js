@@ -61,7 +61,7 @@ String.toLocaleString({
 		"%l_mailinglist": "Developer Mailing List",
 		"%l_appcnews": "Appcelerator News",
 		"%l_qa": "Q&A",
-		"%l_contact": "Contact"
+		"%l_thanks": "Thank You!"
 	},
 	"es": {
 		"%l_welcometotitanium": "Bienvenido al Titanium",
@@ -125,6 +125,6 @@ String.toLocaleString({
 		"%l_mailinglist": "Desarrollador la Lista de Correo",
 		"%l_appcnews": "Appcelerator Noticias",
 		"%l_qa": "Q&A",
-		"%l_contact": "Contacto"
+		"%l_thanks": "¡Gracias!"
 	}
 });
