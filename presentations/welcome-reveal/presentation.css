@@ -7,3 +7,46 @@
 	width: 300px;
 	float: right;
 }
+
+#howitworks h1 {
+	margin-top: 80px;
+}
+
+#howitworks ul {
+	width: 500px;
+	float: left;
+}
+
+#howitworks img {
+	width: 300px;
+	float: right;
+}
+
+#workflow h2 {
+	margin-top: 80px;
+}
+
+#workflow ul {
+	width: 400px;
+	float: left;
+}
+
+#workflow pre {
+	width: 450px;
+	float: right;
+}
+
+#appcnews h2 {
+	margin-top: 80px;
+}
+
+#appcnews ul {
+	width: 600px;
+	float: left;
+	margin-top: 50px;
+}
+
+#appcnews img {
+	width: 250px;
+	float: right;
+}
