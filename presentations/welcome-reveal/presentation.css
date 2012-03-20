@@ -1,0 +1,9 @@
+#agenda ul {
+	width: 500px;
+	float: left;
+}
+
+#agenda img {
+	width: 300px;
+	float: right;
+}
