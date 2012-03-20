@@ -1,5 +1,5 @@
 <!doctype html>  
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8">
 		<title>Welcome to Titanium!</title>
@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="engine/reveal.js/css/main.css">
 		<link rel="stylesheet" href="engine/reveal.js/lib/zenburn.css">
 		<link rel="stylesheet" href="presentation.css">
+		<script type="text/javascript" src="engine/js/l10n.js"></script>
 		<script type="text/javascript" src="js/localizations.js"></script>
 	</head>
 	
@@ -20,8 +21,8 @@
 			<div class="slides">
 				
 				<section>
-					<h1 style="margin-top:100px;">Welcome To<br>Titanium</h1>
-					<h5 class="inverted">The only cross-platform mobile development framework with native UI and performance</h5>
+					<h1 style="margin-top:100px;" class="l_welcometotitanium">Welcome To<br>Titanium</h1>
+					<h5 class="inverted l_tagline">The only cross-platform mobile development framework with native UI and performance</h5>
 					<script>
 						// Delicously hacky. Look away.
 						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) )
@@ -30,34 +31,34 @@
 				</section>
 				
 				<section id="agenda">
-					<h1 style="margin-top:50px;">AGENDA</h1>
+					<h1 style="margin-top:50px;" class="l_agenda_title">AGENDA</h1>
 			    	<ul>
-			    		<li>What is Titanium?</li>
-			    		<li>How does Titanium work?</li>
-			    		<li>What can Titanium do?</li>
-			    		<li>What's it like developing with Titanium?</li>
-			    		<li>How can I learn more?</li>
+			    		<li class="l_agenda1">What is Titanium?</li>
+			    		<li class="l_agenda2">How does Titanium work?</li>
+			    		<li class="l_agenda3">What can Titanium do?</li>
+			    		<li class="l_agenda4">What's it like developing with Titanium?</li>
+			    		<li class="l_agenda5">How can I learn more?</li>
 			    	</ul>
 				    <img src="engine/images/titanium.png"/>
 				</section>
 
 				<section>
 					<section>
-						<h1>What is<br>Titanium?</h1>
+						<h1 class="l_whatis" style="margin-top:80px;">What is<br>Titanium?</h1>
 						<img src="engine/images/titanium.png" style="height:250px;"/>
 					</section>
 					<section>
-						<h2 style="margin-top: 250px;">But more importantly...</h2>
+						<h2 class="l_important" style="margin-top: 250px;">But more importantly...</h2>
 					</section>
 					<section>
-						<h1><span style="color:#a00;">Why</span><br>Titanium?</h1>
+						<h1 class="l_why" style="margin-top:80px;"><span style="color:#a00;">Why</span><br>Titanium?</h1>
 						<img src="engine/images/titanium.png" style="height:250px;"/>
 					</section>
 				</section>
 
 				<section>
-					<h1 style="margin-top:50px;">The Dilemma</h1>
-					<p style="float:left;">So many native platforms...</p>
+					<h1 style="margin-top:50px;" class="l_dilemma">The Dilemma</h1>
+					<p style="float:left;" class="l_somany">So many native platforms...</p>
 					<div style="clear:both;">
 						<img style="height:150px;" src="images/devices/androidtablet.png"/>
 						<img style="height:150px;" src="images/devices/iphone.png"/>
@@ -66,7 +67,7 @@
 						<img style="height:150px;" src="images/devices/ipad.png"/>
 					</div>
 					<br>
-					<p style="float:right;">So few resources.</p>
+					<p style="float:right;" class="l_sofew">So few resources.</p>
 				</section>
 
 				<section>
@@ -74,35 +75,35 @@
 				</section>
 
 				<section>
-					<h2 style="margin-top:200px;">Cross-platform development is the answer, but we don't want to...</h2>
+					<h2 style="margin-top:200px;" class="l_theanswer">Cross-platform development is the answer, but we don't want to...</h2>
 				</section>
 
 				<section>
-					<h1 style="margin-top: 100px;">"Write once,<br><span style="color:#a00;">suck</span> everywhere"</h1>
+					<h1 style="margin-top: 100px;" class="l_suck">"Write once,<br><span style="color:#a00;">suck</span> everywhere"</h1>
 					<p style="font-size:18px; margin-top: 80px; float:right;"><sup>*</sup>Loren Brichter, author of "Tweetie" Twitter client for iOS</p>
 				</section>
 
 				<section>
-					<h2 style="margin-top:100px;">Common Approach<sup>*</sup></h2>
-					<p>Use a single rendering context, like</p>
+					<h2 style="margin-top:100px;" class="l_approach">Common Approach<sup>*</sup></h2>
+					<p class="l_rendering">Use a single rendering context, like</p>
 					<ul>
 						<li>Web View</li>
 						<li>OpenGL</li>
 						<li>Custom Runtime</li>
 					</ul>
-					<p>then add some native API hooks.</p>
+					<p class="l_apihooks">then add some native API hooks.</p>
 				</section>
 
 				<section>
-					<h2 style="margin-top:250px;"><sup>*</sup>see also, "done to death"</h2>
+					<h2 style="margin-top:250px;" class="l_donetodeath"><sup>*</sup>see also, "done to death"</h2>
 				</section>
 
 				<section>
-					<h2 style="margin-top:250px;">What are they all missing?</h2>
+					<h2 style="margin-top:250px;" class="l_missing">What are they all missing?</h2>
 				</section>	
 
 				<section>
-					<h1 style="margin-top: 100px;">Native</h1>
+					<h1 style="margin-top: 100px;" class="l_native">Native</h1>
 					<ul>
 						<li class="l_performance">Performance</li>
 			    		<li class="l_uicomponents">UI Components</li>
@@ -114,30 +115,30 @@
 
 				<section>
 					<img src="engine/images/titanium.png" style="height:350px;"/>
-					<p>Titanium Mobile is a platform for building best in class cross-platform mobile applications in JavaScript</p>
+					<p class="l_titaniummobile">Titanium Mobile is a platform for building best in class cross-platform mobile applications in JavaScript</p>
 				</section>
 
 				<section>
 					<h1 style="margin-top:50px;">Titanium Mobile</h1>
 					<ul style="width: 600px; margin-top:20px;">
-						<li>Only cross-platform mobile toolkit with native UI and performance</li>
-						<li>Free and open source under the Apache 2.0 license</li>
-						<li>Supports iOS, Android, Blackberry, and Mobile Web</li>
+						<li class="l_nativeperf">Only cross-platform mobile toolkit with native UI and performance</li>
+						<li class="l_foss">Free and open source under the Apache 2.0 license</li>
+						<li class="l_supports">Supports iOS, Android, Blackberry, and Mobile Web</li>
 					</ul>
 				</section>
 
 				<section id="howitworks">
-					<h1>How Titanium Works</h1>
+					<h1 class="l_howtitaniumworks">How Titanium Works</h1>
 			    	<ul>
-			    		<li>You write Javascript</li>
-			    		<li>Titanium maps your JS to native bindings</li>
-			    		<li>Your JS + JS engine + native bindings = native mobile app</li>
+			    		<li class="l_youwritejavascript">You write Javascript</li>
+			    		<li class="l_titaniummaps">Titanium maps your JS to native bindings</li>
+			    		<li class="l_theformula">Your JS + JS engine + native bindings = native mobile app</li>
 			    	</ul>
 				    <img src="engine/images/overview.png"/>
 				</section>
 
 				<section>
-					<h2 style="margin-top:200px;">That's great,<br>but what can I do with it?</h2>
+					<h2 style="margin-top:200px;" class="l_whatcanidowithit">That's great,<br>but what can I do with it?</h2>
 				</section>
 
 				<section>
@@ -163,15 +164,15 @@
 				</section>
 
 				<section>
-					<h2 style="margin-top:250px;">What's the code like?</h2>
+					<h2 style="margin-top:250px;" class="l_whatsthecodelike">What's the code like?</h2>
 				</section>
 
 				<section id="workflow">
-					<h2>Development Workflow</h2>
+					<h2 class="l_workflow">Development Workflow</h2>
 					<ul>
-						<li>UI and app logic coded in Javascript</li>
-						<li>Write code, manage projects, and distribute with Titanium Studio</li>
-						<li>Target multiple platforms from a single codebase</li>
+						<li class="l_workflow1">UI and app logic coded in Javascript</li>
+						<li class="l_workflow2">Write code, manage projects, and distribute with Titanium Studio</li>
+						<li class="l_workflow3">Target multiple platforms from a single codebase</li>
 					</ul>
 					<pre><code contenteditable>
     var win = Ti.UI.createWindow({
@@ -192,11 +193,11 @@
 				</section>
 
 				<section>
-					<h1 style="margin-top:200px;">Live Code Demo</h1>
+					<h1 style="margin-top:200px;" class="l_livecode">Live Code Demo</h1>
 				</section>
 				
 				<section>
-					<h2 style="margin-top:250px;">Want to learn more?</h2>
+					<h2 style="margin-top:250px;" class="l_learnmore">Want to learn more?</h2>
 				</section>
 
 				<section>
@@ -213,7 +214,7 @@
 				</section>
 
 				<section id="appcnews">
-					<h2>Appcelerator News</h2>
+					<h2 class="l_appcnews">Appcelerator News</h2>
 			    	<ul>
 			    		<li><a href="https://twitter.com/#!/appcelerator" target="_blank"><span style="display:inline;" class="l_follow">Follow</span> @appcelerator</a></li>
 			    		<li><a href="http://www.facebook.com/appcelerator" target="_blank" class="l_facebook">Like us on Facebook</a></li>
@@ -224,11 +225,11 @@
 				</section>
 
 				<section>
-					<h1 style="margin-top:200px;">Q&A</h1>
+					<h1 style="margin-top:200px;" class="l_qa">Q&A</h1>
 				</section>
 
 				<section>
-					<h1 style="margin-top:200px;">Thank you!</h1>
+					<h1 style="margin-top:200px;" class="l_thanks">Thank you!</h1>
 				</section>
 
 			</div>
