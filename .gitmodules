@@ -1,3 +1,3 @@
-[submodule "presentations/welcome-reveal/engine"]
-	path = presentations/welcome-reveal/engine
+[submodule "presentations/engine"]
+	path = presentations/engine
 	url = git@github.com:appcelerator-titans/presentation-engine.git
