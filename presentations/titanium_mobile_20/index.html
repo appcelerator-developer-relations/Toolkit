@@ -1,0 +1,226 @@
+<!doctype html>  
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<title>Titanium Mobile 2.0</title>
+		<meta name="description" content="Titanium Mobile 2.0, using reveal.js">
+    	<meta name="author" content="Anthony Decena" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="../engine/reveal.js/css/reset.css">
+		<link rel="stylesheet" href="../engine/reveal.js/css/main.css">
+		<link rel="stylesheet" href="../engine/reveal.js/lib/zenburn.css">
+		<link rel="stylesheet" href="presentation.css">
+		<script type="text/javascript" src="../engine/js/l10n.js"></script>
+		<script type="text/javascript" src="js/localizations.js"></script>
+	</head>
+	
+	<body>
+		<div id="reveal">	
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				
+				<section>
+					<h1 style="margin-top:100px;" class="l_welcometotitanium">Welcome To The<br>Titanium 2.0 GA</h1>
+					<h5 class="inverted l_tagline">The latest release of the only cross-platform mobile development framework with native UI and performance</h5>
+					<script>
+						// Delicously hacky. Look away.
+						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) )
+						document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+					</script>
+				</section>
+				
+				<section id="agenda">
+					<h1 style="margin-top:50px;" class="l_agenda_title">AGENDA</h1>
+			    	<ul>
+			    		<li class="l_agenda1">Release Overview</li>
+			    		<li class="l_agenda2">What's New in 2.0</li>
+			    		<li class="l_agenda3">Known Issues</li>
+			    		<li class="l_agenda4">Fixes and Enhancements</li>
+			    		<li class="l_agenda5">Q&A</li>
+			    	</ul>
+				    <img src="../engine/images/titanium.png"/>
+				</section>
+				
+				<section id="overview">
+					<h1 style="margin-top:50px;" class="l_overview">RELEASE OVERVIEW</h1>
+					<h5 class="inverted l_overview1">Titanium Mobile Release 2.0 is a feature release of the Titanium Mobile SDK, including several new features and a number of bug fixes and parity improvements.</h5>
+				</section>
+				
+				<section id="whatsnew">
+					<h1 style="margin-top:50px;" class="l_whatsnew">WHATS NEW IN 2.0?</h1>
+					<ul>
+						<li class="l_whatsnew1">Layout System Updates</li>
+						<li class="l_whatsnew2">Appcelerator Cloud Services Support</li>
+						<li class="l_whatsnew3">Mobile Web Release Candidate</li>
+						<li class="l_whatsnew4">Modules API</li>
+						<li class="l_whatsnew5">Android Geolocation Enhancements</li>
+					</ul>
+				</section>
+				
+				<section>
+					<section>
+						<h1 style="margin-top:200px;" class="l_whatsnew1">Layout System Updates</h1>
+					</section>
+					<section>
+						<h2 style="margin-top:50xp;">View Types &amp; Auto Behavior</h2>
+						<h5>2 new constants: Titanium.UI.FILL and Titanium.UI.SIZE to replaces the 'auto' keyword</h5>
+						<ul>
+							<li><b>Auto Size Views</b> - 'auto' == Ti.UI.SIZE</li>
+							<li><b>Auto Fill Views</b> - 'auto' == Ti.UI.FILL</li>
+							<li><b>Auto Fill Width Views</b> - fills available width by default, scales vertically to fit contents</li>
+						</ul>
+					</section>
+					<section>
+						<h2 style="margin-top:50px;" class="l_batchlayout">Batch Layout Updates</h2>
+						<ul>
+							<li>In previous releases, each update to a layout parameter could trigger a layout cycle.</li>
+							<li><code>startLayout()</code> and <code>finishLayout()</code> place view into deferred layout mode</li>
+							<li><code>updateLayout()</code> method allows you to update a set of layout parameters in a single operation.</li>
+						</ul>
+					</section>
+					<section>
+						<h2 style="margin-top:50px;" class="">Batch Layout Code</h1>
+						<pre><code style="font-size:1.6em;line-height:1em;">
+// Put a view into deferred layout mode.
+
+myView.startLayout();
+myView.top = 50;
+myView.left = 50;
+myView.width = 200;
+myView.finishLayout();
+
+// Update multiple layout parameters in a single operation
+// Same effect as above
+
+myView.updateLayout({
+    top : 50,
+    left : 50,
+    width : 200 
+});
+						</code></pre>
+					</section>
+					<section>
+						<h2 style="margin-top:50px;" class="l_unitsupport">Universal Unit Support</h2>
+						<h5>All platforms now support specifying units for size and position values. The following table lists the supported units:</h5>
+						<img src="images/unit_support.png" />
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h1 style="margin-top:200px;" class="l_acssupport">APPCELERATOR CLOUD SERVICES (COCOAFISH)</h1>
+					</section>
+					<section>
+						<h2 style="margin-top:50px;" class="l_unitsupport">ACS Modules</h2>
+						<ul>
+							<li>This release includes bundled Titanium modules for using Appcelerator Cloud Services (ACS)</li>
+							<li>ACS modules are not part of core. To use the main ACS module, you must import it using <code>require</code></li>
+							<li>To use ACS push notifications on Android, you must also import the Titanium.Push module</li>
+							<li>API reference for <a href="http://docs.appcelerator.com/titanium/latest/#!/api/Titanium.Cloud">Titanium.Cloud</a></li>
+							<li>ACS also provides a REST API and native SDKs for many platforms. See <a href="http://cloud.appcelerator.com">cloud.appcelerator.com</a></li>
+						</ul>
+					</section>
+				</section>
+					
+				<section>
+					<h1 style="margin-top:50px;" class="l_mobilewebrc">MOBILE WEB RELEASE CANDIDATE</h1>
+					<ul>
+						<li>The majority of the Titanium Mobile API is now implemented for Mobile Web.</li>
+						<li>Mobile Web implements a cross-platform subset of the Titanium Mobile APIs, excluding any platform-specific APIs and non-browser based APIs</li>
+						<li>Certain APIs are subject to limitations on Mobile Web because of the constraints imposed on application running in the browser. For more information, see <a href="http://docs.appcelerator.com/titanium/#!/guide/Mobile_Web_Limitations">Mobile Web Limitations</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h1 style="margin-top:50px;" class="l_moduleapis">MODULE APIs</h1>
+					<h5>In this release, the native APIs that can be used by native Android and iOS modules have been documented. The module APIs are not integrated into the main documentation site, but you can find them at the following locations:</h5>
+					<ul>
+						<li><a href="http://builds.appcelerator.com.s3.amazonaws.com/module-apidoc/2.0.0/android/index.html">Android Module API Reference</a></li>
+						<li><a href="http://builds.appcelerator.com.s3.amazonaws.com/module-apidoc/2.0.0/ios/index.html">iOS Module API Reference</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h1 style="margin-top:50px;" class="l_issues">KNOWN ISSUES</h1>
+					<ul>
+						<li></li>
+						<li></li>
+					</ul>
+				</section>
+				
+				<section>
+					<section>
+						<h1 style="margin-top:200px;" class="l_fixes">FIXES &amp; ENHANCEMENTS</h1>
+					</section>
+					<section>
+						<h2 style="margin-top:50px;" class="l_androidfixes">Android Fixes and Enhancements</h2>
+						
+					</section>
+					<section>
+						<h2 style="margin-top:50px;" class="l_iosfixes">iOS Fixes and Enhancements</h2>
+						
+					</section>
+				</section>
+				
+				<section>
+					<h1 style="margin-top:50px;" class="l_resources">RESOURCES</h1>
+					<ul>
+						<li><a href="http://docs.appcelerator.com/titanium/release-notes/?version=2.0.0">Release Notes</a></li>
+						<li><a href="http://docs.appcelerator.com">Documentation</a></li>
+					</ul>
+				</section>
+
+
+			</div>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+			<div class="progress"><span></span></div>
+			
+		</div>
+		
+		<script src="../engine/reveal.js/js/reveal.js"></script>
+		<script src="../engine/reveal.js/lib/highlight.js"></script>
+		<script>
+			// Parse the query string into a key/value object
+			var query = {};
+			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
+
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: true,
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// If true; each slide will be pushed to the browser history
+				history: true,
+
+				// Flags if mouse wheel navigation should be enabled
+				mouseWheel: true,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: true,
+
+				// UI style
+				theme: query.theme || 'default', // default/neon
+
+				// Transition style
+				transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+			});
+
+			hljs.initHighlightingOnLoad();
+		</script>
+		<script src="../engine/js/localize.js"></script>
+	</body>
+</html>
