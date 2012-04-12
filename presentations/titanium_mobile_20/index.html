@@ -33,13 +33,12 @@
 				<section id="agenda">
 					<h1 style="margin-top:50px;" class="l_agenda_title">AGENDA</h1>
 			    	<ul>
-			    		<li class="l_agenda1">Release Overview</li>
-			    		<li class="l_agenda2">What's New in 2.0</li>
+			    		<li class="l_agenda1">Titanium Mobile Release Overview</li>
+			    		<li class="l_agenda2">What's New in Titanium Mobile 2.0</li>
 			    		<li class="l_agenda3">Known Issues</li>
 			    		<li class="l_agenda4">Fixes and Enhancements</li>
-			    		<li class="l_agenda5">Q&A</li>
+			    		<li class="l_agenda5">Resources / Q&amp;A</li>
 			    	</ul>
-				    <img src="../engine/images/titanium.png"/>
 				</section>
 				
 				<section id="overview">
@@ -50,7 +49,7 @@
 				<section id="whatsnew">
 					<h1 style="margin-top:50px;" class="l_whatsnew">WHATS NEW IN 2.0?</h1>
 					<ul>
-						<li class="l_whatsnew1">Layout System Updates</li>
+						<li class="l_whatsnew1">Updated Layout System</li>
 						<li class="l_whatsnew2">Appcelerator Cloud Services Support</li>
 						<li class="l_whatsnew3">Mobile Web Release Candidate</li>
 						<li class="l_whatsnew4">Modules API</li>
@@ -60,15 +59,65 @@
 				
 				<section>
 					<section>
-						<h1 style="margin-top:200px;" class="l_whatsnew1">Layout System Updates</h1>
+						<h1 style="margin-top:50px;" class="l_whatsnew1">Layout System Updates</h1>
+						<ul>
+							<li>Improved handling for auto-sizing of views</li>
+							<li>Batch layout updates for improved performance</li>
+							<li>Post-layout event generated when layout is complete </li>
+						</ul>
 					</section>
 					<section>
 						<h2 style="margin-top:50xp;">View Types &amp; Auto Behavior</h2>
-						<h5>2 new constants: Titanium.UI.FILL and Titanium.UI.SIZE to replaces the 'auto' keyword</h5>
+						<h5>2 new constants: <code>Titanium.UI.FILL</code> and <code>Titanium.UI.SIZE</code> to replaces the 'auto' keyword</h5>
 						<ul>
-							<li><b>Auto Size Views</b> - 'auto' == Ti.UI.SIZE</li>
-							<li><b>Auto Fill Views</b> - 'auto' == Ti.UI.FILL</li>
+							<li><b>Auto Size Views</b> - 'auto' === <code>Ti.UI.SIZE</code></li>
+							<li><b>Auto Fill Views</b> - 'auto' === <code>Ti.UI.FILL</code></li>
 							<li><b>Auto Fill Width Views</b> - fills available width by default, scales vertically to fit contents</li>
+						</ul>
+					</section>
+					<section>
+						<h2 style="margin-top:50xp;">Auto Size Views</h2>
+						<ul>
+							<li>Specifying 'auto' for either height or width is the same as specifying Ti.UI.SIZE</li>
+							<li><code>Button,
+							Label,
+							ImageView,
+							ProgressBar,
+							Switch,
+							TextArea,
+							TextField,
+							Picker,
+							ButtonBar,
+							TableViewSection</code>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2 style="margin-top:50xp;">Auto Fill Views</h2>
+						<ul>
+							<li>Specifying 'auto' for either height or width is the same as specifying Ti.UI.FILL</li>
+							<li><code>View
+							TabGroup
+							VideoPlayer
+							TableView
+							WebView
+							ScrollView
+							ScrollableView
+							</code>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2 style="margin-top:50xp;">Auto Fill Width Views</h2>
+						<ul>
+							<li>The following views fill the available width by default, and scale vertically to fit their contents.</li>
+							<li><code>Slider
+							TableViewRow
+							Toolbar
+							SearchBar
+							</code>
+							</li>
+							<li>'auto' specifies FILL behavior when it is used as a width value, and SIZE behavior when it is used as a height value.</li>
 						</ul>
 					</section>
 					<section>
@@ -101,6 +150,25 @@ myView.updateLayout({
 						</code></pre>
 					</section>
 					<section>
+						<h2 style="margin-top:50px;" class="">Control Size and Position and postLayout()</h1>
+						<pre><code style="font-size:1.4em;line-height:1em;">
+//the rect and size properties can be used to determine the 
+// size and position of the view. 
+
+//Note that updating a view's layout in the postlayout() 
+// event can cause an infinite loop of layout events.
+var postLayoutCallback  = function(e) {
+    Ti.API.info(String.format("Layout done, left: %f, width: %f", myView.rect.x, myView.rect.width));
+    myView.removeEventListener('postlayout', postLayoutCallback);
+}
+myView.addEventListener('postlayout', postLayoutCallback);
+myView.updateLayout({
+    left: '25%',
+    width: '25%'
+});
+						</code></pre>
+					</section>
+					<section>
 						<h2 style="margin-top:50px;" class="l_unitsupport">Universal Unit Support</h2>
 						<h5>All platforms now support specifying units for size and position values. The following table lists the supported units:</h5>
 						<img src="images/unit_support.png" />
@@ -109,29 +177,74 @@ myView.updateLayout({
 				
 				<section>
 					<section>
-						<h1 style="margin-top:200px;" class="l_acssupport">APPCELERATOR CLOUD SERVICES (COCOAFISH)</h1>
+						<h1 style="margin-top:100px;" class="l_acssupport">APPCELERATOR CLOUD SERVICES (COCOAFISH)</h1>
 					</section>
 					<section>
 						<h2 style="margin-top:50px;" class="l_unitsupport">ACS Modules</h2>
 						<ul>
-							<li>This release includes bundled Titanium modules for using Appcelerator Cloud Services (ACS)</li>
+							<li>Bundled Titanium modules for using ACS</li>
 							<li>ACS modules are not part of core. To use the main ACS module, you must import it using <code>require</code></li>
-							<li>To use ACS push notifications on Android, you must also import the Titanium.Push module</li>
+							<li>Must import <code>Titanium.Push</code> module to use ACS push notifications on Android</li>
 							<li>API reference for <a href="http://docs.appcelerator.com/titanium/latest/#!/api/Titanium.Cloud">Titanium.Cloud</a></li>
-							<li>ACS also provides a REST API and native SDKs for many platforms. See <a href="http://cloud.appcelerator.com">cloud.appcelerator.com</a></li>
+							<li>ACS provides a REST API and native SDKs for many platforms. See <a href="http://cloud.appcelerator.com">cloud.appcelerator.com</a></li>
+						</ul>
+					</section>
+					<section>
+						<h2 style="margin-top:50px;" class="l_unitsupport">ACS Module Code</h2>
+						<pre><code style="font-size:1.4em;line-height:1em;">
+//use ACS module
+var Cloud = require('ti.cloud');
+
+//ACS push notifications on Android
+var Push = require('ti.push');						
+						</code></pre>
+					</section>
+				</section>
+				
+				<section>	
+					<section>
+						<h1 style="margin-top:100px;" class="l_mobilewebrc">MOBILE WEB Release Candidate</h1>
+					</section>
+					<section>
+						<h2 style="margin-top:50px;" class="l_unitsupport">Mobile Web Status</h2>
+						<ul>
+							<li>Majority of Titanium Mobile API is implemented for Mobile Web.</li>
+							<li>Implements a cross-platform subset of the Titanium Mobile APIs, excluding platform-specific and non-browser based APIs</li>
+							<li>Certain APIs are subject to limitations due to constraints imposed on running in browser.</li>
+							<li>For more information, see <a href="http://docs.appcelerator.com/titanium/#!/guide/Mobile_Web_Limitations">Mobile Web Limitations</a></li>
+						</ul>
+					</section>
+					<section>
+						<h2 style="margin-top:50px;" class="l_unitsupport">Not Yet Implemented</h2>
+						<ul>
+							<li>Will be available in a future release</li>
+							<li><code>
+							Titanium.Database
+							Titanium.Media.AudioPlayer
+							Titanium.Media.Sound
+							Titanium.Network.Socket
+							Titanium.Network.Socket.TCP
+							Titanium.Stream
+							Titanium.UI.SearchBar
+							Titanium.Locale
+							</code></li>
+						</ul>
+					</section>
+					<section>
+						<h2 style="margin-top:50px;" class="l_unitsupport">Platform Specific UI</h2>
+						<ul>
+							<li>These UI controls are not implemented because they are platform-specific controls that have not yet been moved to a platform-specific namespace</li>
+							<li><code>
+							Titanium.UI.ButtonBar
+							Titanium.UI.MaskedImage
+							Titanium.UI.Notification
+							Titanium.UI.3DMatrix
+							</code></li>
+							<li><code>Titanium.Contacts</code> is not supported as contact data is not available to apps running in a browser</li>
 						</ul>
 					</section>
 				</section>
-					
-				<section>
-					<h1 style="margin-top:50px;" class="l_mobilewebrc">MOBILE WEB RELEASE CANDIDATE</h1>
-					<ul>
-						<li>The majority of the Titanium Mobile API is now implemented for Mobile Web.</li>
-						<li>Mobile Web implements a cross-platform subset of the Titanium Mobile APIs, excluding any platform-specific APIs and non-browser based APIs</li>
-						<li>Certain APIs are subject to limitations on Mobile Web because of the constraints imposed on application running in the browser. For more information, see <a href="http://docs.appcelerator.com/titanium/#!/guide/Mobile_Web_Limitations">Mobile Web Limitations</a></li>
-					</ul>
-				</section>
-
+				
 				<section>
 					<h1 style="margin-top:50px;" class="l_moduleapis">MODULE APIs</h1>
 					<h5>In this release, the native APIs that can be used by native Android and iOS modules have been documented. The module APIs are not integrated into the main documentation site, but you can find them at the following locations:</h5>
@@ -144,8 +257,9 @@ myView.updateLayout({
 				<section>
 					<h1 style="margin-top:50px;" class="l_issues">KNOWN ISSUES</h1>
 					<ul>
-						<li></li>
-						<li></li>
+						<li>iOS: Updating html property of web view shows a blank view. This is a regression, and will be addressed soon. (TIMOB-8293)</li>
+						<li>iOS: Rejection for use of deprecated UDID property.</li>
+						<li>Appcelerator is actively working on replacing UDID property with a per-app user identifier. (TIMOB-8173)</li>
 					</ul>
 				</section>
 				
@@ -154,20 +268,64 @@ myView.updateLayout({
 						<h1 style="margin-top:200px;" class="l_fixes">FIXES &amp; ENHANCEMENTS</h1>
 					</section>
 					<section>
-						<h2 style="margin-top:50px;" class="l_androidfixes">Android Fixes and Enhancements</h2>
-						
+						<h2 style="margin-top:50px;" class="l_androidfixes">Android Enhancements</h2>
+						<ul>
+							<li>Geolocation enhancements. See <a href="http://docs.appcelerator.com/titanium/release-notes/?version=2.0.0#geo">Android Geolocation Enhancements</a></li>
+							<li>Support for Android SDK Tools, Revision 17.</li>
+						</ul>
 					</section>
 					<section>
-						<h2 style="margin-top:50px;" class="l_iosfixes">iOS Fixes and Enhancements</h2>
-						
+						<h2 style="margin-top:50px;" class="l_androidfixes">Android Fixes</h2>
+						<ul>
+							<li>Support for background image tiling on a view</a></li>
+							<li>Improved handling of local URLs inside WebView</li>
+							<li>Fixed a web view crash that occurred when handling the back button (TIMOB-7695)</li>
+							<li>Resolved a crash when reusing a web view on an activity window. (TIMOB-8267)</li>
+							<li>Improved open event handling for tabs. (TIMOB-8192)</li>
+						</ul>
+					</section>
+					<section>
+						<h2 style="margin-top:50px;" class="l_iosfixes">iOS Enhancements</h2>
+						<ul>
+							<li>Upgraded the iOS JavaScript engine, JSCore, to the version shipping with iOS 5.0</li>
+							<li>Added support for Xcode 4.3 and iOS 5.1</li>
+							<li>Added support for the iPad 2012</li>
+							<li>Improved CommonJS module encoding</li>
+							<li>Newsstand content notifications (<a href="https://jira.appcelerator.org/browse/TIMOB-5910">TIMOB-5910</a>)</li>
+						</ul>
+					</section>
+					<section>
+						<h2 style="margin-top:50px;" class="l_iosfixes">iOS Fixes</h2>
+						<ul>
+							
+							<li>Fixed "suspend" and "resume" behavior (<a href="https://jira.appcelerator.org/browse/TIMOB-4538">TIMOB-4538</a>)</li>
+							<li>Several App verification fixes<br/> (<a href="https://jira.appcelerator.org/browse/TIMOB-6575">TIMOB-6575</a>,
+							    <a href="https://jira.appcelerator.org/browse/TIMOB-7674">TIMOB-7674</a>)</li>
+							<li>Fixed numerous crashes. (<a href="https://jira.appcelerator.org/browse/TIMOB-8105">TIMOB-8105</a>, 
+							    <a href="https://jira.appcelerator.org/browse/TIMOB-8102">TIMOB-8102</a>, 
+							    <a href="https://jira.appcelerator.org/browse/TIMOB-8081">TIMOB-8081</a>, 
+							    <a href="https://jira.appcelerator.org/browse/TIMOB-7334">TIMOB-7334</a>)</li>
+							<li>Fixed memory leaks and garbage collection issues<br/>
+							    (<a href="https://jira.appcelerator.org/browse/TIMOB-7644">TIMOB-7644</a>, 
+							    <a href="https://jira.appcelerator.org/browse/TIMOB-7642">TIMOB-7642</a>, 
+							    <a href="https://jira.appcelerator.org/browse/TIMOB-7467">TIMOB-7467</a>,
+							    <a href="https://jira.appcelerator.org/browse/TIMOB-6463">TIMOB-6463</a>)</li>
+							<li>HTTP client support for Shift_JIS, EUC-JP encodings <br/>
+							    (<a href="https://jira.appcelerator.org/browse/TIMOB-6835">TIMOB-6835</a>)</li>
+							
+						</ul>
 					</section>
 				</section>
 				
 				<section>
-					<h1 style="margin-top:50px;" class="l_resources">RESOURCES</h1>
+					<h1 style="margin-top:50px;" class="l_resources">RESOURCES / Q&amp;A</h1>
 					<ul>
 						<li><a href="http://docs.appcelerator.com/titanium/release-notes/?version=2.0.0">Release Notes</a></li>
 						<li><a href="http://docs.appcelerator.com">Documentation</a></li>
+						<li><a href="http://builds.appcelerator.com.s3.amazonaws.com/module-apidoc/2.0.0/android/index.html">Android Module API Reference</a></li>
+						<li><a href="http://builds.appcelerator.com.s3.amazonaws.com/module-apidoc/2.0.0/ios/index.html">iOS Module API Reference</a></li>
+						<li><a href="http://docs.appcelerator.com/titanium/latest/#!/api/Titanium.Cloud">Titanium.Cloud API Reference</a></li>
+						<li><a href="http://cloud.appcelerator.com">ACS Rest API and SDKs</a></li>
 					</ul>
 				</section>
 

@@ -1,0 +1,218 @@
+<!doctype html>  
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<title>Titanium Studio 2.0</title>
+		<meta name="description" content="Titanium Studio 2.0, using reveal.js">
+    	<meta name="author" content="Anthony Decena" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="../engine/reveal.js/css/reset.css">
+		<link rel="stylesheet" href="../engine/reveal.js/css/main.css">
+		<link rel="stylesheet" href="../engine/reveal.js/lib/zenburn.css">
+		<link rel="stylesheet" href="presentation.css">
+		<script type="text/javascript" src="../engine/js/l10n.js"></script>
+		<script type="text/javascript" src="js/localizations.js"></script>
+	</head>
+	
+	<body>
+		<div id="reveal">	
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				
+				<section>
+					<h1 style="margin-top:100px;" class="l_welcometotitanium">Welcome To <br>Titanium Studio 2.0</h1>
+					<h5 class="inverted l_tagline">The latest release of the Appcelerator Titanium integrated development environment</h5>
+					<script>
+						// Delicously hacky. Look away.
+						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) )
+						document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+					</script>
+				</section>
+				
+				<section id="agenda">
+					<h1 style="margin-top:50px;" class="l_agenda_title">AGENDA</h1>
+			    	<ul>
+			    		<li class="l_agenda1">Titanium Studio Release Overview</li>
+			    		<li class="l_agenda2">What's New in Titanium Studio 2.0</li>
+			    		<li class="l_agenda4">Fixes and Enhancements</li>
+			    		<li class="l_agenda5">Resources / Q&amp;A</li>
+			    	</ul>
+				</section>
+				
+				<section id="overview">
+					<h1 style="margin-top:50px;" class="l_overview">RELEASE OVERVIEW</h1>
+					<h5 class="inverted l_overview1">Titanium Studio 2.0 includes substantial feature improvements and increases to developer productivity. This release contains over 400 features, improvements and fixes.</h5>
+				</section>
+				
+				<section id="whatsnew">
+					<h1 style="margin-top:50px;" class="l_whatsnew">WHATS NEW IN 2.0?</h1>
+					<ul>
+						<li class="l_whatsnew1">Appcelerator Cloud Services Support</li>
+						<li class="l_whatsnew2">Module Management</li>
+						<li class="l_whatsnew3">Extensible Publishing Platform</li>
+						<li class="l_whatsnew4">Snippets and Server Views</li>
+						<li>Editor Improvements</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2 style="margin-top:50px;">Appcelerator Cloud Services</h2>
+					<ul>
+						<li>Add cloud services via ACS either from the new project wizard or to an existing project</li>
+						<li>Create a server backend for your app instantly</li>
+						<li>Launch and scale your app automatically</li>
+						<li>No server coding or administration required</li>
+						<li>More in-depth ACS info to follow</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h1 style="margin-top:100px;">MODULE MANAGEMENT</h1>
+					</section>
+					<section>
+						<h2 style="margin-top:50px;">Installing Modules</h2>
+						<ul>
+							<li>Modules can now be installed one of two ways:</li>
+							<li>Per project</li>
+							<li>Globally</li>
+						</ul>
+					</section>
+					<section>
+						<h2 style="margin-top:50px;">Per-Project Installation</h2>
+						<ol>
+							<li>Open Titanium Studio.</li>
+							<li>Expand the project folder in Project Explorer or select the project in the App Explorer menu
+							<li>Drag the .zip file from the download location into the current project, placing it at the root of the project. Choose to "Copy Files"</li>
+						</ol>
+					</section>
+					<section>
+						<h2 style="margin-top:50px;">Global Installation</h2>
+						<ol>
+							<li>Locate your Titanium SDK installation location</li>
+							<li>Drag the .zip file under the /Titanium folder. As an example, on OS X, the path might look like "/Library/Application Support/Titanium/module.zip"</li>
+						</ol>
+					</section>
+					<section>
+						<h2 style="margin-top:50px;">Using Your Module</h2>
+						<img src="images/modules.png" height="75%" />
+					</section>
+					<section>
+						<h2 style="margin-top:50px;">tiapp.xml Editor</h2>
+						<ol>
+							<li>Double-click on the tiapp.xml file</li>
+							<li>In the right-hand column, click the + to add a new module. It will show you a list of modules available in your global directory and in your project</li>
+							<li>Once you've added a module, clicking the pencil (edit) icon allows you to switch versions if there are multiple version available</li>
+							<li>If you wish to delete a module, click the x (delete) button to delete the module</li>
+						</ol>
+					</section>
+				</section>
+				
+				<section>
+					<h2 style="margin-top:50px;">EXTENSIBLE PUBLISHING PLATFORM</h2>
+					<ul>
+						<li>Ability for third-party providers to hook into our publishing workflow</li>
+						<li>App stores can register within the interface</li>
+						<li>Deployment from inside Titanium Studio to an online location</li>
+						<li>Knowledge of Eclipse plugin development is necessary to develop a plugin that extends the built-in Publish functionality</li>
+						<li>See <a href="http://docs.appcelerator.com/titanium/2.0/index.html#!/guide/Adding_a_new_Publish_Provider">Adding A Publish Provider</a></li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2 style="margin-top:50px;">New Views</h2>
+					<ul>
+						<li>A Snippets that provides easy access to the complete list of snippets shipped with Studio, as well as simple ways to filter, preview and edit the list</li>
+						<li>A Servers view for stopping, starting and restarting external servers used for preview</li>
+					</ul>
+				</section>
+				
+				<section>
+					<section>
+						<h2 style="margin-top:50px;">Fixes &amp; Enhancements</h2>
+						<ul>
+							<li>Content assist on user-defined functions without file save</li>
+							<li>Content assist on both hover and in Dynamic Help</li>
+							<li>Type /** before a javascript function will add a documentation header</li>
+							<li>Create a function in one file, and use it in another</li>
+							<li>Access Open Declaration (also via the F3 key) to jump back to the source definition</li>
+							<li>Validate entire project (as opposed to just the current file) as part of the build step, with warn before launching if project has errors</li>
+							<li>No indexing or validating files under "builds" folder</li>
+						</ul>
+					</section>
+					<section>
+						<h2 style="margin-top:50px;">More Notable Changes</h2>
+						<ul>
+							<li>XCode 4.3 Support</li>
+							<li>Studio 2.0 is now built on top of Eclipse 3.7.2</li>
+							<li>iOS and Android distribution more intuitive</li>
+							<li>Emulators and Simulators now support custom launch arguments</li>
+							<li>Right-click on a project to open the analytics for that application</li>
+							<li>The console now auto-locks if you scroll away from the bottom</li>
+							<li>Work on decreasing the amount of processes during startup and editing to improve the editor experience</li>
+						</ul>
+					</section>
+				</section>
+				
+				<section>
+					<h2 style="margin-top:50px;">Resources / Q&amp;A</h2>
+					<ul>
+						<li><a href="http://docs.appcelerator.com/titanium/2.0/index.html#!/guide/Titanium_Studio_Release_Notes">Release Notes</a></li>
+						<li><a href="http://docs.appcelerator.com/titanium/2.0/index.html#!/guide/Appcelerator_Cloud_Services">Appcelerator Cloud Services</a></li>
+						<li><a href="http://docs.appcelerator.com/titanium/2.0/index.html#!/guide/Using_Titanium_Modules">Using Titanium Modules</a></li>
+						<li><a href="http://docs.appcelerator.com/titanium/2.0/index.html#!/guide/Adding_a_new_Publish_Provider">Adding a Publish Provider</a></li>
+					</ul>
+				</section>
+			</div>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+			<div class="progress"><span></span></div>
+			
+		</div>
+		
+		<script src="../engine/reveal.js/js/reveal.js"></script>
+		<script src="../engine/reveal.js/lib/highlight.js"></script>
+		<script>
+			// Parse the query string into a key/value object
+			var query = {};
+			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
+
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: true,
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// If true; each slide will be pushed to the browser history
+				history: true,
+
+				// Flags if mouse wheel navigation should be enabled
+				mouseWheel: true,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: true,
+
+				// UI style
+				theme: query.theme || 'default', // default/neon
+
+				// Transition style
+				transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+			});
+
+			hljs.initHighlightingOnLoad();
+		</script>
+		<script src="../engine/js/localize.js"></script>
+	</body>
+</html>
