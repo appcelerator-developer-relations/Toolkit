@@ -5,7 +5,12 @@
 
 span.redshadow {
 	color:#a00;
-	text-shadow: 0px 0px 6px rgba(0,0,0,0.8);
+	text-shadow: 0px 0px 20px rgba(0,0,0,0.8);
+}
+
+span.blueshadow {
+	color:#33f;
+	text-shadow: 0px 0px 20px rgba(0,0,0,0.8);
 }
 
 /* Slide specific style */
