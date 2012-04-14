@@ -1,0 +1,3 @@
+[submodule "presentations/engine"]
+	path = presentations/engine
+	url = git@github.com:appcelerator-titans/presentation-engine.git
