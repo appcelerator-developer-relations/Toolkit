@@ -199,6 +199,53 @@ var Cloud = require('ti.cloud');
 var Push = require('ti.push');						
 						</code></pre>
 					</section>
+					<section>
+						<h2>tiapp.xml Properties</h2>
+						<pre><code>
+&lt;property name=&quot;acs-api-key-development&quot; type=&quot;string&quot;&gt;YOUR DEVELOPMENT API KEY HERE&lt;/property&gt;
+&lt;property name=&quot;acs-oauth-key-development&quot; type=&quot;string&quot;&gt;YOUR DEVELOPMENT OAUTH KEY HERE&lt;/property&gt;
+&lt;property name=&quot;acs-oauth-secret-development&quot; type=&quot;string&quot;&gt;YOUR DEVELOPMENT OAUTH SECRET HERE&lt;/property&gt;
+
+&lt;property name=&quot;acs-api-key-production&quot; type=&quot;string&quot;&gt;YOUR PRODUCTION API KEY HERE&lt;/property&gt;
+&lt;property name=&quot;acs-oauth-key-production&quot; type=&quot;string&quot;&gt;YOUR PRODUCTION OAUTH KEY HERE&lt;/property&gt;
+&lt;property name=&quot;acs-oauth-secret-production&quot; type=&quot;string&quot;&gt;YOUR PRODUCTION OAUTH SECRET HERE&lt;/property&gt;
+
+&lt;property name=&quot;acs-api-key&quot; type=&quot;string&quot;&gt;YOUR API KEY HERE&lt;/property&gt;
+&lt;property name=&quot;acs-oauth-key&quot; type=&quot;string&quot;&gt;YOUR OAUTH KEY HERE&lt;/property&gt;
+&lt;property name=&quot;acs-oauth-secret&quot; type=&quot;string&quot;&gt;YOUR OAUTH SECRET HERE&lt;/property&gt;&lt;property name=&quot;acs-base-url&quot; type=&quot;string&quot;&gt;API URL HERE&lt;/property&gt;
+						</code></pre>
+					</section>
+					<section>
+						<h2>Tiapp Property Value Rules:</h2>
+						<ul>
+							<li>OAuth is preferred over apiKey. If both are provided then OAuth will be used; otherwise, apiKey will be used.</li>
+							<li>If a deployment-specific setting is provided (production or development) then that value will be used for the current deployment environment.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Built in ACS Objects</h2>
+						<ul>
+							<li><code style="font-size:1.4em;line-height:1em;">
+Chat, Checkins,
+Clients, Emails, 
+PhotoCollections, Photos, 
+Places, Posts, 
+PushNotifications, Reviews, 
+SocialIntegrations, Statuses, 
+Users
+							</code></li>
+						</ul>
+					</section>
+					<section>
+						<h2>For Everything Else</h2>
+						<ul>
+							<li><code>
+								KeyValues, Objects
+							</code></li>
+							<li><code>KeyValues</code> are custom key = value stores for ACS data</li>
+							<li><code>Objects</code> are any arbitrary data objects stored in ACS</li>
+						</ul>
+					</section>
 				</section>
 				
 				<section>	
