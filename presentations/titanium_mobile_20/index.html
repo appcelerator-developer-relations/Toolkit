@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="../engine/reveal.js/css/reset.css">
 		<link rel="stylesheet" href="../engine/reveal.js/css/main.css">
 		<link rel="stylesheet" href="../engine/reveal.js/lib/zenburn.css">
+		<link rel="stylesheet" href="../engine/css/engine.css">
 		<link rel="stylesheet" href="presentation.css">
 		<script type="text/javascript" src="../engine/js/l10n.js"></script>
 		<script type="text/javascript" src="js/localizations.js"></script>
@@ -21,12 +22,13 @@
 			<div class="slides">
 				
 				<section>
-					<div style="margin-top:80px; height:240px;">
-						<img src="../common/images/titanium.png" style="height:200px; float:left;"/>
-						<h1 style="position:absolute; top:50%; height:240px; margin-top:-120px; right:0" class="l_welcometotitanium">Titanium 2.0 GA</h1>
+					<div style="margin-top:40px;">
+						<h1 style="margin-top:0px; font-size:160px; text-align:left;float:left;" class="l_welcometotitanium"><span class="redshadow">Titanium</span><br>2.0 GA</h1>
+						<img src="../common/images/titanium.png" style="height:300px; float:right;"/>
+						
 					</div>
 					<div style="clear:both; height:50px;"></div>
-					<h5 class="inverted l_tagline">The latest release of the only cross-platform mobile development framework with native UI and performance</h5>
+					<h5 class="inverted l_tagline">The latest release of the only cross-platform mobile development framework that creates both native and web-based apps.</h5>
 					<script>
 						// Delicously hacky. Look away.
 						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) )
@@ -74,6 +76,29 @@
 							<li><b>Auto Fill Views</b> - 'auto' === <code>Ti.UI.FILL</code></li>
 							<li><b>Auto Fill Width Views</b> - fills available width by default, scales vertically to fit contents</li>
 						</ul>
+					</section>
+					<section>
+						<pre><code style="font-size:18px;" contenteditable>
+var win = Ti.UI.createWindow();
+var label = Ti.UI.createLabel({
+	text: 'Titanium 2.0',
+	height: Ti.UI.FILL,
+	width: Ti.UI.FILL,
+	backgroundColor: '#aaa',
+	font: { fontSize: 48, fontWeight: 'bold' }
+});
+win.add(label);
+win.open();
+						</code></pre>
+						
+						<table>
+							<tr>
+								<td><img src="images/fill_fill.png" style="border:2px solid #fff; width:170px; margin:20px;"/><br><h4>FILL/FILL</h4></td>
+								<td><img src="images/fill_size.png" style="border:2px solid #fff; width:170px; margin:20px;"/><br><h4>FILL/SIZE</h4></td>
+								<td><img src="images/size_fill.png" style="border:2px solid #fff; width:170px; margin:20px;"/><br><h4>SIZE/FILL</h4></td>
+								<td><img src="images/size_size.png" style="border:2px solid #fff; width:170px; margin:20px;"/><br><h4>SIZE/SIZE</h4></td>
+							</tr>
+						</table>
 					</section>
 					<section>
 						<h2 style="margin-top:50xp;">Auto Size Views</h2>
@@ -383,7 +408,7 @@ Users
 
 			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
 			<div class="progress"><span></span></div>
-			
+			<img src="../engine/images/appc_footer_opaque.png" class="appc_footer"/>
 		</div>
 		
 		<script src="../engine/reveal.js/js/reveal.js"></script>
