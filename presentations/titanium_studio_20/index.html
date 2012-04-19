@@ -57,14 +57,46 @@
 				</section>
 				
 				<section>
-					<h2 style="margin-top:50px;">Appcelerator Cloud Services</h2>
-					<ul>
-						<li>Add cloud services via ACS either from the new project wizard or to an existing project</li>
-						<li>Create a server backend for your app instantly</li>
-						<li>Launch and scale your app automatically</li>
-						<li>No server coding or administration required</li>
-						<li>More in-depth ACS info to follow</li>
-					</ul>
+					<section>
+						<h2 style="margin-top:50px;">Appcelerator Cloud Services</h2>
+						<ul>
+							<li>Add cloud services via ACS either from the new project wizard or to an existing project</li>
+							<li>Create a server backend for your app instantly</li>
+							<li>Launch and scale your app automatically</li>
+							<li>No server coding or administration required</li>
+						</ul>
+					</section>
+					<section>
+						<img src="images/add_acs.png" style="margin-top:-20px;"/><br/>
+						<strong>Add ACS To Project</strong>
+					</section>
+					<section>
+						<img src="images/offline_acs.png"/><br/>
+						<strong>Disabled If Offline</strong>
+					</section>
+					<section>
+						<img src="images/unsupported_acs.png"/><br/>
+						<strong>Enabled With SDKs 2.0+ Only<br/><br/>
+						At the end of the project creation wizard, a new cloud app is registered with two API keys - <br/>
+						"development" and "production"</strong>
+					</section>
+					<section>
+						<h2 style="margin-top:50px;">Switching Between Dev and Prod</h2>
+						<strong>
+							No action is necessary on the part of the developer. The "development" key is used automatically when running or debugging the application in an emulator or simulator. The "production" key is used when deploying to device.
+						</strong>
+					</section>
+					<section>
+						<h2>Removing ACS from a project</h2>
+						<ol>
+							<li>Switch to the source view of tiapp.xml</li>
+							<li>Delete the properties named acs-*</li>
+							<li>Save the editor</li>
+						</ol>
+						<p style="margin-top:40px;">
+							<strong>You may re-add ACS at any time by following the same steps as adding ACS to an existing project.</strong>
+						</p>
+					</section>
 				</section>
 
 				<section>
