@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="../engine/reveal.js/css/reset.css">
 		<link rel="stylesheet" href="../engine/reveal.js/css/main.css">
 		<link rel="stylesheet" href="../engine/reveal.js/lib/zenburn.css">
+		<link rel="stylesheet" href="../engine/css/engine.css">
 		<link rel="stylesheet" href="presentation.css">
 		<script type="text/javascript" src="../engine/js/l10n.js"></script>
 		<script type="text/javascript" src="js/localizations.js"></script>
@@ -21,8 +22,10 @@
 			<div class="slides">
 				
 				<section>
-					<h1 style="margin-top:100px;" class="l_welcometotitanium">Welcome To <br>Titanium Studio 2.0</h1>
-					<h5 class="inverted l_tagline">The latest release of the Appcelerator Titanium integrated development environment</h5>
+					<h1 style="margin-top:40px;" class="l_welcometotitanium"><span class="redshadow">Titanium</span> Studio 2.0</h1>
+					<h5 class="inverted l_tagline">The latest release of the Appcelerator's integrated development environment for Titanium</h5>
+					<br>
+					<img src="images/tistudio.png" style="height:200px; border:4px solid #fff"/>
 					<script>
 						// Delicously hacky. Look away.
 						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) )
@@ -32,21 +35,24 @@
 				
 				<section id="agenda">
 					<h1 style="margin-top:50px;" class="l_agenda_title">AGENDA</h1>
-			    	<ul>
+			    	<ul style="width:550px; float:left;">
 			    		<li class="l_agenda1">Titanium Studio Release Overview</li>
 			    		<li class="l_agenda2">What's New in Titanium Studio 2.0</li>
 			    		<li class="l_agenda4">Fixes and Enhancements</li>
 			    		<li class="l_agenda5">Resources / Q&amp;A</li>
 			    	</ul>
+			    	<img src="../engine/images/appc_white.png" style="width:300px; padding-top:50px; float:right;"/>
 				</section>
 				
 				<section id="overview">
 					<h1 style="margin-top:50px;" class="l_overview">RELEASE OVERVIEW</h1>
-					<h5 class="inverted l_overview1">Titanium Studio 2.0 includes substantial feature improvements and increases to developer productivity. This release contains over 400 features, improvements and fixes.</h5>
+					<h5 class="inverted l_overview1">Titanium Studio 2.0 includes substantial feature improvements and increases to developer productivity. This release contains <span style="color:#f00; font-weight:bold; text-shadow:0px 1px rgba(255,255,255,0.25),">over 400</span> features, improvements and fixes.</h5>
+					<br>
+					<h5>See the <a href="http://docs.appcelerator.com/titanium/2.0/index.html#!/guide/Titanium_Studio_Release_Notes">full release notes</a> for details</h5>
 				</section>
 				
 				<section id="whatsnew">
-					<h1 style="margin-top:50px;" class="l_whatsnew">WHATS NEW IN 2.0?</h1>
+					<h1 style="margin-top:50px;" class="l_whatsnew">WHATS <span class="redshadow">NEW</span> IN 2.0?</h1>
 					<ul>
 						<li class="l_whatsnew1">Appcelerator Cloud Services Support</li>
 						<li class="l_whatsnew2">Module Management</li>
@@ -58,50 +64,55 @@
 				
 				<section>
 					<section>
-						<h2 style="margin-top:50px;">Appcelerator Cloud Services</h2>
-						<ul>
-							<li>Add cloud services via ACS either from the new project wizard or to an existing project</li>
-							<li>Create a server backend for your app instantly</li>
+						<h2 style="margin-top:50px;">Appcelerator <span class="blueshadow">Cloud</span> Services</h2>
+						<ul style="width:500px; float:left;">
+							<li>Add ACS cloud services vis Titanium Studio 2.0</li>
+							<li>Create a server backend for your app <span style="color:#f00">instantly</span></li>
 							<li>Launch and scale your app automatically</li>
 							<li>No server coding or administration required</li>
 						</ul>
+						<img src="images/cloud-graphic-featured.png" style="width:300px; padding-top:100px;"/>
 					</section>
 					<section>
-						<img src="images/add_acs.png" style="margin-top:-20px;"/><br/>
-						<strong>Add ACS To Project</strong>
+						<img src="images/add_acs_arrow.png" style="margin-top:-20px;"/><br/>
+						<strong>Add <span class="blueshadow">ACS</span> To Project</strong>
 					</section>
 					<section>
+						<h2>Basic prerequisites</h2>
+						<br>
 						<img src="images/offline_acs.png"/><br/>
-						<strong>Disabled If Offline</strong>
-					</section>
-					<section>
+						<div><strong><span class="redshadow">Disabled</span> If Offline</strong></div><br>
 						<img src="images/unsupported_acs.png"/><br/>
-						<strong>Enabled With SDKs 2.0+ Only<br/><br/>
-						At the end of the project creation wizard, a new cloud app is registered with two API keys - <br/>
-						"development" and "production"</strong>
+						<div><strong><span class="blueshadow">Enabled</span> With SDKs 2.0+ Only</strong></div>
 					</section>
 					<section>
-						<h2 style="margin-top:50px;">Switching Between Dev and Prod</h2>
-						<strong>
-							No action is necessary on the part of the developer. The "development" key is used automatically when running or debugging the application in an emulator or simulator. The "production" key is used when deploying to device.
-						</strong>
+						<img src="images/keys.png" style="height:500px;"/>
+						<div><strong>Titanium Studio will auto-generate <span class="redshadow">development</span> and <span class="blueshadow">production</span> API keys</strong></div>
 					</section>
 					<section>
-						<h2>Removing ACS from a project</h2>
+						<h2 style="margin-top:50px;">Switching Between<br><span class="redshadow">Development</span> and <span class="blueshadow">Production</span></h2>
+						<ul>
+							<li>Handled by Titanium Studio automatically</li>
+							<li>Deployments to emulators and simulators use your development key</li>
+							<li>Deployments to devices use your production key</li>
+						</ul>
+					</section>
+					<section>
+						<h2 style="margin-top:50px;">Removing <span class="blueshadow">ACS</span> from a project<sup>*</sup></h2>
 						<ol>
 							<li>Switch to the source view of tiapp.xml</li>
-							<li>Delete the properties named acs-*</li>
+							<li>Delete the properties named <code>acs-*</code></li>
 							<li>Save the editor</li>
 						</ol>
-						<p style="margin-top:40px;">
-							<strong>You may re-add ACS at any time by following the same steps as adding ACS to an existing project.</strong>
+						<p style="margin-top:140px;">
+							<strong><sup>*</sup>You may re-add ACS at any time by following the same steps as <a href="#/4/1">adding ACS to an existing project</a>.</strong>
 						</p>
 					</section>
 				</section>
 
 				<section>
 					<section>
-						<h1 style="margin-top:100px;">MODULE MANAGEMENT</h1>
+						<h1 style="margin-top:100px;"><span class="blueshadow">MODULE</span> MANAGEMENT</h1>
 					</section>
 					<section>
 						<h2 style="margin-top:50px;">Installing Modules</h2>
@@ -208,7 +219,7 @@
 
 			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
 			<div class="progress"><span></span></div>
-			
+			<img src="../engine/images/appc_footer_opaque.png" class="appc_footer"/>
 		</div>
 		
 		<script src="../engine/reveal.js/js/reveal.js"></script>
