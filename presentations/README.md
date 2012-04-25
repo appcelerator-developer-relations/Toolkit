@@ -11,7 +11,7 @@ In short, **these presentations are free for anyone to use and you can modify th
 
 All presentations in this repository are created using [reveal.js](https://github.com/hakimel/reveal.js). So before diving in, you'll likely want to take a look at that project and its educational resources. It's pretty basic, but it's a new paradigm for creating presentations. The best way to really get a sense of how different it is is to visit the [reveal.js website](http://lab.hakim.se/reveal-js/#/) and see for yourself. One quick reference I found was [this blog post](http://amimetic.co.uk/?p=239) as well.
 
-But, if you want to ignore me and get started right away, here's a straight-to-the-point rundown of impress.js and how it's used for these presentations. It's not a complete doc, and I again urge you to check out the [impress.js website](http://lab.hakim.se/reveal-js/#/). That said, here we go.
+But, if you want to ignore me and get started right away, here's a straight-to-the-point rundown of reveal.js and how it's used for these presentations. It's not a complete doc, and I again urge you to check out the [reveal.js website](http://lab.hakim.se/reveal-js/#/). That said, here we go.
 
 ### Supported Browsers
 
@@ -63,7 +63,7 @@ cd YOUR_TARGET_PRESENTATION
 In the presentation folder, you'll find all the presentation-specific files. Here's the critical ones that will help you shape the presentation.
 
 * **index.html** - The main HTML file for the presentation. It contains all of your **_steps_**.
-* **css/presentation.css** - The style sheet for this presentation. This will compliment the base stylesheet located at `../common/css/appc.css`, as well as the `../common/css/showoff.css` responsible for the navigation panel and a few other animations.
+* **css/presentation.css** - The style sheet for this presentation. This will compliment the base stylesheet located at `../common/css/appc.css`.
 * **js/localizations.js** - This file contains all the language localizations for the presentation. All translations are filled in here and are then dynamically populated based on the browser's locale. See the <a href="#localizations">localizations</a> for more details.
 * **images/\*** - A collection of images to use in the presentation. You'll find various Appcelerator and Titanium logos in here for easy access.
 
@@ -74,10 +74,10 @@ In the presentation folder, you'll find all the presentation-specific files. Her
 Making text in presentations based on the template here is pretty simple. All you need to do is give the HTML element that contains your localized text a class name with the prefix `l_` and then add that class name as an entry in the `js/localizations.js` file. So for example:
 
 ```html
-<div id="impress">
-    <div class="step" data-x="0" data-y="0">
+<div class="slides">
+    <section>
         <span class="l_localizeMe">Here is some text that needs localization</span>
-    </div>
+    </section>
 </div>
 ```
 
