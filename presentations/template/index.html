@@ -1,0 +1,92 @@
+<!doctype html>  
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<title>{PresentationTemplate}</title>
+		<meta name="description" content="{PresentationTemplate}, using reveal.js">
+    	<meta name="author" content="Anthony Decena" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="../engine/reveal.js/css/reset.css">
+		<link rel="stylesheet" href="../engine/reveal.js/css/main.css">
+		<link rel="stylesheet" href="../engine/reveal.js/lib/zenburn.css">
+		<link rel="stylesheet" href="../engine/css/engine.css">
+		<link rel="stylesheet" href="presentation.css">
+		<script type="text/javascript" src="../engine/js/l10n.js"></script>
+		<script type="text/javascript" src="js/localizations.js"></script>
+	</head>
+	
+	<body>
+		<div id="reveal">	
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				
+				<section>
+					<div style="margin-top:40px;">
+						<h1 class="l_template">{PresentationTemplate}</h1>
+						<img src="../common/images/titanium.png" style="height:300px;"/>
+						
+					</div>
+				</section>
+				<section>
+					<div style="clear:both; height:50px;"></div>
+					<h2>Use this template to create your own presentations.</h2>
+					<script>
+						// Delicously hacky. Look away.
+						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) )
+						document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
+					</script>
+				</section>
+
+			</div>
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+			<div class="progress"><span></span></div>
+			<img src="../engine/images/appc_footer_opaque.png" class="appc_footer"/>
+		</div>
+		
+		<script src="../engine/reveal.js/js/reveal.js"></script>
+		<script src="../engine/reveal.js/lib/highlight.js"></script>
+		<script>
+			// Parse the query string into a key/value object
+			var query = {};
+			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
+
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: true,
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// If true; each slide will be pushed to the browser history
+				history: true,
+
+				// Flags if mouse wheel navigation should be enabled
+				mouseWheel: true,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: true,
+
+				// UI style
+				theme: query.theme || 'default', // default/neon
+
+				// Transition style
+				transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+			});
+
+			hljs.initHighlightingOnLoad();
+		</script>
+		<script src="../engine/js/localize.js"></script>
+	</body>
+</html>
