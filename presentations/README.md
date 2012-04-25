@@ -7,76 +7,42 @@ In short, **these presentations are free for anyone to use and you can modify th
 * Submit a pull request with your changes to this project
 * Send us an email at community at appcelerator dot com
 
-## Impress.js Crash Course
+## Reveal.js Crash Course
 
-All presentations in this repository are created using [impress.js](http://bartaz.github.com/impress.js/#/bored). So before diving in, you'll likely want to take a look at that project and its educational resources. It's pretty basic, but it's a new paradigm for creating presentations. The best way to really get a sense of how different it is is to visit the [impress.js website](http://bartaz.github.com/impress.js/#/bored) and see for yourself. Another good reference I found was [this blog post](http://www.cubewebsites.com/blog/guides/how-to-use-impress-js/) as well.
+All presentations in this repository are created using [reveal.js](https://github.com/hakimel/reveal.js). So before diving in, you'll likely want to take a look at that project and its educational resources. It's pretty basic, but it's a new paradigm for creating presentations. The best way to really get a sense of how different it is is to visit the [reveal.js website](http://lab.hakim.se/reveal-js/#/) and see for yourself. One quick reference I found was [this blog post](http://amimetic.co.uk/?p=239) as well.
 
-But, if you want to ignore me and get started right away, here's a straight-to-the-point rundown of impress.js and how it's used for these presentations. It's not a complete doc, and I again urge you to check out the [impress.js website](http://bartaz.github.com/impress.js/#/bored). That said, here we go.
+But, if you want to ignore me and get started right away, here's a straight-to-the-point rundown of impress.js and how it's used for these presentations. It's not a complete doc, and I again urge you to check out the [impress.js website](http://lab.hakim.se/reveal-js/#/). That said, here we go.
 
 ### Supported Browsers
 
-Since you're going to be presenting in a browser of your own choosing, wide compatibility isn't much of an issue. Knowing that, though, you still need to use one of the following browsers to get all the features of impress.js:
+Since you're going to be presenting in a browser of your own choosing, wide compatibility isn't much of an issue. Knowing that, though, you still need to use a modern browser with CSS 3D Tranform support to see it in its full glory:
 
 * Chrome
 * Safari 5.1+
 * Firefox 10+
 
-### Steps
+### Sections
 
-Presentations consist of **_steps_**. In impress.js, steps are essentially equal to a typical presentation's slides. They represent a single view state of the presentation. Steps are navigated in a few ways:
+Presentations consist of HTML5 **_sections_**.  In reveal.js, sections are essentially equal to a typical presentation's slides. They represent a single view state of the presentation. Steps are navigated in a few ways:
 
-* **Forward** - spacebar, tab, right/down arrow, page down
-* **Back** - left/up arrow, page up
-* **Navigation Panel** - press 'n' to toggle
+* **Forward** - right arrow / directional pad click
+* **Back** - left arrow / directional pad click
+* **Navigation Panel** - press the space bar for holistic overview
 
-You create a step in your presentation by defining an HTML element inside of the main `<div id="impress">` element with the class `step`. Below is a basic, 2-step example.
+You create a section in your presentation by defining an HTML element inside of the main `<div class="slides">` element. Below is a basic, 2-step example.
 
 <a name="stepexample">&nbsp;</a>
 
 ```html
-<div id="impress">
-    <div id="step1" class="step" data-x="0" data-y="0">
-        This is my first step!
-    </div>
-    <div id="step2" class="step" data-x="1000" data-y="0" data-rotate-y="45" data-scale="0.5">
-        This is my second step!
-    </div>
+<div class="slides">
+    <section>
+        <h1>This is my first step!</h1>
+    </section>
+    <section>
+        <h2>This is my second step!</h2>
+    </section>
 </div>
 ``` 
-
-### Data-\* Attributes
-
-You'l probably notice the `data-x` and `data-y` attributes right away. These attributes, among a few others, allow you to dictate how impress.js will perform animated transitions between each step. You can make all forms of 2D & 3D transitions, including scale, translation, and rotation. Let's take a quick look at each:
-
-* **data-x, data-y, data-z** - Used to specify a step's position along the given axis. So `<div class="step" data-x="0" data-y="300" data-z="400">` would be positioned, you guessed it, at `(0,300,400)` within the presentation.
-* **data-rotate** - Rotates the step the given number of degrees in the 2D clockwise direction.
-* **data-rotate-x, data-rotate-y, data-rotate-z** - Rotates the step along the given 3D axis. 
-* **data-scale** - Scales up or down the size of the whole step. A practical application of this is when you want to create a footnote that you'd like to zoom in on in the next step.
-
-So if we look again at the <a href="#stepexample">2-step example</a>, when you navigate from `step1` to `step2`, you would move 1000 pixels to the right to `step2`, which is rotated 45 degrees along its y-axis and is also 1/2 it's normal size.
-
-### The _active_ class
-
-When steps become active, they get the `active` class added to them. This is useful for initiating JS and CSS animations when slides become active. For a good exmaple of this, let's look at how I animate in the opacity of images on a step from the [Welcome to Titanium](https://github.com/appcelerator-titans/Toolkit/tree/master/presentations/Welcome%20to%20Titanium) presentation:
-
-```css
-/* animate in the opacity of images when active */
-#donetodeath img {
-    position: fixed;
-    height: 150px;  
-    opacity: 0;
-}
- 
-#donetodeath.active img {
-    opacity: 1;
-    -webkit-transition: opacity 1s ease-in;
-    -webkit-transition-delay: 2s;   
-}
-```
-
-As you can see above, the opacity of the images on the `donetodeath` step are animated from `0` to `1`, but not until 2 seconds _after_ the step becomes active. Understanding the power of the `active` class is critical to creating really dynamic impress.js presentations. 
-
-And that's it for now. As previously mentioned, firing up a presentation in a supported browser and checking out the source is probably the best way to learn how to start toying with it yourself. Be warned, once you get the hang of it, impress.js is very addicting. You'll find yourself forgetting about the content and spending your time playing with transitions and animations. 
 
 ## Create a Presentation
 
@@ -122,7 +88,7 @@ String.toLocaleString({
         "en-US": {
                 // English version from the presentation. This will be the default 
                 // for languages with no localization entry.
-		"%l_localizeMe": "Here is some text that needs localization"
+    	"%l_localizeMe": "Here is some text that needs localization"
 	},
 	"es": {
                 // The Spanish translation we are adding. This will automatically 
@@ -146,9 +112,9 @@ Now when someone wants to present in Spanish, they don't have to do anything, it
 
 The **best** way you can help us with these presentations is to submit text localizations. We'd like these presentations to be available in as many languages as possible. Fortunately, it's pretty quick and easy to submit a localization for one (or more) of these presentations if you have the linguistic skills.
 
-So let's assume you want to add support for a new language in the [Welcome to Titanium](https://github.com/appcelerator-titans/Toolkit/tree/master/presentations/Welcome%20to%20Titanium) presentation. Here's the steps you would follow.
+So let's assume you want to add support for a new language in the [Welcome to Titanium](https://github.com/appcelerator-titans/Toolkit/tree/master/presentations/welcome) presentation. Here's the steps you would follow.
 
-1. Goto `Toolkit/presentations/Welcome to Titanium/js`
+1. Goto `Toolkit/presentations/welcome/js`
 2. Open the `localizations.js` file
 3. Copy the entire `en-US` localization key and content
 
@@ -170,10 +136,8 @@ Without the help of the following people and projects, this repository would be 
 
 ### Projects
 
-* [impress.js](https://github.com/bartaz/impress.js) - HTML5/JS presentation framework
+* [reveal.js](https://github.com/hakimel/reveal.js) - HTML5/JS presentation framework
 * [l10n.js](https://github.com/eligrey/l10n.js/tree/) - Javascript Localization library
-* [SyntaxHighlighter](http://alexgorbatchev.com/SyntaxHighlighter/) - JS syntax highlighter
-* [jQuery](http://jquery.com/) - If you need a description...
 
 ### Contributors
 

@@ -1,1 +1,3 @@
-git submodule update --init --recursive
+# Web vs. Native
+
+Ending the web vs. native debate
