@@ -1,0 +1,113 @@
+/* swinging text animation */
+@-webkit-keyframes swinginggate {
+	0% {
+		-webkit-transform: rotateY(-70deg);
+        -webkit-animation-timing-function: ease-out;
+    }
+    70% {
+    	-webkit-transform: rotateY(45deg);
+        -webkit-animation-timing-function: ease-in-out;
+    }
+    85% {
+    	-webkit-transform: rotateY(-25deg);
+        -webkit-animation-timing-function: ease-in-out;
+    }
+    100% {
+        -webkit-transform: rotateY(0deg);       
+    }
+}
+
+@-webkit-keyframes flyin {
+	0% {
+		left: -2000px;
+        -webkit-animation-timing-function: ease-out;
+    }
+    80% {
+    	left: 100px;
+        -webkit-animation-timing-function: ease-in-out;
+    }
+    90% {
+    	left: -50px;
+    	-webkit-animation-timing-function: ease-in-out;	
+    }
+    100% {
+        left: 0px;       
+        -webkit-animation-timing-function: ease-in-out;	
+    }
+}
+
+@-webkit-keyframes fontswell {
+	0% {
+    	font-size: inherit;
+        text-shadow: 0px 2px #222;
+        -webkit-animation-timing-function: ease-out;
+    }
+    50% {
+    	text-shadow: 0px 4px #222;
+        font-size: 160%;
+        -webkit-animation-timing-function: ease-in-out;
+    }
+    100% {
+    	text-shadow: 0px 2px #222;
+        font-size: inherit;       
+    }
+}
+
+#showoff_navpanel {
+	position:fixed; 
+	top: 0; 
+	bottom:0; 
+	left: 50px; 
+	width: 150px; 
+	background-color: #555; 
+	z-index:100; 
+	text-align:center; 
+	overflow-x: hidden;
+	overflow-y: scroll;
+    visibility: hidden;
+	opacity: 0;
+	border-left: solid 2px #222;
+	border-right: solid 2px #222;
+}
+
+#showoff_navpanel.visible {
+    visibility: visible;
+	opacity: 0.8;
+	-webkit-transition: opacity 0.5s linear;	
+}
+
+#showoff_navpanel.hidden {
+    visibility: hidden;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s linear;	
+}
+
+#showoff_navpanel div.preview {
+	position:relative; 
+	display: block;
+	width: 900px;
+	height:720px; 
+	margin:5px; 
+	-webkit-transform-origin: 0 0; 
+	-webkit-transform: scale(0.155); 
+	border: solid 2px #222; 
+	border-radius:32px;	
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+    line-height: 1;
+}
+
+ul.swinginggate-stagger li {
+	-webkit-transform-origin: 0 0;
+	-webkit-transform: rotateY(-70deg);		
+}
+
+ul.flyin-stagger li {
+	position: relative;
+	left: -2000px;	
+}
+
+
