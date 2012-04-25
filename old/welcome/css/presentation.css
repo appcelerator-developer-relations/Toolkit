@@ -1,0 +1,568 @@
+/* Main title step */
+#title {
+	padding: 0px;
+}
+
+	/* Welcome to Titanium title */
+	#title .welcome {
+		position: fixed;
+		top: -1000px;
+		left: 40px;
+		font-size: 35px;
+		color: #000;
+		-webkit-transition: top 0.5s ease-out;
+		-webkit-transition-delay: 0.75s;	
+	}
+	#title.active .welcome {
+		top: -20px;	
+	}
+	
+	#title .to {
+		position: fixed;
+		top: -1000px;
+		left: 40px;
+		font-size: 35px;
+		color: #000;
+		-webkit-transition: top 0.5s ease-out;
+		-webkit-transition-delay: 0.75s;	
+	}
+	#title.active .to {
+		top: 18px;	
+	}
+	
+	#title .titanium {
+		position: relative; 
+		/*left: 45px;*/
+		color: #a00;
+		text-shadow: 0px 2px #222;	
+	}
+	
+	#title .l_welcometotitanium {
+			
+	}
+	
+	#title .titleImage {
+		position: relative;
+		top: 2px;
+		height: 500px;
+		-webkit-transition: height 1s ease-in;	
+	}
+	#title.active .titleImage {
+		height: 100px;	
+	}
+	
+	#title .titleLeft {
+		position: relative;
+		left: -1000px;
+		-webkit-transition: all 1s ease-in;
+	}
+	#title.active .titleLeft {
+		left: 5px;
+		font-size: 160px;
+	}
+	
+	#title .titleRight {
+		position: relative;
+		left: 1000px;
+		-webkit-transition: all 1s ease-in;
+	}
+	#title.active .titleRight {
+		left: -15px;
+		font-size: 160px;
+	}
+
+	/* The cross platform statement */
+	#title .statement {
+		text-align:center; 
+		font-size: 32px;
+	}
+	
+		/* Statement line 1 */
+		#title .statement1 {
+		    position: relative;
+		    top: 1000px;
+		    padding-bottom: 10px;
+		}
+		
+		#title.active .statement1 {
+			top: 0px;
+			-webkit-transition: top 1s ease-in;
+			-webkit-transition-delay: 2s;	
+		}
+		
+		#title .xplatform {
+			position: relative;
+			left: -100px;	
+		}
+		
+		#title.active .xplatform {
+			left: 0px;
+			-webkit-transition: left 0.5s ease-in;
+			-webkit-transition-delay: 7s;	
+		}
+		
+		#title .theonly {
+			position: relative;
+			left: -1000px;
+			font-weight: bold;
+			color: #000;	
+		}
+		
+		#title.active .theonly {
+			left: 0px;
+			-webkit-transition: left 0.5s ease-in;
+			-webkit-transition-delay: 7s;	
+		}
+	
+		/* Statement line 2 */
+		#title .statement2 {
+			position: relative;
+			top: 1000px;
+		    left: -40px;
+		}
+		
+		#title.active .statement2 {
+			top: 0px;
+			left: 0px;
+			-webkit-transition-property: top, left;
+			-webkit-transition-duration: 1s, 0.5s;
+			-webkit-transition-timing-function: ease-in, ease-in;
+			-webkit-transition-delay: 4s, 7s;
+		}
+		
+		#title.active .native {
+			font-size: 48px;
+			font-weight: bold;
+			color: #7a86a3;
+			text-shadow: 0px 1px #222;
+			-webkit-transition: all 0.25s ease-out;
+			-webkit-transition-delay: 6s;
+		}
+		
+/* Presenter step */
+
+#presenter {}
+
+	#presenter .presenterpic {
+		width: 300px;
+		float: left;
+	}
+	
+	#presenter .bio {
+		width:450px; 
+		float:right;
+	}
+
+	#presenter .employee {
+		float: right;
+		height: 100px;	
+	}
+	
+	#presenter .contact {
+		font-size:24px; 
+		text-align:center; 
+		padding-top:30px;	
+	}
+
+	#badges {
+		clear: both;
+		padding-top: 20px;
+		text-align: center;	
+	}
+	
+	#badges img {
+		height: 100px;	
+	}
+
+/* Agenda step */
+
+#agenda {}
+	
+	/* Titanium Image */
+	#agenda .image {
+		height: 300px;
+		float: right;
+	}
+	
+	/* Agenda item listing */
+	#agenda ul {
+		float:left; 
+		width:500px; 
+		text-align:left; 
+		font-size:32px;
+	}
+	
+		/* Individual classes to independently animate and localize items */
+		#agenda ul li {
+			padding: 10px;
+			-webkit-transform-origin: 0 0;
+			-webkit-transform: rotateY(-70deg);
+		}
+
+/* What is and why Titanium? */
+
+#whatistitanium {}
+
+	#whatistitanium:not(.active), #importantly:not(.active), #whytitanium:not(.active) {
+		opacity: 0;	
+	}
+	
+	#whytitanium.active .l_why {
+		-webkit-animation: fontswell 0.5s;
+		-webkit-animation-delay: 1.5s;
+		-webkit-animation-fill-mode: forwards;
+	}
+
+/* Dilemma */
+
+#dilemma {}
+	
+	/* Image swell animation */
+	@-webkit-keyframes imageswell {
+		0% {
+	    	height: 0px;
+	        -webkit-animation-timing-function: ease-out;
+	    }
+	    90% {
+	        height: 160px;
+	        -webkit-animation-timing-function: ease-in-out;
+	    }
+	    100% {
+	        height: 150px;      
+	    }
+	}
+	
+	/* Dilemma text styles */
+	#dilemma .l_somany {
+		position: relative;
+		left: 0px;	
+		padding-bottom: 15px;
+	}
+	
+	#dilemma .l_sofew {
+		position: relative;
+		left: 290px;	
+	}
+	
+	#dilemma img {
+		height: 150px;
+	}
+
+/* resource details */
+
+#resources {
+	font-size: 32px;
+	text-shadow: 0px 1px #222;	
+}
+
+	/* Down arrows for resources flow */
+	.arrow-down {
+	    width: 0;
+	    height: 0;
+	    border-left: 10px solid transparent;
+	    border-right: 10px solid transparent;
+	    border-top: 10px solid #000;
+	}
+
+	/* Resource flow boxes */
+	#resources div {
+		position: fixed;
+	}
+	
+	#resources .box {
+		border-radius:8px; 
+		border: solid 1px #ccc;
+	}
+
+	#resources .platform {
+		background-color:#fff;  
+		padding: 10px; 	
+		width: 220px;	
+		top: -200px;
+	}
+	
+	#resources .resources {
+		background-color: #222;
+		color: #eee;
+		padding: 10px;
+		font-size: 24px;
+		width: 220px;	
+		top: -40px;
+	}
+	
+	#resources .scalable {
+		background-color: #a00;
+		padding: 50px 10px 50px 10px;
+		color: #eee;
+		top: 140px;	
+		width: 760px;
+	}
+	
+	#resources .line {
+		background-color: #000;
+		width: 3px;	
+		height: 90px;
+	}
+
+/* Write once, suck everywhere */
+
+#suck {
+	color: #222;
+}
+
+	#suck .footnote {
+		font-size: 16px; 
+		text-align:right; 
+		text-shadow: 0px 0px #000;
+		padding: 150px 30px 0px 0px;
+	}
+	
+/* Common approach */
+
+#commonapproach {
+	font-size: 28px;
+}
+
+	#commonapproach li {
+		padding: 0px;	
+	}
+
+	#commonapproach .contexts {
+		margin-left: 100px; 
+		font-size:36px; 
+		padding: 20px 0px 20px 0px;	
+	}
+
+/* done to death */
+
+#donetodeath {}
+
+	/* animate in the opacity of images */
+	#donetodeath img {
+		position: fixed;
+		height: 150px;	
+		opacity: 0;
+	}
+	
+	#donetodeath.active img {
+		opacity: 1;
+		-webkit-transition: opacity 1s ease-in;
+		-webkit-transition-delay: 2s;	
+	}
+
+	/* positions of each image */
+	#donetodeath .image1 {
+		top: -160px;
+		left: 380px;
+	}
+	
+	#donetodeath .image2 {
+		top: -140px;
+		left: 560px;
+	}
+	
+	#donetodeath .image3 {
+		top: -140px;
+		left: -100px;
+	}
+	
+	#donetodeath .image4 {
+		top: 160px;
+		left: 380px;
+	}
+	
+	#donetodeath .image5 {
+		top: 160px;
+		left: 580px;
+	}
+	
+	#donetodeath .image6 {
+		top: 140px;
+		left: -100px;
+	}
+	
+	#donetodeath .image7 {
+		top: 0px;
+		left: -40px;
+	}
+	
+	#donetodeath .image8 {
+		top: 0px;
+		left: 750px;
+	}
+	
+	#donetodeath .image9 {
+		top: 0px;
+		left: 900px;
+	}
+
+/* missing native */
+
+#missingnative {}
+
+	/* Set up NATIVE and brace, then animate their scale */
+	#missingnative .l_native {
+		color: #a00;
+		font-weight: bold;
+		font-size: 90px;
+		text-shadow: 0px 2px #222;
+		float: left;
+		width: 320px;
+		padding-top: 70px;
+		-webkit-transform: scale(0);
+	}
+	
+	#missingnative .brace {
+		color: #a00;
+		font-weight: normal;
+		font-size: 230px;
+		text-shadow: 0px 2px #222;
+		float: right;
+		padding-right:30px;
+		width: 70px;
+		-webkit-transform: scale(0);
+	}
+	
+	#missingnative.active .l_native, 
+	#missingnative.active .brace {
+		-webkit-transform: scale(1);
+		-webkit-transition: -webkit-transform 0.5s ease-in 4.5s;	
+	}
+	
+	/* The listing of native attributes */
+	#missingnative ul {
+		list-style: none;
+		color: #555;
+		font-weight: normal;
+		font-size: 44px;
+		text-shadow: 0px 1px #222;
+		float: right;	
+		width: 370px;
+	}
+
+	#missingnative ul li {
+		position: relative;
+		left: -2000px;	
+		padding: 2px;
+	}
+
+		/* Each items to be animated in */
+		#missingnative.active .item1 {
+			left: 0px;
+			-webkit-transition: left 1s ease-in 1s;
+		}
+		
+		#missingnative.active .item2 {
+			left: 0px;
+			color: #7a86a3;
+			-webkit-transition: left 1s ease-in 1.5s;
+		}
+		
+		#missingnative.active .item3 {
+			left: 0px;
+			-webkit-transition: left 1s ease-in 2s;
+		}
+		
+		#missingnative.active .item4 {
+			left: 0px;
+			color: #7a86a3;
+			-webkit-transition: left 1s ease-in 2.5s;
+		}
+		
+		#missingnative.active .item5 {
+			left: 0px;
+			-webkit-transition: left 1s ease-in 3s;
+		}
+
+/* Introducing Titanium */
+#introducetitanium:not(.active) {
+	opacity: 0;	
+}
+
+/* How Titanium Works */
+#howitworks {}
+
+	#howitworks img {
+		float:right; 
+		height:300px;
+		padding-left: 20px;
+	}
+	
+	#howitworks ul {
+		font-size: 32px;
+		margin-left:30px;	
+	}
+	
+/* The Apps */
+
+#apps { 
+	font-size: 38px;
+}
+
+	#apps img {
+		height: 300px;	
+	}
+	
+/* Development Workflow */
+
+#workflow {}
+
+	#workflow h2 {
+		text-align: center;	
+	}
+	
+	#workflow ul {
+		width:420px; 
+		float:left; 
+		font-size:32px;
+	}
+	
+	#workflow img {
+		float:right; 
+		height: 450px;	
+	}
+	
+/* Learning Resources */
+
+#learning {}
+
+	#learning ul {
+		width:480px; 
+		float:left; 
+		font-size:32px;	
+	}
+	
+	#learning img {
+		float:right; 
+		width: 320px; 
+		padding-top:100px;	
+	}
+
+/* Appcelerator News */
+
+#news {}
+
+	#news h2 {
+		text-align: center;	
+	}
+
+	#news ul {
+		width:480px; 
+		float:left; 
+		font-size:32px;	
+	}
+	
+	#news img {
+		float:right; 
+		width: 320px; 
+		padding-top:40px;
+	}
+	
+/* Q & A */
+
+#qa {
+	color:#7a86a3; 
+	font-size:200px; 
+	font-weight:bold; 
+	text-shadow:0px 2px #222;
+}
