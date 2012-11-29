@@ -1,0 +1,570 @@
+<!doctype html>  
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<title>Backbone.js</title>
+		<meta name="description" content="{PresentationTemplate}, using reveal.js">
+    	<meta name="author" content="Anthony Decena" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="../engine/reveal.js/css/reset.css">
+		<link rel="stylesheet" href="../engine/reveal.js/css/main.css">
+		<link rel="stylesheet" href="../engine/reveal.js/lib/zenburn.css">
+		<link rel="stylesheet" href="../engine/css/engine.css">
+		<link rel="stylesheet" href="presentation.css">
+		<script type="text/javascript" src="../engine/js/l10n.js"></script>
+		<script type="text/javascript" src="js/localizations.js"></script>
+	</head>
+	
+	<body>
+		<div id="reveal">	
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+			    <section>
+			        <h1>backbonejs</h1>
+			        <img src="http://arcane-refuge-8744.herokuapp.com/img/backbone-300x300.png">
+			    </section>
+			    <section>
+			        <h2>
+			            <br>
+			        </h2>
+			        <h2>Overview of Backbone.jS</h2>
+			        <ul>
+			            <li>Created by Jeremy Ashkenas (coffee script builder)</li>
+			            <li>Super light-weight library (shade under 4kb)</li>
+			            <li>Create easy to maintain front ends</li>
+			            <li>Backend agnostic</li>
+			            <li>Works well with any modern JavaScript lib</li>
+			            <li>Helps you build a proper MVC app in the browser<br>
+			            </li>
+			        </ul>
+			    </section>
+			    <section>
+			        <h2>
+			            <br>
+			        </h2>
+			        <blockquote>
+			            <p>Backbone supplies structure to JavaScript-heavy applications by 
+			providing models with key-value binding and custom events, collections 
+			with a rich API of enumerable functions, views with declarative event 
+			handling, and connects it all to your existing application over a 
+			RESTful JSON interface.</p>
+			        </blockquote>
+			    </section>
+			    <section>
+			        <section>
+			            <h2>
+			                <br>
+			            </h2>
+			            <h2>
+			                <br>
+			            </h2>
+			            <h2>
+			                <br>
+			            </h2>
+			            <h1>Deconstructing The Jargon<br>
+			            </h1>
+			        </section>
+			        <section>
+			            <h3>
+			                <br>
+			            </h3>
+			            <h3>Key-value binding and custom events</h3>
+			            <p>When a model’s contents or state is changed, other objects that have 
+			subscribed to the model are notified so they can proceed accordingly. 
+			Here, the views listen to changes in the model, and update themselves 
+			accordingly instead of the model having to deal with the views manually.</p>
+			        </section>
+			        <section>
+			            <h3>
+			                <br>
+			            </h3>
+			            <h3>Rich API of enumerable functions</h3>
+			            <p>Backbone ships with a number of very useful functions for handling and 
+			working with your data. Unlike other implementation, arrays in 
+			JavaScript are pretty neutered, which really is a hampering problem when
+			 you have to deal with data.</p>
+			        </section>
+			        <section>
+			            <h2>
+			                <br>
+			            </h2>
+			            <h3>Views with declarative event handling</h3>
+			            <p>Your days of writing spaghetti bind calls are over. You can 
+			programmatically declare which callback needs to be associated with 
+			specific elements.</p>
+			        </section>
+			        <section>
+			            <h3>
+			                <br>
+			            </h3>
+			            <h3>RESTful JSON interface</h3>
+			            <p>Even though the default method is to use a standard AJAX call when you 
+			want to talk to the server, you can easily switch it out to anything you
+			 need. A number of adapters have sprung up covering most of the 
+			favorites including Websockets and local storage.</p>
+			        </section>
+			        <section>
+			            <h2>
+			                <br>
+			            </h2>
+			            <blockquote>
+			                <p>Backbone provides a clean way to surgically separate your data from your
+			 presentation. The model that works with the data is only concerned with
+			 synchronizing with a server while the view’s primary duty is listening 
+			to changes to the subscribed model and rendering the HTML.</p>
+			            </blockquote>
+			        </section>
+			    </section>
+			    <section>
+			        <section>
+			            <h2>
+			                <br>
+			            </h2>
+			            <h2>
+			                <br>
+			            </h2>
+			            <h1>A Quick FAQ</h1>
+			            <h2>Lets clear some shit up!!<br>
+			            </h2>
+			        </section>
+			        <section>
+			            <h3>
+			                <br>
+			            </h3>
+			            <h3>Does it replace jQuery?</h3>
+			            <h3>NO!</h3>
+			            <p>They are complementary in their scopes</p>
+			            <p>Almost no overlaps in 
+			functionality<br>
+			        </p>
+			        <p>Backbone handles all the higher level abstractions</p>
+			        <p>jQuery – or similar libraries – work with the DOM, normalize events and
+			 so on.</p>
+			        <p>
+			        <br>
+			    </p>
+			    <p>Learn to use BOTH!<br>
+			</p>
+			</section>
+			<section>
+			    <h3>
+			        <br>
+			    </h3>
+			    <h3>Why should I be using this?</h3>
+			    <p>More often than not, front end code devolves into a mess:</p>
+			    <p> Nested callbacks</p>
+			    <p>DOM manipulations</p>
+			    <p>HTML for the 
+			presentation <br>
+			</p>
+			<p>Unspeakable acts of lunacy</p>
+			<p>
+			<br>
+			</p>
+			<p>Backbone offers a&nbsp; clean and elegant chaos management<br>
+			</p>
+			</section>
+			<section>
+			    <h3>
+			        <br>
+			    </h3>
+			    <h3>Where should I be using this?</h3>
+			    <p>Front end heavy, data driven 
+			applications. Think the GMail interface, or the new Twitter.</p>
+			    <p>
+			    <br>
+			</p>
+			<p>While you can shoehorn it for more mainstream web <em>pages</em>, this is really a library that is tailored for web apps.</p>
+			</section>
+			<section>
+			    <h3>
+			        <br>
+			    </h3>
+			    <h3>Is it similar to Cappuccino or Sproutcore?</h3>
+			    <h2>YES.&nbsp; NO.</h2>
+			    <p>
+			    <br>
+			</p>
+			<p>Yes, in its intended for complex front-end apps.</p>
+			<p>
+			<br>
+			</p>
+			<p>No, in that its quite lean, and ships with none of the widget that the others ship with.</p>
+			</section>
+			<section>
+			    <h3>
+			        <br>
+			    </h3>
+			    <h3>I can still use other libraries on the page, right?</h3>
+			    <p>
+			    <br>
+			</p>
+			<h1>YES!</h1>
+			<p>Extremely loosely coupled. Works with DOM accessing, AJAX wrapping, templating, and script loading libs.<br>
+			</p>
+			</section>
+			<section>
+			    <h3>
+			        <br>
+			    </h3>
+			    <h3>Will it usher in world peace?</h3>
+			    <p>
+			    <br>
+			</p>
+			<h2>No, sorry.</h2>
+			</section>
+			</section>
+			<section>
+			    <h2>
+			        <br>
+			    </h2>
+			    <h2>Getting to Know Backbone’s Backbone</h2>
+			    <p>MVC in Backbone originally stood for Models, Views and Collections, 
+			since there were no controllers in the framework. This has since 
+			changed.</p>
+			    <ul>
+			        <li>MODEL</li>
+			        <li>COLLECTION</li>
+			        <li>VIEW</li>
+			        <li>CONTROLLER<br>
+			        </li>
+			    </ul>
+			</section>
+			<section>
+			    <section>
+			        <h2>
+			            <br>
+			        </h2>
+			        <h2>MODEL</h2>
+			        <p>Models can mean different things in different implementations of MVC. In
+			 Backbone, a model represents a singular entity — a record in a database
+			 if you will. But there are no hard and fast rules here. <br>
+			    </p>
+			</section>
+			<section>
+			    <h2>
+			        <br>
+			    </h2>
+			    <h2>From the 
+			Backbone website:</h2>
+			    <blockquote>
+			        <p>Models are the heart of any JavaScript application, containing the 
+			interactive data as well as a large part of the logic surrounding it: 
+			conversions, validations, computed properties, and access control.</p>
+			    </blockquote>
+			</section>
+			<section>
+			    <h2>
+			        <br>
+			    </h2>
+			    <p>The model merely gives you a way to read and write arbitrary properties 
+			or attributes on a data set. With that in mind, the single liner below 
+			is completely functional:</p>
+			    <p>
+			    <br>
+			</p>
+			<pre>
+			    <span>
+			        <span class="keyword">var</span>
+			        <span>&nbsp;Game&nbsp;=&nbsp;Backbone.Model.extend({}); <br>
+			        </span>
+			    </span>
+			</pre>
+			</section>
+			<section>
+			    <h2>
+			        <br>
+			    </h2>
+			    <pre>var Game = Backbone.Model.extend({<br>    initialize: function(){<br>        alert("Oh hey! ");<br>    },<br>    defaults: {<br>        name: 'Default title',<br>        releaseDate: 2011,<br>    }<br>});<br>
+			    </pre>
+			    <p>
+			    <code>
+			        <br>
+			    </code>
+			</p>
+			<p>
+			<code>initialize</code> will be fired when an object is instantiated</p>
+			<p>In your app: bootstrap data, housekeeping<br>
+			</p>
+			</section>
+			<section>
+			    <h2>
+			        <br>
+			    </h2>
+			    <h2>how to read and write attributes:</h2>
+			    <pre>// Create a new game<br>var portal = new Game({ name: "Portal 2", releaseDate: 2011});<br>
+			        <br>// release will hold the releaseDate value -- 2011 here<br>var release = portal.get('releaseDate');<br>
+			        <br>// Changes the name attribute<br>portal.set({ name: "Portal 2 by Valve"});<br>
+			    </pre>
+			    <p>
+			    <br>
+			</p>
+			<p>object.attribute format not available</p>
+			<p>getter/setter required. No mistakes.<br>
+			</p>
+			</section>
+			<section>
+			    <h2>
+			        <br>
+			    </h2>
+			    <p>At this point, all the changes are only kept in memory. Let’s make these changes permanent by talking to the server.</p>
+			    <p>
+			    <br>
+			</p>
+			<pre>
+			    <span>
+			        <span>portal.save();<br>
+			        </span>
+			    </span>
+			    <span>
+			        <span>
+			        </span>
+			    </span>
+			</pre>
+			<p>
+			<br>
+			</p>
+			<p>Thats it!</p>
+			<p>Request types change intelligently. <br>
+			</p>
+			<p>Fresh objects will POST</p>
+			<p>Existing objects will PUT<br>
+			</p>
+			</section>
+			</section>
+			<section>
+			    <section>
+			        <h2>
+			            <br>
+			        </h2>
+			        <h2>CollectionS</h2>
+			        <p>Collections in Backbone are essentially just a collection of models. <br>
+			    </p>
+			    <p>DB analogy: collections are the results of a query where the results consists of a number of records [models]</p>
+			</section>
+			<section>
+			    <h2>
+			        <br>
+			    </h2>
+			    <h2>Defining A Collection</h2>
+			    <pre>var GamesCollection = Backbone.Collection.extend({<br>  model : Game<br>});<br>
+			    </pre>
+			    <p>
+			    <br>
+			</p>
+			<p>Define which model this is a collection of.</p>
+			<p>Play around with your data to your hearts contents!</p>
+			</section>
+			<section>
+			    <h2>
+			        <br>
+			    </h2>
+			    <h2>Only return specific Games</h2>
+			    <pre>var GamesCollection = Backbone.Collection.extend({<br>  model : Game,<br>  old : function() {<br>    return this.filter(function(game) {<br>      return game.get('releaseDate') &lt; 2009;<br>    });<br>  }<br>});<br>
+			    </pre>
+			    <p>
+			    <br>
+			</p>
+			<p>If game was released prior to 2009, return it.<br>
+			</p>
+			</section>
+			<section>
+			    <h2>
+			        <br>
+			    </h2>
+			    <h2>Directly manipulate collection contents:</h2>
+			    <pre>var games = new GamesCollection<br>games.get(0);<br>
+			    </pre>
+			    <p>
+			    <br>
+			</p>
+			<p>Instantiate a new collection and retrieves the model with an ID of 0</p>
+			<p>
+			<br>
+			</p>
+			</section>
+			<section>
+			    <h2>
+			        <br>
+			    </h2>
+			    <h2>dynamically populate collection:</h2>
+			    <pre>var GamesCollection = Backbone.Collection.extend({<br>  model : Game,<br>  url: '/games'<br>});<br>var games = new GamesCollection<br>games.fetch();<br>
+			    </pre>
+			    <p>
+			    <br>
+			</p>
+			<p>Create a new object and call the <em>fetch</em> method which fires of an asynchronous call to the server and populates the collection with the results.</p>
+			</section>
+			</section>
+			<section>
+			    <section>
+			        <h2>
+			            <br>
+			        </h2>
+			        <h2>Views</h2>
+			        <p>Views in Backbone can be slightly confusing at first glance. To MVC 
+			purists, they resemble a controller rather than a view itself.</p>
+			        <p>View duties:</p>
+			        <ul>
+			            <li>Listen to events thrown by the DOM and models/collections.</li>
+			            <li>Represent the application’s state and data model to the user.</li>
+			        </ul>
+			    </section>
+			    <section>
+			        <h2>
+			            <br>
+			        </h2>
+			        <h2>Creating a View:</h2>
+			        <pre>GameView = Backbone.View.extend({<br>  tagName : "div",<br>  className: "game",<br>  render : function() {<br>    // code for rendering the HTML for the view<br>  }<br>});<br>
+			        </pre>
+			        <p>
+			        <br>
+			    </p>
+			    <p>specifying which HTML element should be used to wrap the view through the <em>tagName</em> attribute as well as the ID for it through <em>className</em>.</p>
+			</section>
+			<section>
+			    <h2>
+			        <br>
+			    </h2>
+			    <h2>REnder:</h2>
+			    <pre>  render : function() {<br>    this.el.innerHTML = this.model.get('name');<br>	 //Or the jQuery way<br>	 $(this.el).html(this.model.get('name'));<br>  }<br>
+			    </pre>
+			    <p>
+			    <br>
+			</p>
+			<p>
+			<em>el</em> refers to the DOM element</p>
+			<p>the <em>div</em> element now contains the name of our game</p>
+			<p>
+			<br>
+			</p>
+			<p>* use built in templating solution: underscore.js *<br>
+			</p>
+			</section>
+			<section>
+			    <h2>
+			        <br>
+			    </h2>
+			    <h2>listen to dom events:</h2>
+			    <pre>events: {<br>        'click .name': 'handleClick'<br>    },<br>handleClick: function(){<br>		  alert('In the name of science... you monster');<br>		  // Other actions as necessary<br>}<br>
+			    </pre>
+			    <p>
+			    <br>
+			</p>
+			<p>first part refers to the event, the next specifies the triggering elements, last part is the function to fire.<br>
+			</p>
+			</section>
+			<section>
+			    <h2>
+			        <br>
+			    </h2>
+			    <h2>binding to models and collections:</h2>
+			    <pre>GameView= Backbone.View.extend({<br>initialize: function (args) {<br>        _.bindAll(this, 'changeName');<br>		  this.model.bind('change:name', this.changeName);<br>},<br>});<br>
+			    </pre>
+			    <p>
+			    <br>
+			</p>
+			<p>place the binding code in the <em>initialize</em> functions</p>
+			<p>bindAll (US.js) persists the value of a function’s <em>this</em> value.</p>
+			<p>when model’s <em>name</em> attribute is changed, the <em>changeName</em> function is called</p>
+			</section>
+			</section>
+			<section>
+			    <section>
+			        <h2>
+			            <br>
+			        </h2>
+			        <h2>Controllers</h2>
+			        <p>Controllers in Backbone essentially let you create bookmarkable, stateful apps by using hashbangs.</p>
+			    </section>
+			    <section>
+			        <h2>
+			            <br>
+			        </h2>
+			        <pre>var Hashbangs = Backbone.Controller.extend({<br>  routes: {<br>    "!/":             "root",<br>    "!/games":        "games",<br>  },<br>  root: function() {<br>    // Prep the home page and render stuff<br>  },<br>  games: function() {<br>    // Re-render views to show a collection of games<br>  },<br> });<br>
+			        </pre>
+			        <p>Similar to MVC routing</p>
+			        <p>
+			        <em>!/games</em> will map to the <em>games</em> function while the URL in the browser itself will be <em>domain/#!/games</em>
+			    </p>
+			</section>
+			<section>
+			    <h2>
+			        <br>
+			    </h2>
+			    <h2>dont break the back button:</h2>
+			    <pre>// Init the controller like so<br>var ApplicationController = new Controller;<br>Backbone.history.start();<br>
+			    </pre>
+			    <p>
+			    <br>
+			</p>
+			<p>Backbone can monitor your hashbangs and in conjunction with the routes you’ve specified earlier, make your app bookmarkable.</p>
+			</section>
+			</section>
+			<section>
+			    <h2>
+			        <br>
+			    </h2>
+			    <h2>what we've learned</h2>
+			    <ul>
+			        <li>We really need MVC for the front end. Traditional methods leave us with 
+			code that’s too coupled, messy and incredibly hard to maintain.</li>
+			        <li>Storing data and state in the DOM is a bad idea.</li>
+			        <li>Fat models and skinny controllers are the way to go. Workflow is simplified when business logic is taken care of by models.</li>
+			        <li>Templating is an absolute necessity. Putting HTML inside your JavaScript gives you bad karma.</li>
+			    </ul>
+			</section>
+			</div>
+			
+
+			<!-- The navigational controls UI -->
+			<aside class="controls">
+				<a class="left" href="#">&#x25C4;</a>
+				<a class="right" href="#">&#x25BA;</a>
+				<a class="up" href="#">&#x25B2;</a>
+				<a class="down" href="#">&#x25BC;</a>
+			</aside>
+
+			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+			<div class="progress"><span></span></div>
+			<img src="../engine/images/appc_footer_opaque.png" class="appc_footer"/>
+		</div>
+		
+		<script src="../engine/reveal.js/js/reveal.js"></script>
+		<script src="../engine/reveal.js/lib/highlight.js"></script>
+		<script>
+			// Parse the query string into a key/value object
+			var query = {};
+			location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+				query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+			} );
+
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: true,
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// If true; each slide will be pushed to the browser history
+				history: true,
+
+				// Flags if mouse wheel navigation should be enabled
+				mouseWheel: true,
+
+				// Apply a 3D roll to links on hover
+				rollingLinks: true,
+
+				// UI style
+				theme: query.theme || 'default', // default/neon
+
+				// Transition style
+				transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+			});
+
+			hljs.initHighlightingOnLoad();
+		</script>
+		<script src="../engine/js/localize.js"></script>
+	</body>
+</html>

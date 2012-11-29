@@ -8,6 +8,14 @@
 	background:#fff;
 }
 
+#reveal span.text_footer {
+	position: absolute;
+	font-size: 14px;
+	bottom: 50px;
+	left: 25px;
+	padding: 2px;
+}
+
 #reveal section img {
 	margin: 0;
 	background: rgba(255,255,255,0);
